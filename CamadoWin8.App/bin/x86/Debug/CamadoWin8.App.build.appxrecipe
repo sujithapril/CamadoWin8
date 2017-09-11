@@ -40,12 +40,6 @@
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\OnTheRoad.Model.dll">
       <PackagePath>OnTheRoad.Model.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Repositories\bin\x86\Debug\OnTheRoad.Repositories.dll">
-      <PackagePath>OnTheRoad.Repositories.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\bin\x86\Debug\OnTheRoad.ServiceClient.dll">
-      <PackagePath>OnTheRoad.ServiceClient.dll</PackagePath>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\OnTheRoad.Services.dll">
       <PackagePath>OnTheRoad.Services.dll</PackagePath>
     </AppxPackagedFile>
@@ -79,10 +73,16 @@
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\WinRtBehaviors.1.0.3\lib\winrt45\WinRtBehaviors.dll">
       <PackagePath>WinRtBehaviors.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\OnTheRoad.ServiceClient.dll">
+      <PackagePath>OnTheRoad.ServiceClient.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\OnTheRoad.Repositories.dll">
+      <PackagePath>OnTheRoad.Repositories.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\metroioc.dll">
       <PackagePath>metroioc.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\NotificationsExtensions\bin\x86\Debug\NotificationsExtensions.winmd">
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\NotificationsExtensions.winmd">
       <PackagePath>NotificationsExtensions.winmd</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\bg.jpg">

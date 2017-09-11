@@ -11,6 +11,9 @@
     <RootPropertyPathName Name="TravelName" />
     <RootPropertyPathName Name="ImageUrl" />
     <RootPropertyPathName Name="LogInViewModel" />
+    <RootPropertyPathName Name="SignInCommand" />
+    <RootPropertyPathName Name="Password" />
+    <RootPropertyPathName Name="UserName" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -105,6 +108,7 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Command" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.DataTemplate">
       <RootProperty Name="Template" />
@@ -158,6 +162,7 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Converter" />
       <RootProperty Name="Source" />
+      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ToolTip">
       <RootProperty Name="Style" />
@@ -244,12 +249,14 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
       <RootProperty Name="Name" />
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Password" />
     </RootType>
     <RootType FullName="CamadoWin8.App.Views.LogInView" />
   </Roots.RootTypes>

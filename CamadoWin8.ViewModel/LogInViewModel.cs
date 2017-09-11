@@ -27,28 +27,33 @@ namespace CamadoWin8.ViewModel
         private IToastService toastService;
         private IStateService stateService;
 
-        private ITravelDetail selectedTravelDetail;
-        public ITravelDetail SelectedTravelDetail
+        private string username;
+        public string UserName
         {
             get
             {
-                return selectedTravelDetail;
+                return username;
             }
             set
             {
-                selectedTravelDetail = value;
-                shareContractService.SharedTravelDetail = SelectedTravelDetail;
-                tileService.SendSimpleTextUpdate
-                    (SelectedTravelDetail.TravelName);
-                //tileService.SendImageAndTextUpdate(SelectedTravelDetail.TravelName, SelectedTravelDetail.ImageUrl);
-                //toastService.SendImageAndTextToast(SelectedTravelDetail.TravelName, SelectedTravelDetail.ImageUrl);
-
-                stateService.AddState(PageNames.TravelDetailView, 
-                    selectedTravelDetail.TravelId.ToString());
-                RaisePropertyChanged("SelectedTravelDetail");
+                username = value;
+                RaisePropertyChanged("UserName");
             }
         }
-
+        private string password;
+        public string Password
+        {
+            get
+            {
+                return password;
+            }
+            set
+            {
+                password = value;
+                RaisePropertyChanged("Password");
+            }
+        }
+        public RelayCommand SignInCommand { get; set; }
         public LogInViewModel(ITravelDataService travelDataService, INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
             ITileService tileService, IToastService toastService, IStateService stateService)
         {
@@ -66,18 +71,24 @@ namespace CamadoWin8.ViewModel
 
         private void InitializeCommands()
         {
-            GoBack = new RelayCommand(() =>
+            SignInCommand= new RelayCommand(() =>
             {
-                navigationService.GoBack();
+
+            toastService.SendSimpleTextToast(UserName + Password);
+                
             });
-            GoHome = new RelayCommand(() =>
-            {
-                navigationService.Navigate(PageNames.PopularTravelView);
-            });
-            AddToFavorites = new RelayCommand(() => 
-            {
-                dialogService.ShowAddToFavoriteConfirmation();
-            });
+            //GoBack = new RelayCommand(() =>
+            //{
+            //    navigationService.GoBack();
+            //});
+            //GoHome = new RelayCommand(() =>
+            //{
+            //    navigationService.Navigate(PageNames.PopularTravelView);
+            //});
+            //AddToFavorites = new RelayCommand(() => 
+            //{
+            //    dialogService.ShowAddToFavoriteConfirmation();
+            //});
         }
 
         public async void Initialize(object parameter)

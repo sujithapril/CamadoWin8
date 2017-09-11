@@ -35,10 +35,10 @@ DataContext="{Binding LogInViewModel, Source={StaticResource MainViewModelLocato
                 <TextBlock Text="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
 
                 <TextBlock Text="Username" Foreground="White"/>
-                <TextBox Name="txtUsername" Background="#545d6a" Foreground="White" FontSize="18"/>
+                <TextBox Name="txtUsername" Background="#545d6a" Foreground="White" FontSize="18" Text="{Binding UserName, Mode=TwoWay}"/>
                 <TextBlock Text="Password" Foreground="White"/>
-                <PasswordBox Name="txtPassword" Background="#545d6a" Foreground="White" FontSize="18"/>
-                <Button Name="btnSubmit"  Content="Submit" Margin="60 10" Background="#545d6a" Foreground="White" FontSize="18"/>
+                <PasswordBox Name="txtPassword" Background="#545d6a" Foreground="White" FontSize="18" Password="{Binding Password, Mode=TwoWay}"/>
+                <Button Name="btnSubmit"  Content="Submit" Margin="60 10" Background="#545d6a" Foreground="White" FontSize="18" Command="{Binding SignInCommand}"/>
             </StackPanel>
         </Border>
     </Grid>
