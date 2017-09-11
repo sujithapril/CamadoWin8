@@ -1,0 +1,16 @@
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\bin\x86\Debug\OnTheRoad.ServiceClient.dll
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\bin\x86\Debug\OnTheRoad.ServiceClient.pdb
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\bin\x86\Debug\OnTheRoad.ServiceClient.pri
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\obj\x86\Debug\OnTheRoad.ServiceClient.dll
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\obj\x86\Debug\OnTheRoad.ServiceClient.pdb
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\obj\x86\Debug\priconfig.xml
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\obj\x86\Debug\priconfig.xml.intermediate
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\obj\x86\Debug\layout.resfiles
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\obj\x86\Debug\layout.resfiles.intermediate
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\obj\x86\Debug\resources.resfiles
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\obj\x86\Debug\resources.resfiles.intermediate
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\obj\x86\Debug\pri.resfiles
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\obj\x86\Debug\pri.resfiles.intermediate
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\obj\x86\Debug\qualifiers.txt
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\obj\x86\Debug\qualifiers.txt.intermediate
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.ServiceClient\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt

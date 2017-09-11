@@ -1,0 +1,10 @@
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.Server\bin\OnTheRoad.Server.dll.config
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.Server\bin\OnTheRoad.Server.dll
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.Server\bin\OnTheRoad.Server.pdb
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.Server\bin\EntityFramework.dll
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.Server\bin\OnTheRoad.ServerDto.dll
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.Server\bin\OnTheRoad.ServerDto.pdb
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.Server\bin\EntityFramework.xml
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.Server\obj\Debug\OnTheRoad.Server.csprojResolveAssemblyReference.cache
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.Server\obj\Debug\OnTheRoad.Server.dll
+D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\OnTheRoad.Server\obj\Debug\OnTheRoad.Server.pdb

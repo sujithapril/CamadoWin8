@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>CS-052-LT-WS</Machine>
+    <WindowsUser>sujith.ks</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>17064GillCleeren.CamadoWin8App</PackageIdentityName>
+    <PackageIdentityPublisher>CN=F171D774-BAB2-4347-98DD-59A019635623</PackageIdentityPublisher>
+    <IntermediateOutputPath>D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <RegisteredManifestChecksum>8F1E01BC537114189EBF29F7AB598A4F41F37098DC002FCA53C49FC5FDF80B27</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>17064GillCleeren.CamadoWin8App_1.1.0.0_x86__ydshsff7j2rnj</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>17064GillCleeren.CamadoWin8App_ydshsff7j2rnj!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>17064GillCleeren.CamadoWin8App</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=F171D774-BAB2-4347-98DD-59A019635623</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-11T07:26:47.895</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\OnTheRoad.App.exe">
+      <PackagePath>OnTheRoad.App.exe</PackagePath>
+      <Modified>2017-09-11T07:26:35.786</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\GalaSoft.MvvmLight.Extras.Win8.dll">
+      <PackagePath>GalaSoft.MvvmLight.Extras.Win8.dll</PackagePath>
+      <Modified>2013-08-11T04:52:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\GalaSoft.MvvmLight.Win8.dll">
+      <PackagePath>GalaSoft.MvvmLight.Win8.dll</PackagePath>
+      <Modified>2013-08-11T04:52:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\Microsoft.Practices.ServiceLocation.dll">
+      <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
+      <Modified>2013-08-11T04:52:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\OnTheRoad.Contracts.dll">
+      <PackagePath>OnTheRoad.Contracts.dll</PackagePath>
+      <Modified>2017-09-11T07:24:55.939</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\OnTheRoad.Model.dll">
+      <PackagePath>OnTheRoad.Model.dll</PackagePath>
+      <Modified>2017-09-11T07:24:57.425</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Repositories\bin\x86\Debug\OnTheRoad.Repositories.dll">
+      <PackagePath>OnTheRoad.Repositories.dll</PackagePath>
+      <Modified>2017-09-11T07:24:59.591</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\bin\x86\Debug\OnTheRoad.ServiceClient.dll">
+      <PackagePath>OnTheRoad.ServiceClient.dll</PackagePath>
+      <Modified>2017-09-07T11:52:25.261</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\OnTheRoad.Services.dll">
+      <PackagePath>OnTheRoad.Services.dll</PackagePath>
+      <Modified>2017-09-11T07:26:28.860</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\OnTheRoad.Shared.dll">
+      <PackagePath>OnTheRoad.Shared.dll</PackagePath>
+      <Modified>2017-09-07T11:52:24.812</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\OnTheRoad.ViewModel.dll">
+      <PackagePath>OnTheRoad.ViewModel.dll</PackagePath>
+      <Modified>2017-09-11T07:25:01.198</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Rx-Core.2.1.30214.0\lib\NetCore45\System.Reactive.Core.dll">
+      <PackagePath>System.Reactive.Core.dll</PackagePath>
+      <Modified>2013-08-11T04:52:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Rx-Interfaces.2.1.30214.0\lib\NetCore45\System.Reactive.Interfaces.dll">
+      <PackagePath>System.Reactive.Interfaces.dll</PackagePath>
+      <Modified>2013-08-11T04:52:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Rx-Linq.2.1.30214.0\lib\NetCore45\System.Reactive.Linq.dll">
+      <PackagePath>System.Reactive.Linq.dll</PackagePath>
+      <Modified>2013-08-11T04:52:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Rx-PlatformServices.2.1.30214.0\lib\NetCore45\System.Reactive.PlatformServices.dll">
+      <PackagePath>System.Reactive.PlatformServices.dll</PackagePath>
+      <Modified>2013-08-11T04:52:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\Win8nl.dll">
+      <PackagePath>Win8nl.dll</PackagePath>
+      <Modified>2013-08-11T04:52:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\Win8nl.External.dll">
+      <PackagePath>Win8nl.External.dll</PackagePath>
+      <Modified>2013-08-11T04:52:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\Win8nl.Utilities.dll">
+      <PackagePath>Win8nl.Utilities.dll</PackagePath>
+      <Modified>2013-08-11T04:52:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\WinRtBehaviors.1.0.3\lib\winrt45\WinRtBehaviors.dll">
+      <PackagePath>WinRtBehaviors.dll</PackagePath>
+      <Modified>2013-08-11T04:52:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\metroioc.dll">
+      <PackagePath>metroioc.dll</PackagePath>
+      <Modified>2013-08-11T04:14:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\NotificationsExtensions\bin\x86\Debug\NotificationsExtensions.winmd">
+      <PackagePath>NotificationsExtensions.winmd</PackagePath>
+      <Modified>2017-09-07T11:52:25.986</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\bg.jpg">
+      <PackagePath>Assets\bg.jpg</PackagePath>
+      <Modified>2013-08-11T13:38:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-08-11T13:33:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-08-11T13:40:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-08-11T13:28:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-08-11T13:40:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\WideLogo.png">
+      <PackagePath>Assets\WideLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-08-11T13:34:52.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\OnTheRoad.App.xr.xml">
+      <PackagePath>OnTheRoad.App.xr.xml</PackagePath>
+      <Modified>2017-09-11T07:26:35.461</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2017-09-07T12:06:15.298</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Common\StandardStyles.xbf">
+      <PackagePath>Common\StandardStyles.xbf</PackagePath>
+      <Modified>2017-09-07T12:06:15.298</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\LogInView.xbf">
+      <PackagePath>Views\LogInView.xbf</PackagePath>
+      <Modified>2017-09-07T18:15:28.335</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-09-11T07:26:37.367</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

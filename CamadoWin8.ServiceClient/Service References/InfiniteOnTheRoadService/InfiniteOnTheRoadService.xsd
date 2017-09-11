@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="GetTravels">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTravelsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTravelsResult" nillable="true" type="ArrayOfTravel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="ArrayOfTravel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Travel" nillable="true" type="Travel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTravel" nillable="true" type="ArrayOfTravel" />
+  <xs:complexType name="Travel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContinentId" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Duration" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Outline" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ShortTitle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TravelId" type="xs:int" />
+      <xs:element minOccurs="0" name="TravelName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Travel" nillable="true" type="Travel" />
+</xs:schema>

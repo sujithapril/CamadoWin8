@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CamadoWin8Model" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CamadoWin8Entities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Continents" EntityType="CamadoWin8Model.Continent" />
+    <EntitySet Name="Travels" EntityType="CamadoWin8Model.Travel" />
+    <AssociationSet Name="FK_Travel_Continent" Association="CamadoWin8Model.FK_Travel_Continent">
+      <End Role="Continent" EntitySet="Continents" />
+      <End Role="Travel" EntitySet="Travels" />
+    </AssociationSet>
+    <EntitySet Name="ChannelUri" EntityType="CamadoWin8Model.ChannelUri" />
+  </EntityContainer>
+  <EntityType Name="Continent">
+    <Key>
+      <PropertyRef Name="ContinentId" />
+    </Key>
+    <Property Name="ContinentId" Type="Int32" Nullable="false" />
+    <Property Name="ContinentName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ImageUrl" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Travels" Relationship="CamadoWin8Model.FK_Travel_Continent" FromRole="Continent" ToRole="Travel" />
+    <Property Type="Int32" Name="OrderNumber" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Travel">
+    <Key>
+      <PropertyRef Name="TravelId" />
+    </Key>
+    <Property Name="TravelId" Type="Int32" Nullable="false" />
+    <Property Name="TravelName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ShortTitle" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Outline" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="ContinentId" Type="Int32" Nullable="false" />
+    <Property Name="ImageUrl" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Duration" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Continent" Relationship="CamadoWin8Model.FK_Travel_Continent" FromRole="Travel" ToRole="Continent" />
+    <Property Type="Boolean" Name="IsPopular" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Travel_Continent">
+    <End Role="Continent" Type="CamadoWin8Model.Continent" Multiplicity="1" />
+    <End Role="Travel" Type="CamadoWin8Model.Travel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Continent">
+        <PropertyRef Name="ContinentId" />
+      </Principal>
+      <Dependent Role="Travel">
+        <PropertyRef Name="ContinentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ChannelUri">
+    <Key>
+      <PropertyRef Name="PushNotificationId" />
+    </Key>
+    <Property Type="Int32" Name="PushNotificationId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="ClientChannelUri" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

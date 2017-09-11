@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="07ae1ddf-d1a7-4d62-9412-80d6f8dd2385" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:35756/ChannelUriService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ChannelUriService.wsdl" MetadataType="Wsdl" ID="3dba5421-0110-4f7d-95aa-4895d2245d5f" SourceId="1" SourceUrl="http://localhost:35756/ChannelUriService.svc?wsdl" />
+    <MetadataFile FileName="ChannelUriService.xsd" MetadataType="Schema" ID="049aa409-e8bf-4582-9849-33c914c3bc7a" SourceId="1" SourceUrl="http://localhost:35756/ChannelUriService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ChannelUriService1.xsd" MetadataType="Schema" ID="47cf726a-4d92-4237-bdbb-c1502784ac55" SourceId="1" SourceUrl="http://localhost:35756/ChannelUriService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ChannelUriService.disco" MetadataType="Disco" ID="ab0306ec-0287-468b-bdf2-a4a7ba239c8d" SourceId="1" SourceUrl="http://localhost:35756/ChannelUriService.svc?disco" />
+    <MetadataFile FileName="ChannelUriService1.wsdl" MetadataType="Wsdl" ID="4092e46b-b91b-45f0-a920-457b00cf1a9c" SourceId="1" SourceUrl="http://localhost:35756/ChannelUriService.svc?wsdl=wsdl0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

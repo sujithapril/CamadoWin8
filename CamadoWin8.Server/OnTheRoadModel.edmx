@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OnTheRoadModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="OnTheRoadModelStoreContainer">
+          <EntitySet Name="ChannelUri" EntityType="OnTheRoadModel.Store.ChannelUri" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Continent" EntityType="OnTheRoadModel.Store.Continent" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Travel" EntityType="OnTheRoadModel.Store.Travel" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Travel_Continent" Association="OnTheRoadModel.Store.FK_Travel_Continent">
+            <End Role="Continent" EntitySet="Continent" />
+            <End Role="Travel" EntitySet="Travel" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ChannelUri">
+          <Key>
+            <PropertyRef Name="PushNotificationId" />
+          </Key>
+          <Property Name="PushNotificationId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ClientChannelUri" Type="nvarchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Continent">
+          <Key>
+            <PropertyRef Name="ContinentId" />
+          </Key>
+          <Property Name="ContinentId" Type="int" Nullable="false" />
+          <Property Name="ContinentName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ImageUrl" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="OrderNumber" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Travel">
+          <Key>
+            <PropertyRef Name="TravelId" />
+          </Key>
+          <Property Name="TravelId" Type="int" Nullable="false" />
+          <Property Name="TravelName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ShortTitle" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="Outline" Type="nvarchar" Nullable="false" MaxLength="255" />
+          <Property Name="ContinentId" Type="int" Nullable="false" />
+          <Property Name="ImageUrl" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Duration" Type="int" Nullable="false" />
+          <Property Name="IsPopular" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Travel_Continent">
+          <End Role="Continent" Type="OnTheRoadModel.Store.Continent" Multiplicity="1" />
+          <End Role="Travel" Type="OnTheRoadModel.Store.Travel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Continent">
+              <PropertyRef Name="ContinentId" />
+            </Principal>
+            <Dependent Role="Travel">
+              <PropertyRef Name="ContinentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="OnTheRoadModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="OnTheRoadEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Continents" EntityType="OnTheRoadModel.Continent" />
+          <EntitySet Name="Travels" EntityType="OnTheRoadModel.Travel" />
+          <AssociationSet Name="FK_Travel_Continent" Association="OnTheRoadModel.FK_Travel_Continent">
+            <End Role="Continent" EntitySet="Continents" />
+            <End Role="Travel" EntitySet="Travels" />
+          </AssociationSet>
+          <EntitySet Name="ChannelUri" EntityType="OnTheRoadModel.ChannelUri" />
+        </EntityContainer>
+        <EntityType Name="Continent">
+          <Key>
+            <PropertyRef Name="ContinentId" />
+          </Key>
+          <Property Name="ContinentId" Type="Int32" Nullable="false" />
+          <Property Name="ContinentName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ImageUrl" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Travels" Relationship="OnTheRoadModel.FK_Travel_Continent" FromRole="Continent" ToRole="Travel" />
+          <Property Type="Int32" Name="OrderNumber" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Travel">
+          <Key>
+            <PropertyRef Name="TravelId" />
+          </Key>
+          <Property Name="TravelId" Type="Int32" Nullable="false" />
+          <Property Name="TravelName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ShortTitle" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="Outline" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+          <Property Name="ContinentId" Type="Int32" Nullable="false" />
+          <Property Name="ImageUrl" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Duration" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Continent" Relationship="OnTheRoadModel.FK_Travel_Continent" FromRole="Travel" ToRole="Continent" />
+          <Property Type="Boolean" Name="IsPopular" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Travel_Continent">
+          <End Role="Continent" Type="OnTheRoadModel.Continent" Multiplicity="1" />
+          <End Role="Travel" Type="OnTheRoadModel.Travel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Continent">
+              <PropertyRef Name="ContinentId" />
+            </Principal>
+            <Dependent Role="Travel">
+              <PropertyRef Name="ContinentId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="ChannelUri">
+          <Key>
+            <PropertyRef Name="PushNotificationId" />
+          </Key>
+          <Property Type="Int32" Name="PushNotificationId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ClientChannelUri" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="OnTheRoadModelStoreContainer" CdmEntityContainer="OnTheRoadEntities">
+          <EntitySetMapping Name="Continents">
+            <EntityTypeMapping TypeName="OnTheRoadModel.Continent">
+              <MappingFragment StoreEntitySet="Continent">
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="ContinentId" ColumnName="ContinentId" />
+                <ScalarProperty Name="ContinentName" ColumnName="ContinentName" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Travels">
+            <EntityTypeMapping TypeName="OnTheRoadModel.Travel">
+              <MappingFragment StoreEntitySet="Travel">
+                <ScalarProperty Name="IsPopular" ColumnName="IsPopular" />
+                <ScalarProperty Name="TravelId" ColumnName="TravelId" />
+                <ScalarProperty Name="TravelName" ColumnName="TravelName" />
+                <ScalarProperty Name="ShortTitle" ColumnName="ShortTitle" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Outline" ColumnName="Outline" />
+                <ScalarProperty Name="ContinentId" ColumnName="ContinentId" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="Duration" ColumnName="Duration" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChannelUri">
+            <EntityTypeMapping TypeName="OnTheRoadModel.ChannelUri">
+              <MappingFragment StoreEntitySet="ChannelUri">
+                <ScalarProperty Name="ClientChannelUri" ColumnName="ClientChannelUri" />
+                <ScalarProperty Name="PushNotificationId" ColumnName="PushNotificationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

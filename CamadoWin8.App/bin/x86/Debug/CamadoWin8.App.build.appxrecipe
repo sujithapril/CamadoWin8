@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>CS-052-LT-WS</Machine>
+    <WindowsUser>sujith.ks</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>17064GillCleeren.CamadoWin8App</PackageIdentityName>
+    <PackageIdentityPublisher>CN=F171D774-BAB2-4347-98DD-59A019635623</PackageIdentityPublisher>
+    <IntermediateOutputPath>D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\OnTheRoad.App.exe">
+      <PackagePath>OnTheRoad.App.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\GalaSoft.MvvmLight.Extras.Win8.dll">
+      <PackagePath>GalaSoft.MvvmLight.Extras.Win8.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\GalaSoft.MvvmLight.Win8.dll">
+      <PackagePath>GalaSoft.MvvmLight.Win8.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\Microsoft.Practices.ServiceLocation.dll">
+      <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\OnTheRoad.Contracts.dll">
+      <PackagePath>OnTheRoad.Contracts.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\OnTheRoad.Model.dll">
+      <PackagePath>OnTheRoad.Model.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Repositories\bin\x86\Debug\OnTheRoad.Repositories.dll">
+      <PackagePath>OnTheRoad.Repositories.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\bin\x86\Debug\OnTheRoad.ServiceClient.dll">
+      <PackagePath>OnTheRoad.ServiceClient.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\OnTheRoad.Services.dll">
+      <PackagePath>OnTheRoad.Services.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\OnTheRoad.Shared.dll">
+      <PackagePath>OnTheRoad.Shared.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\OnTheRoad.ViewModel.dll">
+      <PackagePath>OnTheRoad.ViewModel.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Rx-Core.2.1.30214.0\lib\NetCore45\System.Reactive.Core.dll">
+      <PackagePath>System.Reactive.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Rx-Interfaces.2.1.30214.0\lib\NetCore45\System.Reactive.Interfaces.dll">
+      <PackagePath>System.Reactive.Interfaces.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Rx-Linq.2.1.30214.0\lib\NetCore45\System.Reactive.Linq.dll">
+      <PackagePath>System.Reactive.Linq.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Rx-PlatformServices.2.1.30214.0\lib\NetCore45\System.Reactive.PlatformServices.dll">
+      <PackagePath>System.Reactive.PlatformServices.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\Win8nl.dll">
+      <PackagePath>Win8nl.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\Win8nl.External.dll">
+      <PackagePath>Win8nl.External.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\Win8nl.Utilities.dll">
+      <PackagePath>Win8nl.Utilities.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\WinRtBehaviors.1.0.3\lib\winrt45\WinRtBehaviors.dll">
+      <PackagePath>WinRtBehaviors.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\metroioc.dll">
+      <PackagePath>metroioc.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\NotificationsExtensions\bin\x86\Debug\NotificationsExtensions.winmd">
+      <PackagePath>NotificationsExtensions.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\bg.jpg">
+      <PackagePath>Assets\bg.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\WideLogo.png">
+      <PackagePath>Assets\WideLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\OnTheRoad.App.xr.xml">
+      <PackagePath>OnTheRoad.App.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Common\StandardStyles.xbf">
+      <PackagePath>Common\StandardStyles.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\LogInView.xbf">
+      <PackagePath>Views\LogInView.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

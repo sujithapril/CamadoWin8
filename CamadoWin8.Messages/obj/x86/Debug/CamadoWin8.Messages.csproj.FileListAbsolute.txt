@@ -1,0 +1,16 @@
+D:\Projects\CamadoWin8\CamadoWin8.Messages\bin\x86\Debug\OnTheRoad.Messages.dll
+D:\Projects\CamadoWin8\CamadoWin8.Messages\bin\x86\Debug\OnTheRoad.Messages.pdb
+D:\Projects\CamadoWin8\CamadoWin8.Messages\bin\x86\Debug\OnTheRoad.Messages.pri
+D:\Projects\CamadoWin8\CamadoWin8.Messages\obj\x86\Debug\OnTheRoad.Messages.dll
+D:\Projects\CamadoWin8\CamadoWin8.Messages\obj\x86\Debug\OnTheRoad.Messages.pdb
+D:\Projects\CamadoWin8\CamadoWin8.Messages\obj\x86\Debug\priconfig.xml
+D:\Projects\CamadoWin8\CamadoWin8.Messages\obj\x86\Debug\priconfig.xml.intermediate
+D:\Projects\CamadoWin8\CamadoWin8.Messages\obj\x86\Debug\layout.resfiles
+D:\Projects\CamadoWin8\CamadoWin8.Messages\obj\x86\Debug\layout.resfiles.intermediate
+D:\Projects\CamadoWin8\CamadoWin8.Messages\obj\x86\Debug\resources.resfiles
+D:\Projects\CamadoWin8\CamadoWin8.Messages\obj\x86\Debug\resources.resfiles.intermediate
+D:\Projects\CamadoWin8\CamadoWin8.Messages\obj\x86\Debug\pri.resfiles
+D:\Projects\CamadoWin8\CamadoWin8.Messages\obj\x86\Debug\pri.resfiles.intermediate
+D:\Projects\CamadoWin8\CamadoWin8.Messages\obj\x86\Debug\qualifiers.txt
+D:\Projects\CamadoWin8\CamadoWin8.Messages\obj\x86\Debug\qualifiers.txt.intermediate
+D:\Projects\CamadoWin8\CamadoWin8.Messages\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt

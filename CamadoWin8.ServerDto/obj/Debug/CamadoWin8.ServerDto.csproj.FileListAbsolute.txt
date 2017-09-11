@@ -1,0 +1,4 @@
+D:\Projects\CamadoWin8\CamadoWin8.ServerDto\bin\Debug\OnTheRoad.ServerDto.dll
+D:\Projects\CamadoWin8\CamadoWin8.ServerDto\bin\Debug\OnTheRoad.ServerDto.pdb
+D:\Projects\CamadoWin8\CamadoWin8.ServerDto\obj\Debug\OnTheRoad.ServerDto.dll
+D:\Projects\CamadoWin8\CamadoWin8.ServerDto\obj\Debug\OnTheRoad.ServerDto.pdb
