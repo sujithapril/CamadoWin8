@@ -78,15 +78,12 @@ D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Tests.dll
 D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Tests.pdb
 D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Contracts.dll
 D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Model.dll
-D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Repositories.dll
 D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Shared.dll
 D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.ViewModel.dll
 D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Contracts.pdb
 D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Contracts.pri
 D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Model.pdb
 D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Model.pri
-D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Repositories.pdb
-D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Repositories.pri
 D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Shared.pdb
 D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Shared.pri
 D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.ViewModel.pdb
