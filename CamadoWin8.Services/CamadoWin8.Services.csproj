@@ -122,6 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\CacheDataService.cs" />
+    <Compile Include="Data\GraphService.cs" />
     <Compile Include="Data\DeviceService.cs" />
     <Compile Include="Infrastructure\DialogService.cs" />
     <Compile Include="Infrastructure\NavigationService.cs" />

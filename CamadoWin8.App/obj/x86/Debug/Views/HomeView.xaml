@@ -7,6 +7,8 @@ DataContext="{Binding HomeViewModel, Source={StaticResource MainViewModelLocator
     xmlns:local="using:CamadoWin8.App.Views"  
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Win8nl_Behavior="using:Win8nl.Behaviors"
+	xmlns:WinRtBehaviors="using:WinRtBehaviors"
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -47,6 +49,12 @@ DataContext="{Binding HomeViewModel, Source={StaticResource MainViewModelLocator
                             <TextBlock Text="{Binding NickName}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="60" Margin="15,0,15,0"/>
 
                         </StackPanel>
+                        <WinRtBehaviors:Interaction.Behaviors>
+                            <Win8nl_Behavior:EventToBoundCommandBehavior 
+														Command="{Binding DataContext.SelectedCommand, ElementName=LayoutRoot}" 
+														CommandParameter="{Binding}" 
+														Event="Tapped" />
+                        </WinRtBehaviors:Interaction.Behaviors>
                     </Grid>
                 </DataTemplate>
             </GridView.ItemTemplate>

@@ -9,7 +9,7 @@ namespace CamadoWin8.Contracts.Services
 {
     public interface IShareContractService
     {
-        ITravelDetail SharedTravelDetail { get; set; }
+      //  ITravelDetail SharedTravelDetail { get; set; }
         void Initialize();
     }
 }

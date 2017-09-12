@@ -21,7 +21,7 @@ namespace CamadoWin8.ViewModel
         public RelayCommand AddToFavorites { get; set; }
 
 
-        private ITravelDataService travelDataService;
+       
         private INavigationService navigationService;
         private IDialogService dialogService;
         private IShareContractService shareContractService;
@@ -86,7 +86,8 @@ namespace CamadoWin8.ViewModel
         //        RaisePropertyChanged("DeviceTileInfos");
         //    }
         //}
-        public RelayCommand SignInCommand { get; set; }
+          public RelayCommand<IDeviceInfo> SelectedCommand { get; set; }
+       // public RelayCommand SelectedCommand { get; set; }
         public HomeViewModel( INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
             ITileService tileService, IToastService toastService, IStateService stateService,IDeviceService deviceService)
         {
@@ -104,12 +105,17 @@ namespace CamadoWin8.ViewModel
 
         private void InitializeCommands()
         {
-            SignInCommand= new RelayCommand(() =>
-            {
+            SelectedCommand = new RelayCommand<IDeviceInfo>((deviceObj) =>
+             {
+                 toastService.SendSimpleTextToast("Hello YOU  clicked me!");
+                 navigationService.Navigate(PageNames.GraphView,
+                     deviceObj.DeviceId);
+             });
 
-            toastService.SendSimpleTextToast(UserName + Password);
-                
-            });
+            //SelectedCommand = new RelayCommand(() =>
+            //{
+            //    toastService.SendSimpleTextToast("Hello clicked me!");
+            //});
             //GoBack = new RelayCommand(() =>
             //{
             //    navigationService.GoBack();

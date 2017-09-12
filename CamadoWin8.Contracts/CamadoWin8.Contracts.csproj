@@ -102,13 +102,10 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Model\IContinentDetail.cs" />
-    <Compile Include="Model\IContinentTileInfo.cs" />
-    <Compile Include="Model\ITravelDetail.cs" />
     <Compile Include="Model\IDeviceInfo.cs" />
-    <Compile Include="Model\ITravelTileInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ICacheDataService.cs" />
+    <Compile Include="Services\IGraphService.cs" />
     <Compile Include="Services\IDIalogService.cs" />
     <Compile Include="Services\INavigationService.cs" />
     <Compile Include="Services\IPushNotificationService.cs" />
@@ -117,10 +114,11 @@
     <Compile Include="Services\ITileService.cs" />
     <Compile Include="Services\IToastService.cs" />
     <Compile Include="Services\IDeviceService.cs" />
-    <Compile Include="Services\ITravelDataService.cs" />
+    <Compile Include="ViewModels\IGraphViewModel.cs" />
     <Compile Include="ViewModels\IHomeViewModel.cs" />
     <Compile Include="ViewModels\ILogInViewModel.cs" />
     <Compile Include="ViewModels\IViewModel.cs" />
+    <Compile Include="View\IGraphView.cs" />
     <Compile Include="View\IHomeView.cs" />
     <Compile Include="View\ILogInView.cs" />
     <Compile Include="View\IView.cs" />

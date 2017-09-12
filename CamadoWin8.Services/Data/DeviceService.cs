@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using CamadoWin8.Shared;
 using Windows.Web.Http;
 using Newtonsoft.Json;
-using CamadoWin8.Model;
+
 namespace CamadoWin8.Services.Data
 {
     public class DeviceService : IDeviceService

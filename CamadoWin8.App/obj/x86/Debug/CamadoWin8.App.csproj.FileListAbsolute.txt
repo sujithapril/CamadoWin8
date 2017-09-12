@@ -90,6 +90,11 @@ D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\Views\HomeView.xaml
 D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\Views\HomeView.xbf
 D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Newtonsoft.Json.dll
 D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Newtonsoft.Json.xml
+D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\Views\GraphView.g.i.cs
+D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\Views\GraphView.g.cs
+D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\Views\GraphView.xaml
+D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\Views\GraphView.xbf
+D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\GraphView.xbf
 D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\System.Reactive.Core\layout.resfiles
 D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\System.Reactive.Core\layout.resfiles.intermediate
 D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\System.Reactive.Core\Resources.resfiles

@@ -102,12 +102,8 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="ContinentDetail.cs" />
-    <Compile Include="ContinentTileInfo.cs" />
     <Compile Include="DeviceInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TravelDetail.cs" />
-    <Compile Include="TravelTileInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CamadoWin8.Contracts\CamadoWin8.Contracts.csproj">

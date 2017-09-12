@@ -19,7 +19,7 @@ namespace CamadoWin8.ViewModel
         public RelayCommand AddToFavorites { get; set; }
 
 
-        private ITravelDataService travelDataService;
+       // private ITravelDataService travelDataService;
         private INavigationService navigationService;
         private IDialogService dialogService;
         private IShareContractService shareContractService;

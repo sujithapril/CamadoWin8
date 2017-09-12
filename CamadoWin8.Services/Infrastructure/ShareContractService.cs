@@ -27,26 +27,26 @@ namespace CamadoWin8.Services.Infrastructure
 
         private void DataRequested(DataTransferManager sender, DataRequestedEventArgs e)
         {
-            if (SharedTravelDetail != null)
-            {
-                e.Request.Data.Properties.Title = SharedTravelDetail.TravelName;
+            //if (SharedTravelDetail != null)
+            //{
+            //    e.Request.Data.Properties.Title = SharedTravelDetail.TravelName;
 
-                e.Request.Data.Properties.Description = "Overview of the travel";
+            //    e.Request.Data.Properties.Description = "Overview of the travel";
 
-                e.Request.Data.SetText(SharedTravelDetail.Description);
+            //    e.Request.Data.SetText(SharedTravelDetail.Description);
 
-                var uri = new Uri(SharedTravelDetail.ImageUrl);
-                var reference = RandomAccessStreamReference.CreateFromUri(uri);
-                e.Request.Data.Properties.Thumbnail = reference;
-                e.Request.Data.SetBitmap(reference);
-            }
+            //    var uri = new Uri(SharedTravelDetail.ImageUrl);
+            //    var reference = RandomAccessStreamReference.CreateFromUri(uri);
+            //    e.Request.Data.Properties.Thumbnail = reference;
+            //    e.Request.Data.SetBitmap(reference);
+            //}
         }
 
 
-        public ITravelDetail SharedTravelDetail
-        {
-            get;
-            set;
-        }
+        //public ITravelDetail SharedTravelDetail
+        //{
+        //    get;
+        //    set;
+        //}
     }
 }

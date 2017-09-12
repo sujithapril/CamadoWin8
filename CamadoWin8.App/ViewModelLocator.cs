@@ -24,7 +24,7 @@ namespace CamadoWin8.App
           
             InstanceFactory.RegisterType<ILogInViewModel, LogInViewModel>();
             InstanceFactory.RegisterType<IHomeViewModel, HomeViewModel>();
-
+            InstanceFactory.RegisterType<IGraphViewModel, GraphViewModel>();
 
 
             //View registration
@@ -32,7 +32,8 @@ namespace CamadoWin8.App
                LogInView>();
             InstanceFactory.RegisterType<IHomeView,
                 HomeView>();
-
+            InstanceFactory.RegisterType<IGraphView,
+               GraphView>();
             //Services registration
 
             InstanceFactory.RegisterType<INavigationService, 
@@ -46,6 +47,7 @@ namespace CamadoWin8.App
             InstanceFactory.RegisterType<ICacheDataService, CacheDataService>();
 
             InstanceFactory.RegisterType<IDeviceService, DeviceService>();
+            InstanceFactory.RegisterType<IGraphService, GraphService>();
 
             //Model
             InstanceFactory.RegisterType<IDeviceInfo, DeviceInfo>();
@@ -66,6 +68,14 @@ namespace CamadoWin8.App
             get
             {
                 return InstanceFactory.GetInstance<IHomeViewModel>();
+            }
+        }
+
+        public IGraphViewModel GraphViewModel
+        {
+            get
+            {
+                return InstanceFactory.GetInstance<IGraphViewModel>();
             }
         }
     }

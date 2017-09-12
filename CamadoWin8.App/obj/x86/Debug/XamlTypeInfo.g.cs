@@ -124,31 +124,57 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[11];
+            _typeNameTable = new string[24];
             _typeNameTable[0] = "CamadoWin8.App.ViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "CamadoWin8.Contracts.ViewModels.ILogInViewModel";
             _typeNameTable[3] = "CamadoWin8.Contracts.ViewModels.IHomeViewModel";
-            _typeNameTable[4] = "CamadoWin8.App.Converter.DoNothingConverter";
-            _typeNameTable[5] = "CamadoWin8.App.Converter.ListConverter";
-            _typeNameTable[6] = "CamadoWin8.App.Views.HomeView";
-            _typeNameTable[7] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[8] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[9] = "CamadoWin8.Contracts.ViewModels.IViewModel";
-            _typeNameTable[10] = "CamadoWin8.App.Views.LogInView";
+            _typeNameTable[4] = "CamadoWin8.Contracts.ViewModels.IGraphViewModel";
+            _typeNameTable[5] = "CamadoWin8.App.Converter.DoNothingConverter";
+            _typeNameTable[6] = "CamadoWin8.App.Converter.ListConverter";
+            _typeNameTable[7] = "CamadoWin8.App.Views.GraphView";
+            _typeNameTable[8] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[9] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[10] = "CamadoWin8.Contracts.ViewModels.IViewModel";
+            _typeNameTable[11] = "WinRtBehaviors.Interaction";
+            _typeNameTable[12] = "System.Collections.ObjectModel.ObservableCollection`1<WinRtBehaviors.Behavior>";
+            _typeNameTable[13] = "System.Collections.ObjectModel.Collection`1<WinRtBehaviors.Behavior>";
+            _typeNameTable[14] = "WinRtBehaviors.Behavior";
+            _typeNameTable[15] = "Windows.UI.Xaml.FrameworkElement";
+            _typeNameTable[16] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[17] = "Win8nl.Behaviors.EventToBoundCommandBehavior";
+            _typeNameTable[18] = "WinRtBehaviors.Behavior`1<Windows.UI.Xaml.FrameworkElement>";
+            _typeNameTable[19] = "System.Windows.Input.ICommand";
+            _typeNameTable[20] = "String";
+            _typeNameTable[21] = "Boolean";
+            _typeNameTable[22] = "CamadoWin8.App.Views.HomeView";
+            _typeNameTable[23] = "CamadoWin8.App.Views.LogInView";
 
-            _typeTable = new global::System.Type[11];
+            _typeTable = new global::System.Type[24];
             _typeTable[0] = typeof(global::CamadoWin8.App.ViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::CamadoWin8.Contracts.ViewModels.ILogInViewModel);
             _typeTable[3] = typeof(global::CamadoWin8.Contracts.ViewModels.IHomeViewModel);
-            _typeTable[4] = typeof(global::CamadoWin8.App.Converter.DoNothingConverter);
-            _typeTable[5] = typeof(global::CamadoWin8.App.Converter.ListConverter);
-            _typeTable[6] = typeof(global::CamadoWin8.App.Views.HomeView);
-            _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[9] = typeof(global::CamadoWin8.Contracts.ViewModels.IViewModel);
-            _typeTable[10] = typeof(global::CamadoWin8.App.Views.LogInView);
+            _typeTable[4] = typeof(global::CamadoWin8.Contracts.ViewModels.IGraphViewModel);
+            _typeTable[5] = typeof(global::CamadoWin8.App.Converter.DoNothingConverter);
+            _typeTable[6] = typeof(global::CamadoWin8.App.Converter.ListConverter);
+            _typeTable[7] = typeof(global::CamadoWin8.App.Views.GraphView);
+            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[9] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[10] = typeof(global::CamadoWin8.Contracts.ViewModels.IViewModel);
+            _typeTable[11] = typeof(global::WinRtBehaviors.Interaction);
+            _typeTable[12] = typeof(global::System.Collections.ObjectModel.ObservableCollection<global::WinRtBehaviors.Behavior>);
+            _typeTable[13] = typeof(global::System.Collections.ObjectModel.Collection<global::WinRtBehaviors.Behavior>);
+            _typeTable[14] = typeof(global::WinRtBehaviors.Behavior);
+            _typeTable[15] = typeof(global::Windows.UI.Xaml.FrameworkElement);
+            _typeTable[16] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[17] = typeof(global::Win8nl.Behaviors.EventToBoundCommandBehavior);
+            _typeTable[18] = typeof(global::WinRtBehaviors.Behavior<global::Windows.UI.Xaml.FrameworkElement>);
+            _typeTable[19] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[20] = typeof(global::System.String);
+            _typeTable[21] = typeof(global::System.Boolean);
+            _typeTable[22] = typeof(global::CamadoWin8.App.Views.HomeView);
+            _typeTable[23] = typeof(global::CamadoWin8.App.Views.LogInView);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -184,10 +210,26 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
         }
 
         private object Activate_0_ViewModelLocator() { return new global::CamadoWin8.App.ViewModelLocator(); }
-        private object Activate_4_DoNothingConverter() { return new global::CamadoWin8.App.Converter.DoNothingConverter(); }
-        private object Activate_5_ListConverter() { return new global::CamadoWin8.App.Converter.ListConverter(); }
-        private object Activate_6_HomeView() { return new global::CamadoWin8.App.Views.HomeView(); }
-        private object Activate_10_LogInView() { return new global::CamadoWin8.App.Views.LogInView(); }
+        private object Activate_5_DoNothingConverter() { return new global::CamadoWin8.App.Converter.DoNothingConverter(); }
+        private object Activate_6_ListConverter() { return new global::CamadoWin8.App.Converter.ListConverter(); }
+        private object Activate_7_GraphView() { return new global::CamadoWin8.App.Views.GraphView(); }
+        private object Activate_12_ObservableCollection() { return new global::System.Collections.ObjectModel.ObservableCollection<global::WinRtBehaviors.Behavior>(); }
+        private object Activate_13_Collection() { return new global::System.Collections.ObjectModel.Collection<global::WinRtBehaviors.Behavior>(); }
+        private object Activate_17_EventToBoundCommandBehavior() { return new global::Win8nl.Behaviors.EventToBoundCommandBehavior(); }
+        private object Activate_22_HomeView() { return new global::CamadoWin8.App.Views.HomeView(); }
+        private object Activate_23_LogInView() { return new global::CamadoWin8.App.Views.LogInView(); }
+        private void VectorAdd_12_ObservableCollection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::WinRtBehaviors.Behavior>)instance;
+            var newItem = (global::WinRtBehaviors.Behavior)item;
+            collection.Add(newItem);
+        }
+        private void VectorAdd_13_Collection(object instance, object item)
+        {
+            var collection = (global::System.Collections.Generic.ICollection<global::WinRtBehaviors.Behavior>)instance;
+            var newItem = (global::WinRtBehaviors.Behavior)item;
+            collection.Add(newItem);
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -204,6 +246,7 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
                 userType.Activator = Activate_0_ViewModelLocator;
                 userType.AddMemberName("LogInViewModel");
                 userType.AddMemberName("HomeViewModel");
+                userType.AddMemberName("GraphViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -224,45 +267,123 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 4:   //  CamadoWin8.App.Converter.DoNothingConverter
-                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_4_DoNothingConverter;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 5:   //  CamadoWin8.App.Converter.ListConverter
-                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_5_ListConverter;
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 6:   //  CamadoWin8.App.Views.HomeView
-                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_HomeView;
-                userType.AddMemberName("ViewModel");
-                userType.SetIsLocalType();
-                xamlType = userType;
-                break;
-
-            case 7:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 8:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 9:   //  CamadoWin8.Contracts.ViewModels.IViewModel
+            case 4:   //  CamadoWin8.Contracts.ViewModels.IGraphViewModel
                 userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 10:   //  CamadoWin8.App.Views.LogInView
+            case 5:   //  CamadoWin8.App.Converter.DoNothingConverter
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_5_DoNothingConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  CamadoWin8.App.Converter.ListConverter
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_6_ListConverter;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  CamadoWin8.App.Views.GraphView
                 userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_LogInView;
+                userType.Activator = Activate_7_GraphView;
+                userType.AddMemberName("ViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 8:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 9:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 10:   //  CamadoWin8.Contracts.ViewModels.IViewModel
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 11:   //  WinRtBehaviors.Interaction
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.AddMemberName("Behaviors");
+                xamlType = userType;
+                break;
+
+            case 12:   //  System.Collections.ObjectModel.ObservableCollection`1<WinRtBehaviors.Behavior>
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Collections.ObjectModel.Collection`1<WinRtBehaviors.Behavior>"));
+                userType.CollectionAdd = VectorAdd_12_ObservableCollection;
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 13:   //  System.Collections.ObjectModel.Collection`1<WinRtBehaviors.Behavior>
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_13_Collection;
+                userType.CollectionAdd = VectorAdd_13_Collection;
+                xamlType = userType;
+                break;
+
+            case 14:   //  WinRtBehaviors.Behavior
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.FrameworkElement"));
+                userType.AddMemberName("AssociatedObject");
+                xamlType = userType;
+                break;
+
+            case 15:   //  Windows.UI.Xaml.FrameworkElement
+                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 16:   //  Windows.UI.Xaml.DependencyObject
+                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 17:   //  Win8nl.Behaviors.EventToBoundCommandBehavior
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRtBehaviors.Behavior`1<Windows.UI.Xaml.FrameworkElement>"));
+                userType.Activator = Activate_17_EventToBoundCommandBehavior;
+                userType.AddMemberName("Command");
+                userType.AddMemberName("CommandParameter");
+                userType.AddMemberName("Event");
+                userType.AddMemberName("PassEventArgsToCommand");
+                xamlType = userType;
+                break;
+
+            case 18:   //  WinRtBehaviors.Behavior`1<Windows.UI.Xaml.FrameworkElement>
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("WinRtBehaviors.Behavior"));
+                userType.AddMemberName("AssociatedObject");
+                xamlType = userType;
+                break;
+
+            case 19:   //  System.Windows.Input.ICommand
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 20:   //  String
+                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 21:   //  Boolean
+                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 22:   //  CamadoWin8.App.Views.HomeView
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_22_HomeView;
+                userType.AddMemberName("ViewModel");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 23:   //  CamadoWin8.App.Views.LogInView
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_23_LogInView;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -282,12 +403,90 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
             var that = (global::CamadoWin8.App.ViewModelLocator)instance;
             return that.HomeViewModel;
         }
-        private object get_2_HomeView_ViewModel(object instance)
+        private object get_2_ViewModelLocator_GraphViewModel(object instance)
+        {
+            var that = (global::CamadoWin8.App.ViewModelLocator)instance;
+            return that.GraphViewModel;
+        }
+        private object get_3_GraphView_ViewModel(object instance)
+        {
+            var that = (global::CamadoWin8.App.Views.GraphView)instance;
+            return that.ViewModel;
+        }
+        private object get_4_Interaction_Behaviors(object instance)
+        {
+            return global::WinRtBehaviors.Interaction.GetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance);
+        }
+        private void set_4_Interaction_Behaviors(object instance, object Value)
+        {
+            global::WinRtBehaviors.Interaction.SetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance, (global::System.Collections.ObjectModel.ObservableCollection<global::WinRtBehaviors.Behavior>)Value);
+        }
+        private object get_5_Behavior_AssociatedObject(object instance)
+        {
+            var that = (global::WinRtBehaviors.Behavior)instance;
+            return that.AssociatedObject;
+        }
+        private void set_5_Behavior_AssociatedObject(object instance, object Value)
+        {
+            var that = (global::WinRtBehaviors.Behavior)instance;
+            that.AssociatedObject = (global::Windows.UI.Xaml.FrameworkElement)Value;
+        }
+        private object get_6_EventToBoundCommandBehavior_Command(object instance)
+        {
+            var that = (global::Win8nl.Behaviors.EventToBoundCommandBehavior)instance;
+            return that.Command;
+        }
+        private void set_6_EventToBoundCommandBehavior_Command(object instance, object Value)
+        {
+            var that = (global::Win8nl.Behaviors.EventToBoundCommandBehavior)instance;
+            that.Command = (global::System.Windows.Input.ICommand)Value;
+        }
+        private object get_7_EventToBoundCommandBehavior_CommandParameter(object instance)
+        {
+            var that = (global::Win8nl.Behaviors.EventToBoundCommandBehavior)instance;
+            return that.CommandParameter;
+        }
+        private void set_7_EventToBoundCommandBehavior_CommandParameter(object instance, object Value)
+        {
+            var that = (global::Win8nl.Behaviors.EventToBoundCommandBehavior)instance;
+            that.CommandParameter = (global::System.Object)Value;
+        }
+        private object get_8_EventToBoundCommandBehavior_Event(object instance)
+        {
+            var that = (global::Win8nl.Behaviors.EventToBoundCommandBehavior)instance;
+            return that.Event;
+        }
+        private void set_8_EventToBoundCommandBehavior_Event(object instance, object Value)
+        {
+            var that = (global::Win8nl.Behaviors.EventToBoundCommandBehavior)instance;
+            that.Event = (global::System.String)Value;
+        }
+        private object get_9_EventToBoundCommandBehavior_PassEventArgsToCommand(object instance)
+        {
+            var that = (global::Win8nl.Behaviors.EventToBoundCommandBehavior)instance;
+            return that.PassEventArgsToCommand;
+        }
+        private void set_9_EventToBoundCommandBehavior_PassEventArgsToCommand(object instance, object Value)
+        {
+            var that = (global::Win8nl.Behaviors.EventToBoundCommandBehavior)instance;
+            that.PassEventArgsToCommand = (global::System.Boolean)Value;
+        }
+        private object get_10_Behavior_AssociatedObject(object instance)
+        {
+            var that = (global::WinRtBehaviors.Behavior<global::Windows.UI.Xaml.FrameworkElement>)instance;
+            return that.AssociatedObject;
+        }
+        private void set_10_Behavior_AssociatedObject(object instance, object Value)
+        {
+            var that = (global::WinRtBehaviors.Behavior<global::Windows.UI.Xaml.FrameworkElement>)instance;
+            that.AssociatedObject = (global::Windows.UI.Xaml.FrameworkElement)Value;
+        }
+        private object get_11_HomeView_ViewModel(object instance)
         {
             var that = (global::CamadoWin8.App.Views.HomeView)instance;
             return that.ViewModel;
         }
-        private object get_3_LogInView_ViewModel(object instance)
+        private object get_12_LogInView_ViewModel(object instance)
         {
             var that = (global::CamadoWin8.App.Views.LogInView)instance;
             return that.ViewModel;
@@ -312,16 +511,75 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
                 xamlMember.Getter = get_1_ViewModelLocator_HomeViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "CamadoWin8.App.ViewModelLocator.GraphViewModel":
+                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CamadoWin8.App.ViewModelLocator");
+                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "GraphViewModel", "CamadoWin8.Contracts.ViewModels.IGraphViewModel");
+                xamlMember.Getter = get_2_ViewModelLocator_GraphViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CamadoWin8.App.Views.GraphView.ViewModel":
+                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CamadoWin8.App.Views.GraphView");
+                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "ViewModel", "CamadoWin8.Contracts.ViewModels.IViewModel");
+                xamlMember.Getter = get_3_GraphView_ViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "WinRtBehaviors.Interaction.Behaviors":
+                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRtBehaviors.Interaction");
+                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "Behaviors", "System.Collections.ObjectModel.ObservableCollection`1<WinRtBehaviors.Behavior>");
+                xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
+                xamlMember.SetIsAttachable();
+                xamlMember.Getter = get_4_Interaction_Behaviors;
+                xamlMember.Setter = set_4_Interaction_Behaviors;
+                break;
+            case "WinRtBehaviors.Behavior.AssociatedObject":
+                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRtBehaviors.Behavior");
+                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.FrameworkElement");
+                xamlMember.Getter = get_5_Behavior_AssociatedObject;
+                xamlMember.Setter = set_5_Behavior_AssociatedObject;
+                break;
+            case "Win8nl.Behaviors.EventToBoundCommandBehavior.Command":
+                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Win8nl.Behaviors.EventToBoundCommandBehavior");
+                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_6_EventToBoundCommandBehavior_Command;
+                xamlMember.Setter = set_6_EventToBoundCommandBehavior_Command;
+                break;
+            case "Win8nl.Behaviors.EventToBoundCommandBehavior.CommandParameter":
+                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Win8nl.Behaviors.EventToBoundCommandBehavior");
+                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_7_EventToBoundCommandBehavior_CommandParameter;
+                xamlMember.Setter = set_7_EventToBoundCommandBehavior_CommandParameter;
+                break;
+            case "Win8nl.Behaviors.EventToBoundCommandBehavior.Event":
+                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Win8nl.Behaviors.EventToBoundCommandBehavior");
+                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "Event", "String");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_8_EventToBoundCommandBehavior_Event;
+                xamlMember.Setter = set_8_EventToBoundCommandBehavior_Event;
+                break;
+            case "Win8nl.Behaviors.EventToBoundCommandBehavior.PassEventArgsToCommand":
+                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Win8nl.Behaviors.EventToBoundCommandBehavior");
+                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "PassEventArgsToCommand", "Boolean");
+                xamlMember.Getter = get_9_EventToBoundCommandBehavior_PassEventArgsToCommand;
+                xamlMember.Setter = set_9_EventToBoundCommandBehavior_PassEventArgsToCommand;
+                break;
+            case "WinRtBehaviors.Behavior`1<Windows.UI.Xaml.FrameworkElement>.AssociatedObject":
+                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("WinRtBehaviors.Behavior`1<Windows.UI.Xaml.FrameworkElement>");
+                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.FrameworkElement");
+                xamlMember.Getter = get_10_Behavior_AssociatedObject;
+                xamlMember.Setter = set_10_Behavior_AssociatedObject;
+                break;
             case "CamadoWin8.App.Views.HomeView.ViewModel":
                 userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CamadoWin8.App.Views.HomeView");
                 xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "ViewModel", "CamadoWin8.Contracts.ViewModels.IViewModel");
-                xamlMember.Getter = get_2_HomeView_ViewModel;
+                xamlMember.Getter = get_11_HomeView_ViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             case "CamadoWin8.App.Views.LogInView.ViewModel":
                 userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CamadoWin8.App.Views.LogInView");
                 xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "ViewModel", "CamadoWin8.Contracts.ViewModels.IViewModel");
-                xamlMember.Getter = get_3_LogInView_ViewModel;
+                xamlMember.Getter = get_12_LogInView_ViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }

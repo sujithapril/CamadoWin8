@@ -114,6 +114,9 @@
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Common\StandardStyles.xbf">
       <PackagePath>Common\StandardStyles.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\GraphView.xbf">
+      <PackagePath>Views\GraphView.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\HomeView.xbf">
       <PackagePath>Views\HomeView.xbf</PackagePath>
     </AppxPackagedFile>
