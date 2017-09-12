@@ -19,7 +19,10 @@ DataContext="{Binding LogInViewModel, Source={StaticResource MainViewModelLocato
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Background="White">
+    <Grid Style="{StaticResource LayoutRootStyle}">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/bg.png" Stretch="UniformToFill"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -30,7 +33,7 @@ DataContext="{Binding LogInViewModel, Source={StaticResource MainViewModelLocato
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Border Background="#2e3137" Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20">
+        <Border Background="Red" Grid.Row="1" Grid.Column="1" CornerRadius="20" Margin="20">
             <StackPanel Margin="20">
                 <TextBlock Text="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
 

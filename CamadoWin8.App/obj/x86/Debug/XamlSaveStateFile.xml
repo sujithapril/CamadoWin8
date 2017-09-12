@@ -1,6 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="d:\projects\camadowin8\camadowin8.app\obj\x86\debug\intermediatexaml\camadowin8.app.exe" HashGuid="a287df29-8e4a-2317-a3b7-82cc4e217a4c" />
+    <LocalAssembly PathName="d:\projects\camadowin8\camadowin8.app\obj\x86\debug\intermediatexaml\camadowin8.app.exe" HashGuid="3a6734e1-22c8-37e9-2264-b4b14ceed9ed" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.contracts\bin\x86\debug\camadowin8.contracts.dll" HashGuid="4a3e7e33-d8c2-657f-e44f-4463b212d87e" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.model\bin\x86\debug\camadowin8.model.dll" HashGuid="dc5f38fa-868e-51e0-8680-559f913e14f8" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.services\bin\x86\debug\camadowin8.services.dll" HashGuid="1b91ab6f-460c-dc99-9635-f72b021cfb2e" />
@@ -9,7 +9,6 @@
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\win8nl.1.0.8\lib\netcore45\galasoft.mvvmlight.extras.win8.dll" HashGuid="8635689a-0317-90e3-1f19-9daa8dd22a46" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\win8nl.1.0.8\lib\netcore45\galasoft.mvvmlight.win8.dll" HashGuid="074e0c73-ccad-7578-2ca5-abb10a561d4b" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\win8nl.1.0.8\lib\netcore45\microsoft.practices.servicelocation.dll" HashGuid="d3a03fc5-3dbc-3307-e1a1-f478f8f2a94d" />
-    <ReferenceAssembly PathName="d:\projects\camadowin8\notificationsextensions\bin\x86\debug\notificationsextensions.winmd" HashGuid="fb35ff80-8c4f-0106-7096-5602727f41b4" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\rx-core.2.1.30214.0\lib\netcore45\system.reactive.core.dll" HashGuid="ea0d9876-0662-e9a8-457e-8b0934becc52" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\rx-interfaces.2.1.30214.0\lib\netcore45\system.reactive.interfaces.dll" HashGuid="f9d5b710-cc1d-673a-5c4a-1c6c500b8bb1" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\rx-linq.2.1.30214.0\lib\netcore45\system.reactive.linq.dll" HashGuid="fb6a772b-9896-682d-52bb-f2640068ac4f" />
