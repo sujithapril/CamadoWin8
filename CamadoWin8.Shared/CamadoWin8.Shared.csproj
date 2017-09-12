@@ -9,8 +9,8 @@
     <ProjectGuid>{5A085948-A9C5-43BE-B564-60C7AC4F6858}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OnTheRoad.Shared</RootNamespace>
-    <AssemblyName>OnTheRoad.Shared</AssemblyName>
+    <RootNamespace>CamadoWin8.Shared</RootNamespace>
+    <AssemblyName>CamadoWin8.Shared</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

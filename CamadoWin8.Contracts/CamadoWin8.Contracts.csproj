@@ -9,8 +9,8 @@
     <ProjectGuid>{DCFF7E2F-0F07-40C6-BB77-FA2A97489C63}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OnTheRoad.Contracts</RootNamespace>
-    <AssemblyName>OnTheRoad.Contracts</AssemblyName>
+    <RootNamespace>CamadoWin8.Contracts</RootNamespace>
+    <AssemblyName>CamadoWin8.Contracts</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -105,6 +105,7 @@
     <Compile Include="Model\IContinentDetail.cs" />
     <Compile Include="Model\IContinentTileInfo.cs" />
     <Compile Include="Model\ITravelDetail.cs" />
+    <Compile Include="Model\IDeviceInfo.cs" />
     <Compile Include="Model\ITravelTileInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ICacheDataService.cs" />
@@ -115,9 +116,12 @@
     <Compile Include="Services\IStateService.cs" />
     <Compile Include="Services\ITileService.cs" />
     <Compile Include="Services\IToastService.cs" />
+    <Compile Include="Services\IDeviceService.cs" />
     <Compile Include="Services\ITravelDataService.cs" />
+    <Compile Include="ViewModels\IHomeViewModel.cs" />
     <Compile Include="ViewModels\ILogInViewModel.cs" />
     <Compile Include="ViewModels\IViewModel.cs" />
+    <Compile Include="View\IHomeView.cs" />
     <Compile Include="View\ILogInView.cs" />
     <Compile Include="View\IView.cs" />
   </ItemGroup>

@@ -54,10 +54,10 @@ namespace CamadoWin8.ViewModel
             }
         }
         public RelayCommand SignInCommand { get; set; }
-        public LogInViewModel(ITravelDataService travelDataService, INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
+        public LogInViewModel( INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
             ITileService tileService, IToastService toastService, IStateService stateService)
         {
-            this.travelDataService = travelDataService;
+            
             this.navigationService = navigationService;
             this.dialogService = dialogService;
             this.shareContractService = shareContractService;
@@ -74,7 +74,9 @@ namespace CamadoWin8.ViewModel
             SignInCommand= new RelayCommand(() =>
             {
 
-            toastService.SendSimpleTextToast(UserName + Password);
+                navigationService.Navigate(PageNames.HomeView, UserName);
+
+                //toastService.SendSimpleTextToast(UserName + Password);
                 
             });
             //GoBack = new RelayCommand(() =>

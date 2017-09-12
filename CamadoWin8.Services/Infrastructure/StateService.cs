@@ -34,8 +34,12 @@ namespace CamadoWin8.Services.Infrastructure
 
         public void LoadState()
         {
-            ViewName = localSettings.Values["viewName"].ToString();
-            Parameter = localSettings.Values["parameter"].ToString();
+            try
+            {
+                ViewName = localSettings.Values["viewName"].ToString();
+                Parameter = localSettings.Values["parameter"].ToString();
+            }
+            catch { }
         }
     }
 }

@@ -26,8 +26,8 @@
       <qualifier name="Configuration" value="" />
       <qualifier name="AlternateForm" value="" />
     </default>
-    <indexer-config type="RESW" convertDotsToSlashes="true" initialPath="OnTheRoad.Repositories" />
-    <indexer-config type="RESJSON" initialPath="OnTheRoad.Repositories" />
+    <indexer-config type="RESW" convertDotsToSlashes="true" initialPath="CamadoWin8.Repositories" />
+    <indexer-config type="RESJSON" initialPath="CamadoWin8.Repositories" />
     <indexer-config type="RESFILES" qualifierDelimiter="." />
   </index>
   <index root="\" startIndexAt="obj\x86\Debug\pri.resfiles">

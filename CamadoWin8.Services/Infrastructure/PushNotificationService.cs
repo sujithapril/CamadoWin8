@@ -18,8 +18,8 @@ namespace CamadoWin8.Services.Infrastructure
                   CreatePushNotificationChannelForApplicationAsync();
             ChannelUri = channelOperation.Uri;
 
-            ServiceClient.ChannelUriService.ChannelUriServiceClient client = new ServiceClient.ChannelUriService.ChannelUriServiceClient();
-            await client.SendChannelUriAsync(ChannelUri.ToString());
+            //ServiceClient.ChannelUriService.ChannelUriServiceClient client = new ServiceClient.ChannelUriService.ChannelUriServiceClient();
+            //await client.SendChannelUriAsync(ChannelUri.ToString());
         }
     }
 }

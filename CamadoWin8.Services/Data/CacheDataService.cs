@@ -1,5 +1,5 @@
 ﻿using CamadoWin8.Contracts.Services;
-using CamadoWin8.Repositories;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +12,7 @@ namespace CamadoWin8.Services.Data
     {
         public void ClearCache()
         {
-            new CacheRepository().ClearCache();
+           // new CacheRepository().ClearCache();
         }
     }
 }

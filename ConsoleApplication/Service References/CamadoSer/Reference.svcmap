@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="dbfdf9f7-ef46-4954-ae29-39aa2b3e8fdb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/CamadoService/CamadoService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CamadoService.wsdl" MetadataType="Wsdl" ID="c47674c6-1976-4a60-af1b-e11cab7cfe68" SourceId="1" SourceUrl="http://localhost/CamadoService/CamadoService.svc?wsdl" />
+    <MetadataFile FileName="CamadoService.xsd" MetadataType="Schema" ID="ab93bfde-1804-49f0-8ba5-451e1899d777" SourceId="1" SourceUrl="http://localhost/CamadoService/CamadoService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CamadoService1.xsd" MetadataType="Schema" ID="a8b7e32c-9387-40b6-a793-c04279e3d0d6" SourceId="1" SourceUrl="http://localhost/CamadoService/CamadoService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CamadoService.disco" MetadataType="Disco" ID="c45addce-a01e-44fb-a158-2e34eb780cbd" SourceId="1" SourceUrl="http://localhost/CamadoService/CamadoService.svc?disco" />
+    <MetadataFile FileName="CamadoService2.xsd" MetadataType="Schema" ID="fa8a39eb-3d97-433f-9c74-8e45bfdd561e" SourceId="1" SourceUrl="http://localhost/CamadoService/CamadoService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

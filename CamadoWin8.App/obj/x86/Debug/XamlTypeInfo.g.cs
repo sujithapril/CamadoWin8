@@ -13,13 +13,13 @@ namespace CamadoWin8.App
 {
     public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
-        private global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        private global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlTypeInfoProvider _provider;
 
         public global::Windows.UI.Xaml.Markup.IXamlType GetXamlType(global::System.Type type)
         {
             if(_provider == null)
             {
-                _provider = new global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlTypeInfoProvider();
+                _provider = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByType(type);
         }
@@ -28,7 +28,7 @@ namespace CamadoWin8.App
         {
             if(_provider == null)
             {
-                _provider = new global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlTypeInfoProvider();
+                _provider = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByName(fullName);
         }
@@ -40,7 +40,7 @@ namespace CamadoWin8.App
     }
 }
 
-namespace OnTheRoad.App.CamadoWin8_App_XamlTypeInfo
+namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
 {
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks", "4.0.0.0")]    
@@ -124,27 +124,31 @@ namespace OnTheRoad.App.CamadoWin8_App_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[9];
+            _typeNameTable = new string[11];
             _typeNameTable[0] = "CamadoWin8.App.ViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "CamadoWin8.Contracts.ViewModels.ILogInViewModel";
-            _typeNameTable[3] = "CamadoWin8.App.Converter.DoNothingConverter";
-            _typeNameTable[4] = "CamadoWin8.App.Converter.ListConverter";
-            _typeNameTable[5] = "CamadoWin8.App.Views.LogInView";
-            _typeNameTable[6] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[7] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[8] = "CamadoWin8.Contracts.ViewModels.IViewModel";
+            _typeNameTable[3] = "CamadoWin8.Contracts.ViewModels.IHomeViewModel";
+            _typeNameTable[4] = "CamadoWin8.App.Converter.DoNothingConverter";
+            _typeNameTable[5] = "CamadoWin8.App.Converter.ListConverter";
+            _typeNameTable[6] = "CamadoWin8.App.Views.HomeView";
+            _typeNameTable[7] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[8] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[9] = "CamadoWin8.Contracts.ViewModels.IViewModel";
+            _typeNameTable[10] = "CamadoWin8.App.Views.LogInView";
 
-            _typeTable = new global::System.Type[9];
+            _typeTable = new global::System.Type[11];
             _typeTable[0] = typeof(global::CamadoWin8.App.ViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::CamadoWin8.Contracts.ViewModels.ILogInViewModel);
-            _typeTable[3] = typeof(global::CamadoWin8.App.Converter.DoNothingConverter);
-            _typeTable[4] = typeof(global::CamadoWin8.App.Converter.ListConverter);
-            _typeTable[5] = typeof(global::CamadoWin8.App.Views.LogInView);
-            _typeTable[6] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[8] = typeof(global::CamadoWin8.Contracts.ViewModels.IViewModel);
+            _typeTable[3] = typeof(global::CamadoWin8.Contracts.ViewModels.IHomeViewModel);
+            _typeTable[4] = typeof(global::CamadoWin8.App.Converter.DoNothingConverter);
+            _typeTable[5] = typeof(global::CamadoWin8.App.Converter.ListConverter);
+            _typeTable[6] = typeof(global::CamadoWin8.App.Views.HomeView);
+            _typeTable[7] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[8] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[9] = typeof(global::CamadoWin8.Contracts.ViewModels.IViewModel);
+            _typeTable[10] = typeof(global::CamadoWin8.App.Views.LogInView);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -180,14 +184,15 @@ namespace OnTheRoad.App.CamadoWin8_App_XamlTypeInfo
         }
 
         private object Activate_0_ViewModelLocator() { return new global::CamadoWin8.App.ViewModelLocator(); }
-        private object Activate_3_DoNothingConverter() { return new global::CamadoWin8.App.Converter.DoNothingConverter(); }
-        private object Activate_4_ListConverter() { return new global::CamadoWin8.App.Converter.ListConverter(); }
-        private object Activate_5_LogInView() { return new global::CamadoWin8.App.Views.LogInView(); }
+        private object Activate_4_DoNothingConverter() { return new global::CamadoWin8.App.Converter.DoNothingConverter(); }
+        private object Activate_5_ListConverter() { return new global::CamadoWin8.App.Converter.ListConverter(); }
+        private object Activate_6_HomeView() { return new global::CamadoWin8.App.Views.HomeView(); }
+        private object Activate_10_LogInView() { return new global::CamadoWin8.App.Views.LogInView(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
-            global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType xamlType = null;
-            global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlUserType userType;
+            global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType xamlType = null;
+            global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType userType;
             string typeName = _typeNameTable[typeIndex];
             global::System.Type type = _typeTable[typeIndex];
 
@@ -195,56 +200,71 @@ namespace OnTheRoad.App.CamadoWin8_App_XamlTypeInfo
             {
 
             case 0:   //  CamadoWin8.App.ViewModelLocator
-                userType = new global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_0_ViewModelLocator;
                 userType.AddMemberName("LogInViewModel");
+                userType.AddMemberName("HomeViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
             case 1:   //  Object
-                xamlType = new global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 2:   //  CamadoWin8.Contracts.ViewModels.ILogInViewModel
-                userType = new global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 3:   //  CamadoWin8.App.Converter.DoNothingConverter
-                userType = new global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_3_DoNothingConverter;
+            case 3:   //  CamadoWin8.Contracts.ViewModels.IHomeViewModel
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 4:   //  CamadoWin8.App.Converter.DoNothingConverter
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_4_DoNothingConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  CamadoWin8.App.Converter.ListConverter
-                userType = new global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_4_ListConverter;
+            case 5:   //  CamadoWin8.App.Converter.ListConverter
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_5_ListConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  CamadoWin8.App.Views.LogInView
-                userType = new global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_LogInView;
+            case 6:   //  CamadoWin8.App.Views.HomeView
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_HomeView;
                 userType.AddMemberName("ViewModel");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+            case 7:   //  Windows.UI.Xaml.Controls.Page
+                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 7:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+            case 8:   //  Windows.UI.Xaml.Controls.UserControl
+                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 8:   //  CamadoWin8.Contracts.ViewModels.IViewModel
-                userType = new global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, null);
+            case 9:   //  CamadoWin8.Contracts.ViewModels.IViewModel
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 10:   //  CamadoWin8.App.Views.LogInView
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_LogInView;
+                userType.AddMemberName("ViewModel");
+                userType.SetIsLocalType();
                 xamlType = userType;
                 break;
             }
@@ -257,7 +277,17 @@ namespace OnTheRoad.App.CamadoWin8_App_XamlTypeInfo
             var that = (global::CamadoWin8.App.ViewModelLocator)instance;
             return that.LogInViewModel;
         }
-        private object get_1_LogInView_ViewModel(object instance)
+        private object get_1_ViewModelLocator_HomeViewModel(object instance)
+        {
+            var that = (global::CamadoWin8.App.ViewModelLocator)instance;
+            return that.HomeViewModel;
+        }
+        private object get_2_HomeView_ViewModel(object instance)
+        {
+            var that = (global::CamadoWin8.App.Views.HomeView)instance;
+            return that.ViewModel;
+        }
+        private object get_3_LogInView_ViewModel(object instance)
         {
             var that = (global::CamadoWin8.App.Views.LogInView)instance;
             return that.ViewModel;
@@ -265,21 +295,33 @@ namespace OnTheRoad.App.CamadoWin8_App_XamlTypeInfo
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
-            global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlMember xamlMember = null;
-            global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlUserType userType;
+            global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember xamlMember = null;
+            global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType userType;
 
             switch (longMemberName)
             {
             case "CamadoWin8.App.ViewModelLocator.LogInViewModel":
-                userType = (global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CamadoWin8.App.ViewModelLocator");
-                xamlMember = new global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "LogInViewModel", "CamadoWin8.Contracts.ViewModels.ILogInViewModel");
+                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CamadoWin8.App.ViewModelLocator");
+                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "LogInViewModel", "CamadoWin8.Contracts.ViewModels.ILogInViewModel");
                 xamlMember.Getter = get_0_ViewModelLocator_LogInViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "CamadoWin8.App.ViewModelLocator.HomeViewModel":
+                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CamadoWin8.App.ViewModelLocator");
+                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "HomeViewModel", "CamadoWin8.Contracts.ViewModels.IHomeViewModel");
+                xamlMember.Getter = get_1_ViewModelLocator_HomeViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
+            case "CamadoWin8.App.Views.HomeView.ViewModel":
+                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CamadoWin8.App.Views.HomeView");
+                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "ViewModel", "CamadoWin8.Contracts.ViewModels.IViewModel");
+                xamlMember.Getter = get_2_HomeView_ViewModel;
+                xamlMember.SetIsReadOnly();
+                break;
             case "CamadoWin8.App.Views.LogInView.ViewModel":
-                userType = (global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CamadoWin8.App.Views.LogInView");
-                xamlMember = new global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "ViewModel", "CamadoWin8.Contracts.ViewModels.IViewModel");
-                xamlMember.Getter = get_1_LogInView_ViewModel;
+                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("CamadoWin8.App.Views.LogInView");
+                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "ViewModel", "CamadoWin8.Contracts.ViewModels.IViewModel");
+                xamlMember.Getter = get_3_LogInView_ViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
             }
@@ -338,9 +380,9 @@ namespace OnTheRoad.App.CamadoWin8_App_XamlTypeInfo
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks", "4.0.0.0")]    
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    internal class XamlUserType : global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType
+    internal class XamlUserType : global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType
     {
-        global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlTypeInfoProvider _provider;
         global::Windows.UI.Xaml.Markup.IXamlType _baseType;
         bool _isArray;
         bool _isMarkupExtension;
@@ -354,7 +396,7 @@ namespace OnTheRoad.App.CamadoWin8_App_XamlTypeInfo
         global::System.Collections.Generic.Dictionary<string, string> _memberNames;
         global::System.Collections.Generic.Dictionary<string, object> _enumValues;
 
-        public XamlUserType(global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
+        public XamlUserType(global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
             :base(fullName, fullType)
         {
             _provider = provider;
@@ -547,7 +589,7 @@ namespace OnTheRoad.App.CamadoWin8_App_XamlTypeInfo
     [System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlMember : global::Windows.UI.Xaml.Markup.IXamlMember
     {
-        global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlTypeInfoProvider _provider;
         string _name;
         bool _isAttachable;
         bool _isDependencyProperty;
@@ -556,7 +598,7 @@ namespace OnTheRoad.App.CamadoWin8_App_XamlTypeInfo
         string _typeName;
         string _targetTypeName;
 
-        public XamlMember(global::OnTheRoad.App.CamadoWin8_App_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
+        public XamlMember(global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
         {
             _name = name;
             _typeName = typeName;

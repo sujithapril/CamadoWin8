@@ -8,7 +8,7 @@
     <TargetOsDescription>Windows 8.1</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>17064GillCleeren.CamadoWin8App</PackageIdentityName>
+    <PackageIdentityName>Cabot.CamadoWin8App</PackageIdentityName>
     <PackageIdentityPublisher>CN=F171D774-BAB2-4347-98DD-59A019635623</PackageIdentityPublisher>
     <IntermediateOutputPath>D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
@@ -22,8 +22,23 @@
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\OnTheRoad.App.exe">
-      <PackagePath>OnTheRoad.App.exe</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\CamadoWin8.App.exe">
+      <PackagePath>CamadoWin8.App.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\CamadoWin8.Contracts.dll">
+      <PackagePath>CamadoWin8.Contracts.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Model.dll">
+      <PackagePath>CamadoWin8.Model.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\CamadoWin8.Services.dll">
+      <PackagePath>CamadoWin8.Services.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\CamadoWin8.Shared.dll">
+      <PackagePath>CamadoWin8.Shared.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\CamadoWin8.ViewModel.dll">
+      <PackagePath>CamadoWin8.ViewModel.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\GalaSoft.MvvmLight.Extras.Win8.dll">
       <PackagePath>GalaSoft.MvvmLight.Extras.Win8.dll</PackagePath>
@@ -33,21 +48,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\OnTheRoad.Contracts.dll">
-      <PackagePath>OnTheRoad.Contracts.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\OnTheRoad.Model.dll">
-      <PackagePath>OnTheRoad.Model.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\OnTheRoad.Services.dll">
-      <PackagePath>OnTheRoad.Services.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\OnTheRoad.Shared.dll">
-      <PackagePath>OnTheRoad.Shared.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\OnTheRoad.ViewModel.dll">
-      <PackagePath>OnTheRoad.ViewModel.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Rx-Core.2.1.30214.0\lib\NetCore45\System.Reactive.Core.dll">
       <PackagePath>System.Reactive.Core.dll</PackagePath>
@@ -73,11 +73,8 @@
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\WinRtBehaviors.1.0.3\lib\winrt45\WinRtBehaviors.dll">
       <PackagePath>WinRtBehaviors.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\OnTheRoad.ServiceClient.dll">
-      <PackagePath>OnTheRoad.ServiceClient.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\OnTheRoad.Repositories.dll">
-      <PackagePath>OnTheRoad.Repositories.dll</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\metroioc.dll">
       <PackagePath>metroioc.dll</PackagePath>
@@ -108,14 +105,17 @@
       <PackagePath>Assets\WideLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\OnTheRoad.App.xr.xml">
-      <PackagePath>OnTheRoad.App.xr.xml</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\CamadoWin8.App.xr.xml">
+      <PackagePath>CamadoWin8.App.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Common\StandardStyles.xbf">
       <PackagePath>Common\StandardStyles.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\HomeView.xbf">
+      <PackagePath>Views\HomeView.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\LogInView.xbf">
       <PackagePath>Views\LogInView.xbf</PackagePath>

@@ -48,6 +48,8 @@ namespace CamadoWin8.Services.Infrastructure
                 
                 case PageNames.LogInView:
                     Navigate<ILogInView>(parameter); break;
+                case PageNames.HomeView:
+                    Navigate<IHomeView>(parameter); break;
             }
         }
 

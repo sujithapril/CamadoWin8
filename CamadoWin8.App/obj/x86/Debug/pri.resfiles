@@ -1,10 +1,8 @@
-D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\OnTheRoad.Contracts.pri
-D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\OnTheRoad.Model.pri
-D:\Projects\CamadoWin8\CamadoWin8.Repositories\bin\x86\Debug\OnTheRoad.Repositories.pri
-D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\bin\x86\Debug\OnTheRoad.ServiceClient.pri
-D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\OnTheRoad.Services.pri
-D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\OnTheRoad.Shared.pri
-D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\OnTheRoad.ViewModel.pri
+D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\CamadoWin8.Contracts.pri
+D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Model.pri
+D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\CamadoWin8.Services.pri
+D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\CamadoWin8.Shared.pri
+D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\CamadoWin8.ViewModel.pri
 D:\Projects\CamadoWin8\NotificationsExtensions\bin\x86\Debug\NotificationsExtensions.pri
 D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\System.Reactive.Core.pri
 D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\System.Reactive.Linq.pri

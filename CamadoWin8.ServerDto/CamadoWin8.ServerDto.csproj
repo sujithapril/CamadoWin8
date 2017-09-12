@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Continent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Device.cs" />
     <Compile Include="Travel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,9 +1,8 @@
-D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\OnTheRoad.Contracts.pri
-D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\OnTheRoad.Model.pri
-D:\Projects\CamadoWin8\CamadoWin8.Repositories\bin\x86\Debug\OnTheRoad.Repositories.pri
-D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\bin\x86\Debug\OnTheRoad.ServiceClient.pri
-D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\OnTheRoad.Shared.pri
-D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\OnTheRoad.ViewModel.pri
+D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\CamadoWin8.Contracts.pri
+D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Model.pri
+D:\Projects\CamadoWin8\CamadoWin8.Repositories\bin\x86\Debug\CamadoWin8.Repositories.pri
+D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\CamadoWin8.Shared.pri
+D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\CamadoWin8.ViewModel.pri
 D:\Projects\CamadoWin8\CamadoWin8.Tests\obj\x86\Debug\Microsoft.VisualStudio.TestPlatform.Common.pri
 D:\Projects\CamadoWin8\CamadoWin8.Tests\obj\x86\Debug\Microsoft.VisualStudio.TestPlatform.Core.pri
 D:\Projects\CamadoWin8\CamadoWin8.Tests\obj\x86\Debug\Microsoft.VisualStudio.TestPlatform.Extensions.MSAppContainerAdapter.pri

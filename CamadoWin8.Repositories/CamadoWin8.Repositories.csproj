@@ -9,8 +9,8 @@
     <ProjectGuid>{36624887-084D-44A3-9EFD-9EEF83C78964}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OnTheRoad.Repositories</RootNamespace>
-    <AssemblyName>OnTheRoad.Repositories</AssemblyName>
+    <RootNamespace>CamadoWin8.Repositories</RootNamespace>
+    <AssemblyName>CamadoWin8.Repositories</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -115,10 +115,6 @@
     <ProjectReference Include="..\CamadoWin8.Model\CamadoWin8.Model.csproj">
       <Project>{3be1e94a-019d-4af0-b3c6-73ca732d30d8}</Project>
       <Name>CamadoWin8.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CamadoWin8.ServiceClient\CamadoWin8.ServiceClient.csproj">
-      <Project>{9ae6a34f-ddaf-4c8b-9a5f-8e1b341cc173}</Project>
-      <Name>CamadoWin8.ServiceClient</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">

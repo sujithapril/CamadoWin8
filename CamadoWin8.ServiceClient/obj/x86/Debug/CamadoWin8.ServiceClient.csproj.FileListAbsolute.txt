@@ -1,8 +1,3 @@
-D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\bin\x86\Debug\OnTheRoad.ServiceClient.dll
-D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\bin\x86\Debug\OnTheRoad.ServiceClient.pdb
-D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\bin\x86\Debug\OnTheRoad.ServiceClient.pri
-D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\obj\x86\Debug\OnTheRoad.ServiceClient.dll
-D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\obj\x86\Debug\OnTheRoad.ServiceClient.pdb
 D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\obj\x86\Debug\priconfig.xml
 D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\obj\x86\Debug\priconfig.xml.intermediate
 D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\obj\x86\Debug\layout.resfiles
@@ -14,3 +9,8 @@ D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\obj\x86\Debug\pri.resfiles.inter
 D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\obj\x86\Debug\qualifiers.txt
 D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\obj\x86\Debug\qualifiers.txt.intermediate
 D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\bin\x86\Debug\CamadoWin8.ServiceClient.dll
+D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\bin\x86\Debug\CamadoWin8.ServiceClient.pdb
+D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\bin\x86\Debug\CamadoWin8.ServiceClient.pri
+D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\obj\x86\Debug\CamadoWin8.ServiceClient.dll
+D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\obj\x86\Debug\CamadoWin8.ServiceClient.pdb

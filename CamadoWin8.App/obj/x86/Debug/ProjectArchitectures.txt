@@ -6,8 +6,6 @@ D:\Projects\CamadoWin8\CamadoWin8.Contracts\CamadoWin8.Contracts.csproj;x86
 D:\Projects\CamadoWin8\CamadoWin8.Model\CamadoWin8.Model.csproj;x86
 D:\Projects\CamadoWin8\CamadoWin8.Model\CamadoWin8.Model.csproj;x86
 D:\Projects\CamadoWin8\CamadoWin8.Model\CamadoWin8.Model.csproj;x86
-D:\Projects\CamadoWin8\CamadoWin8.Repositories\CamadoWin8.Repositories.csproj;x86
-D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\CamadoWin8.ServiceClient.csproj;x86
 D:\Projects\CamadoWin8\CamadoWin8.Services\CamadoWin8.Services.csproj;x86
 D:\Projects\CamadoWin8\CamadoWin8.Shared\CamadoWin8.Shared.csproj;x86
 D:\Projects\CamadoWin8\CamadoWin8.Shared\CamadoWin8.Shared.csproj;x86

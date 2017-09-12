@@ -14,7 +14,7 @@ namespace CamadoWin8.Repositories
 {
     public class ContinentRepository
     {
-        private string baseUri = "http://localhost:35756/CamadoWin8TravelService.svc/";
+        private string baseUri = "http://localhost:35756/OnTheRoadTravelService.svc/";
         private string PopularTravelsUriTemplate = "PopularTravels";
         private string TravelsPerContinentUriTemplate = "TravelsPerContinent/{0}";
         private string TravelDetailsUriTemplate = "Travels/{0}";
@@ -241,24 +241,7 @@ namespace CamadoWin8.Repositories
 
         public async Task<List<ITravelTileInfo>> GetInfiniteTravelData()
         {
-            ServiceClient.InfiniteCamadoWin8Service.InfiniteCamadoWin8ServiceClient client = 
-                new ServiceClient.InfiniteCamadoWin8Service.InfiniteCamadoWin8ServiceClient();
-
-            var result = await client.GetTravelsAsync();
-            List<ITravelTileInfo> travels = new List<ITravelTileInfo>();
-
-            foreach (var item in result)
-            {
-                ITravelTileInfo travel = new TravelTileInfo()
-                        {
-                            ContinentId = item.ContinentId,
-                            ImageUrl = item.ImageUrl,
-                            TravelId = item.TravelId,
-                            TravelName = item.TravelName
-                        };
-                travels.Add(travel);
-            }
-            return travels;
+            throw new NotImplementedException();
         }
 
 

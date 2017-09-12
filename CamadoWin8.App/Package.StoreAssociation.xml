@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <StoreAssociation xmlns="http://schemas.microsoft.com/appx/2010/storeassociation">
   <Publisher>CN=F171D774-BAB2-4347-98DD-59A019635623</Publisher>
-  <NamespacePrefix>17064GillCleeren</NamespacePrefix>
-  <PublisherDisplayName>Gill Cleeren</PublisherDisplayName>
+  <NamespacePrefix>Cabot</NamespacePrefix>
+  <PublisherDisplayName>Cabot</PublisherDisplayName>
   <GeneratePackageHash>http://www.w3.org/2001/04/xmlenc#sha256</GeneratePackageHash>
   <SupportedLocales>
     <Language Code="af" InMinimumRequirementSet="false" />
@@ -337,19 +337,19 @@
     <Language Code="zu-za" InMinimumRequirementSet="false" />
   </SupportedLocales>
   <ProductReservedInfo>
-    <MainPackageIdentityName>17064GillCleeren.CamadoWin8App</MainPackageIdentityName>
+    <MainPackageIdentityName>Cabot.CamadoWin8App</MainPackageIdentityName>
     <ReservedNames>
       <ReservedName>CamadoWin8App</ReservedName>
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
-    <MainPackageIdentityName>17064GillCleeren.CommunityDay</MainPackageIdentityName>
-    <MainPackageIdentityName>17064GillCleeren.ContosoCookbookApp</MainPackageIdentityName>
-    <MainPackageIdentityName>17064GillCleeren.GillToDoList</MainPackageIdentityName>
-    <MainPackageIdentityName>17064GillCleeren.SilverlightShowLiveSDKTest</MainPackageIdentityName>
-    <MainPackageIdentityName>17064GillCleeren.SnailMail</MainPackageIdentityName>
-    <MainPackageIdentityName>17064GillCleeren.Snowball</MainPackageIdentityName>
-    <MainPackageIdentityName>17064GillCleeren.Visug</MainPackageIdentityName>
+    <MainPackageIdentityName>Cabot.CommunityDay</MainPackageIdentityName>
+    <MainPackageIdentityName>Cabot.ContosoCookbookApp</MainPackageIdentityName>
+    <MainPackageIdentityName>Cabot.GillToDoList</MainPackageIdentityName>
+    <MainPackageIdentityName>Cabot.SilverlightShowLiveSDKTest</MainPackageIdentityName>
+    <MainPackageIdentityName>Cabot.SnailMail</MainPackageIdentityName>
+    <MainPackageIdentityName>Cabot.Snowball</MainPackageIdentityName>
+    <MainPackageIdentityName>Cabot.Visug</MainPackageIdentityName>
   </AccountPackageIdentityNames>
   <PackageInfoList LandingUrl="https://appdev.microsoft.com:443/StorePortals/Developer/Catalog/ReleaseAnchor/ad845081-b456-4e38-9ac4-7b05e7114369" />
 </StoreAssociation>

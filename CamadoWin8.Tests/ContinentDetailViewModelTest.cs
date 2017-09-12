@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
-using CamadoWin8.Repositories;
+//using CamadoWin8.Repositories;
 using System.Threading.Tasks;
 using CamadoWin8.Shared;
 using CamadoWin8.Contracts.Services;

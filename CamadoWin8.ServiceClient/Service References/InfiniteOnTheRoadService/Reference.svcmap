@@ -21,14 +21,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:35756/InfiniteCamadoWin8Service.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:35756/InfiniteOnTheRoadService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="InfiniteCamadoWin8Service.wsdl" MetadataType="Wsdl" ID="6b4688cf-5c69-4d81-9bb5-8382b373863e" SourceId="1" SourceUrl="http://localhost:35756/InfiniteCamadoWin8Service.svc?wsdl" />
-    <MetadataFile FileName="InfiniteCamadoWin8Service1.wsdl" MetadataType="Wsdl" ID="f7140931-d38c-4b00-9e98-2fdf88178e80" SourceId="1" SourceUrl="http://localhost:35756/InfiniteCamadoWin8Service.svc?wsdl=wsdl0" />
-    <MetadataFile FileName="InfiniteCamadoWin8Service.disco" MetadataType="Disco" ID="56467196-fa3b-4905-872c-5203bda3b375" SourceId="1" SourceUrl="http://localhost:35756/InfiniteCamadoWin8Service.svc?disco" />
-    <MetadataFile FileName="InfiniteCamadoWin8Service.xsd" MetadataType="Schema" ID="df50c464-0b7d-45a4-927d-95b8717caff5" SourceId="1" SourceUrl="http://localhost:35756/InfiniteCamadoWin8Service.svc?xsd=xsd0" />
-    <MetadataFile FileName="InfiniteCamadoWin8Service1.xsd" MetadataType="Schema" ID="0b00626a-8f71-477e-a7eb-567bd70a6f57" SourceId="1" SourceUrl="http://localhost:35756/InfiniteCamadoWin8Service.svc?xsd=xsd1" />
+    <MetadataFile FileName="InfiniteOnTheRoadService.wsdl" MetadataType="Wsdl" ID="6b4688cf-5c69-4d81-9bb5-8382b373863e" SourceId="1" SourceUrl="http://localhost:35756/InfiniteOnTheRoadService.svc?wsdl" />
+    <MetadataFile FileName="InfiniteOnTheRoadService1.wsdl" MetadataType="Wsdl" ID="f7140931-d38c-4b00-9e98-2fdf88178e80" SourceId="1" SourceUrl="http://localhost:35756/InfiniteOnTheRoadService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="InfiniteOnTheRoadService.disco" MetadataType="Disco" ID="56467196-fa3b-4905-872c-5203bda3b375" SourceId="1" SourceUrl="http://localhost:35756/InfiniteOnTheRoadService.svc?disco" />
+    <MetadataFile FileName="InfiniteOnTheRoadService.xsd" MetadataType="Schema" ID="df50c464-0b7d-45a4-927d-95b8717caff5" SourceId="1" SourceUrl="http://localhost:35756/InfiniteOnTheRoadService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InfiniteOnTheRoadService1.xsd" MetadataType="Schema" ID="0b00626a-8f71-477e-a7eb-567bd70a6f57" SourceId="1" SourceUrl="http://localhost:35756/InfiniteOnTheRoadService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

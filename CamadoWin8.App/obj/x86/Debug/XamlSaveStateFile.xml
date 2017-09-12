@@ -1,14 +1,14 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="d:\projects\camadowin8\camadowin8.app\obj\x86\debug\intermediatexaml\ontheroad.app.exe" HashGuid="b5a08801-c020-da9e-1f4d-846a75bed1c5" />
+    <LocalAssembly PathName="d:\projects\camadowin8\camadowin8.app\obj\x86\debug\intermediatexaml\camadowin8.app.exe" HashGuid="c627daba-f42a-4544-f539-4e8d59dfb1f4" />
+    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.contracts\bin\x86\debug\camadowin8.contracts.dll" HashGuid="8a3321e3-1866-1a26-bd3c-220105df1338" />
+    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.model\bin\x86\debug\camadowin8.model.dll" HashGuid="25ee0fc7-c8c2-d07f-37d9-2a821b3fc9d1" />
+    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.services\bin\x86\debug\camadowin8.services.dll" HashGuid="bfd983fd-4d18-6aae-9633-5d1a7fe6afe4" />
+    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.shared\bin\x86\debug\camadowin8.shared.dll" HashGuid="d868c950-5a80-66e2-dd99-b202529f02ff" />
+    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.viewmodel\bin\x86\debug\camadowin8.viewmodel.dll" HashGuid="1cf9f50d-5ff2-73c2-4db3-002ee65f7b1c" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\win8nl.1.0.8\lib\netcore45\galasoft.mvvmlight.extras.win8.dll" HashGuid="8635689a-0317-90e3-1f19-9daa8dd22a46" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\win8nl.1.0.8\lib\netcore45\galasoft.mvvmlight.win8.dll" HashGuid="074e0c73-ccad-7578-2ca5-abb10a561d4b" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\win8nl.1.0.8\lib\netcore45\microsoft.practices.servicelocation.dll" HashGuid="d3a03fc5-3dbc-3307-e1a1-f478f8f2a94d" />
-    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.contracts\bin\x86\debug\ontheroad.contracts.dll" HashGuid="8a2f469b-0182-70b3-3f1d-459b5465b9ac" />
-    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.model\bin\x86\debug\ontheroad.model.dll" HashGuid="672429c5-21c2-8bcf-472b-70407ed27dd0" />
-    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.services\bin\x86\debug\ontheroad.services.dll" HashGuid="473e3eea-0330-dd96-bbd9-f69e0d086948" />
-    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.shared\bin\x86\debug\ontheroad.shared.dll" HashGuid="953ac2d9-bf8f-b370-c9c5-4b8f955620ba" />
-    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.viewmodel\bin\x86\debug\ontheroad.viewmodel.dll" HashGuid="4e53e1ca-4729-eea5-d887-be736113020d" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\rx-core.2.1.30214.0\lib\netcore45\system.reactive.core.dll" HashGuid="ea0d9876-0662-e9a8-457e-8b0934becc52" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\rx-interfaces.2.1.30214.0\lib\netcore45\system.reactive.interfaces.dll" HashGuid="f9d5b710-cc1d-673a-5c4a-1c6c500b8bb1" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\rx-linq.2.1.30214.0\lib\netcore45\system.reactive.linq.dll" HashGuid="fb6a772b-9896-682d-52bb-f2640068ac4f" />

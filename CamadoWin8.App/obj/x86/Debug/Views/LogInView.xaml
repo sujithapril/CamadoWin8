@@ -19,7 +19,7 @@ DataContext="{Binding LogInViewModel, Source={StaticResource MainViewModelLocato
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Background="Gray">
+    <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>

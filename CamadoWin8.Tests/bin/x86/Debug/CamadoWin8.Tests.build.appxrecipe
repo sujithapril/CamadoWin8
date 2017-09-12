@@ -22,47 +22,41 @@
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\OnTheRoad.Tests.dll">
-      <PackagePath>OnTheRoad.Tests.dll</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Tests.dll">
+      <PackagePath>CamadoWin8.Tests.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\OnTheRoad.Contracts.dll">
-      <PackagePath>OnTheRoad.Contracts.dll</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\CamadoWin8.Contracts.dll">
+      <PackagePath>CamadoWin8.Contracts.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\OnTheRoad.Model.dll">
-      <PackagePath>OnTheRoad.Model.dll</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Model.dll">
+      <PackagePath>CamadoWin8.Model.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Repositories\bin\x86\Debug\OnTheRoad.Repositories.dll">
-      <PackagePath>OnTheRoad.Repositories.dll</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Repositories\bin\x86\Debug\CamadoWin8.Repositories.dll">
+      <PackagePath>CamadoWin8.Repositories.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\bin\x86\Debug\OnTheRoad.ServiceClient.dll">
-      <PackagePath>OnTheRoad.ServiceClient.dll</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\CamadoWin8.Shared.dll">
+      <PackagePath>CamadoWin8.Shared.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\OnTheRoad.Shared.dll">
-      <PackagePath>OnTheRoad.Shared.dll</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\CamadoWin8.ViewModel.dll">
+      <PackagePath>CamadoWin8.ViewModel.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\OnTheRoad.ViewModel.dll">
-      <PackagePath>OnTheRoad.ViewModel.dll</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\CamadoWin8.Tests.pdb">
+      <PackagePath>CamadoWin8.Tests.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Tests\bin\x86\Debug\OnTheRoad.Tests.pdb">
-      <PackagePath>OnTheRoad.Tests.pdb</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\CamadoWin8.Contracts.pdb">
+      <PackagePath>CamadoWin8.Contracts.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\OnTheRoad.Contracts.pdb">
-      <PackagePath>OnTheRoad.Contracts.pdb</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Model.pdb">
+      <PackagePath>CamadoWin8.Model.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\OnTheRoad.Model.pdb">
-      <PackagePath>OnTheRoad.Model.pdb</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Repositories\bin\x86\Debug\CamadoWin8.Repositories.pdb">
+      <PackagePath>CamadoWin8.Repositories.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Repositories\bin\x86\Debug\OnTheRoad.Repositories.pdb">
-      <PackagePath>OnTheRoad.Repositories.pdb</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\CamadoWin8.Shared.pdb">
+      <PackagePath>CamadoWin8.Shared.pdb</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ServiceClient\bin\x86\Debug\OnTheRoad.ServiceClient.pdb">
-      <PackagePath>OnTheRoad.ServiceClient.pdb</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\OnTheRoad.Shared.pdb">
-      <PackagePath>OnTheRoad.Shared.pdb</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\OnTheRoad.ViewModel.pdb">
-      <PackagePath>OnTheRoad.ViewModel.pdb</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\CamadoWin8.ViewModel.pdb">
+      <PackagePath>CamadoWin8.ViewModel.pdb</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\MSTestFramework\14.0\References\CommonConfiguration\neutral\Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AppContainer.dll">
       <PackagePath>Microsoft.VisualStudio.TestPlatform.UnitTestFramework.AppContainer.dll</PackagePath>

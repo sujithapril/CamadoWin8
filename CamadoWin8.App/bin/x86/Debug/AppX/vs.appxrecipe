@@ -8,7 +8,7 @@
     <TargetOsDescription>Windows 8.1</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>17064GillCleeren.CamadoWin8App</PackageIdentityName>
+    <PackageIdentityName>Cabot.CamadoWin8App</PackageIdentityName>
     <PackageIdentityPublisher>CN=F171D774-BAB2-4347-98DD-59A019635623</PackageIdentityPublisher>
     <IntermediateOutputPath>D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
@@ -16,10 +16,10 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>8F1E01BC537114189EBF29F7AB598A4F41F37098DC002FCA53C49FC5FDF80B27</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>17064GillCleeren.CamadoWin8App_1.1.0.0_x86__ydshsff7j2rnj</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>17064GillCleeren.CamadoWin8App_ydshsff7j2rnj!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>17064GillCleeren.CamadoWin8App</RegisteredPackageID>
+    <RegisteredManifestChecksum>4816A2517EAC3B07BE7A8EA08CE06BDED6AFC413BA7920303B6DEBC8E19FC7A2</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>Cabot.CamadoWin8App_1.1.0.0_x86__ydshsff7j2rnj</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>Cabot.CamadoWin8App_ydshsff7j2rnj!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>Cabot.CamadoWin8App</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=F171D774-BAB2-4347-98DD-59A019635623</RegisteredPackagePublisher>
     <RegisteredVersion>1.1.0.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
@@ -28,13 +28,33 @@
     <AppXManifest Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-09-11T10:26:41.828</Modified>
+      <Modified>2017-09-12T09:47:36.714</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\OnTheRoad.App.exe">
-      <PackagePath>OnTheRoad.App.exe</PackagePath>
-      <Modified>2017-09-11T10:26:30.362</Modified>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\CamadoWin8.App.exe">
+      <PackagePath>CamadoWin8.App.exe</PackagePath>
+      <Modified>2017-09-12T09:47:23.739</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\CamadoWin8.Contracts.dll">
+      <PackagePath>CamadoWin8.Contracts.dll</PackagePath>
+      <Modified>2017-09-12T07:26:37.429</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Model.dll">
+      <PackagePath>CamadoWin8.Model.dll</PackagePath>
+      <Modified>2017-09-12T08:34:45.560</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\CamadoWin8.Services.dll">
+      <PackagePath>CamadoWin8.Services.dll</PackagePath>
+      <Modified>2017-09-12T08:40:18.082</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\CamadoWin8.Shared.dll">
+      <PackagePath>CamadoWin8.Shared.dll</PackagePath>
+      <Modified>2017-09-11T17:43:36.625</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\CamadoWin8.ViewModel.dll">
+      <PackagePath>CamadoWin8.ViewModel.dll</PackagePath>
+      <Modified>2017-09-12T09:16:33.577</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\GalaSoft.MvvmLight.Extras.Win8.dll">
       <PackagePath>GalaSoft.MvvmLight.Extras.Win8.dll</PackagePath>
@@ -47,26 +67,6 @@
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
       <Modified>2013-08-11T04:52:40.000</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\OnTheRoad.Contracts.dll">
-      <PackagePath>OnTheRoad.Contracts.dll</PackagePath>
-      <Modified>2017-09-11T07:24:55.939</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\OnTheRoad.Model.dll">
-      <PackagePath>OnTheRoad.Model.dll</PackagePath>
-      <Modified>2017-09-11T07:24:57.425</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\OnTheRoad.Services.dll">
-      <PackagePath>OnTheRoad.Services.dll</PackagePath>
-      <Modified>2017-09-11T07:26:28.860</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\OnTheRoad.Shared.dll">
-      <PackagePath>OnTheRoad.Shared.dll</PackagePath>
-      <Modified>2017-09-07T11:52:24.812</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\OnTheRoad.ViewModel.dll">
-      <PackagePath>OnTheRoad.ViewModel.dll</PackagePath>
-      <Modified>2017-09-11T10:23:17.039</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Rx-Core.2.1.30214.0\lib\NetCore45\System.Reactive.Core.dll">
       <PackagePath>System.Reactive.Core.dll</PackagePath>
@@ -100,13 +100,9 @@
       <PackagePath>WinRtBehaviors.dll</PackagePath>
       <Modified>2013-08-11T04:52:38.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\OnTheRoad.ServiceClient.dll">
-      <PackagePath>OnTheRoad.ServiceClient.dll</PackagePath>
-      <Modified>2017-09-07T11:52:25.261</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\OnTheRoad.Repositories.dll">
-      <PackagePath>OnTheRoad.Repositories.dll</PackagePath>
-      <Modified>2017-09-11T07:24:59.591</Modified>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2017-06-18T08:27:10.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\metroioc.dll">
       <PackagePath>metroioc.dll</PackagePath>
@@ -114,7 +110,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\NotificationsExtensions.winmd">
       <PackagePath>NotificationsExtensions.winmd</PackagePath>
-      <Modified>2017-09-07T11:52:25.986</Modified>
+      <Modified>2017-09-11T12:28:46.392</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\bg.jpg">
       <PackagePath>Assets\bg.jpg</PackagePath>
@@ -145,26 +141,30 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-08-11T13:34:52.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\OnTheRoad.App.xr.xml">
-      <PackagePath>OnTheRoad.App.xr.xml</PackagePath>
-      <Modified>2017-09-11T10:26:29.966</Modified>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\CamadoWin8.App.xr.xml">
+      <PackagePath>CamadoWin8.App.xr.xml</PackagePath>
+      <Modified>2017-09-12T09:19:51.295</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2017-09-07T12:06:15.298</Modified>
+      <Modified>2017-09-11T12:28:53.791</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Common\StandardStyles.xbf">
       <PackagePath>Common\StandardStyles.xbf</PackagePath>
-      <Modified>2017-09-11T10:22:56.374</Modified>
+      <Modified>2017-09-11T12:28:53.793</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\HomeView.xbf">
+      <PackagePath>Views\HomeView.xbf</PackagePath>
+      <Modified>2017-09-12T09:47:23.203</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\LogInView.xbf">
       <PackagePath>Views\LogInView.xbf</PackagePath>
-      <Modified>2017-09-11T10:26:29.993</Modified>
+      <Modified>2017-09-12T09:47:23.203</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-09-11T10:26:32.462</Modified>
+      <Modified>2017-09-12T09:26:09.099</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -5,6 +5,7 @@ Assets\SplashScreen.png
 Assets\StoreLogo.png
 Assets\WideLogo.png
 App.xbf
+CamadoWin8.App.xr.xml
 Common\StandardStyles.xbf
-OnTheRoad.App.xr.xml
+Views\HomeView.xbf
 Views\LogInView.xbf

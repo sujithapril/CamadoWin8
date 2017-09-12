@@ -9,8 +9,8 @@
     <ProjectGuid>{4C3A4148-43AE-4FD1-825C-A96FA4871381}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OnTheRoad.Services</RootNamespace>
-    <AssemblyName>OnTheRoad.Services</AssemblyName>
+    <RootNamespace>CamadoWin8.Services</RootNamespace>
+    <AssemblyName>CamadoWin8.Services</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -107,13 +107,9 @@
       <Project>{dcff7e2f-0f07-40c6-bb77-fa2a97489c63}</Project>
       <Name>CamadoWin8.Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CamadoWin8.Repositories\CamadoWin8.Repositories.csproj">
-      <Project>{36624887-084d-44a3-9efd-9eef83c78964}</Project>
-      <Name>CamadoWin8.Repositories</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CamadoWin8.ServiceClient\CamadoWin8.ServiceClient.csproj">
-      <Project>{9ae6a34f-ddaf-4c8b-9a5f-8e1b341cc173}</Project>
-      <Name>CamadoWin8.ServiceClient</Name>
+    <ProjectReference Include="..\CamadoWin8.Model\CamadoWin8.Model.csproj">
+      <Project>{3be1e94a-019d-4af0-b3c6-73ca732d30d8}</Project>
+      <Name>CamadoWin8.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\CamadoWin8.Shared\CamadoWin8.Shared.csproj">
       <Project>{5a085948-a9c5-43be-b564-60c7ac4f6858}</Project>
@@ -126,7 +122,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\CacheDataService.cs" />
-    <Compile Include="Data\TravelDataService.cs" />
+    <Compile Include="Data\DeviceService.cs" />
     <Compile Include="Infrastructure\DialogService.cs" />
     <Compile Include="Infrastructure\NavigationService.cs" />
     <Compile Include="Infrastructure\PushNotificationService.cs" />
@@ -135,6 +131,15 @@
     <Compile Include="Infrastructure\TileService.cs" />
     <Compile Include="Infrastructure\ToastService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
