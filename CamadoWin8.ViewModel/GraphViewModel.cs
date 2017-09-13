@@ -97,9 +97,10 @@ namespace CamadoWin8.ViewModel
             // SelectedTravelDetail = await travelDataService.GetTravelDetails(parameter.ToString());
 
             // shareContractService.Initialize();
-            string bargraphjson =  await graphService.GetBarGraph(parameter.ToString());
-         //   DeviceTileInfos = ideviceenumerableList.ToList();
-           // DeviceTileInfos = ideviceenumerableList.ToObservableCollection();
+           string bargraphjson =  await graphService.GetBarGraph(parameter.ToString());
+           // RootObject obj= await graphService.GetBarGraph2(parameter.ToString());
+            //   DeviceTileInfos = ideviceenumerableList.ToList();
+            // DeviceTileInfos = ideviceenumerableList.ToObservableCollection();
         }
     }
 }

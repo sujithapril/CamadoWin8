@@ -26,5 +26,16 @@ namespace CamadoWin8.Services.Data
             //Console.WriteLine(cc[0].DeviceId);
             return prod;
         }
+        public async Task<RootObject> GetBarGraph2(string deviceId)
+        {
+
+            var c = new HttpClient();
+            var resp = await c.GetAsync(new Uri("http://localhost/CamadoService/CamadoService.svc/BarGraph/" + deviceId));
+            var prod = await resp.Content.ReadAsStringAsync();
+            // dynamic cc= JsonConvert.DeserializeObject<def>(prod);
+            //Console.WriteLine(cc[0].DeviceId);
+           var rootObj= JsonConvert.DeserializeObject<RootObject>(prod);
+            return rootObj;
+        }
     }
 }

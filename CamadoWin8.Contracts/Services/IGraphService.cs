@@ -11,5 +11,7 @@ namespace CamadoWin8.Contracts.Services
     public interface IGraphService
     {
         Task<string> GetBarGraph(string deviceId);
-    }
+        //Task<RootObject> GetBarGraph2(string deviceId);
+        
+     }
 }
