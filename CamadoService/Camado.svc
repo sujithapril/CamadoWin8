@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Camado" CodeBehind="~/App_Code/Camado.cs" %>

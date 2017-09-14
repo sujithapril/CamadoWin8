@@ -44,11 +44,27 @@ namespace ConsoleApplication
                 var prod = await resp.Content.ReadAsStringAsync();
                 // dynamic cc= JsonConvert.DeserializeObject<def>(prod);
                 //Console.WriteLine(cc[0].DeviceId);
-               
-                prod = prod.Replace(Environment.NewLine,string.Empty);
-                prod = prod.Replace("\u0009", string.Empty);
+
+                //prod = prod.Replace(Environment.NewLine,string.Empty);
+                //prod = prod.Replace("\\u0009", "\t");
+                //prod = prod.Replace("\\u000d", "\r");
+                //prod = prod.Replace("\\u000a", "\n");
+                //prod = prod.Replace(@"\", @"");
+                //prod = prod.Replace(@"""", @"\""");
+                ///t/r/n
+                // Convert Unicode to Bytes
+
+                // byte[] uni = Encoding.Unicode.GetBytes(prod);
+
+                // Convert to ASCII
+
+                //string Ascii = Encoding.ASCII.GetString(uni);
+                prod = prod.Replace(@"\u0009", @"\t");
+                prod = prod.Replace(@"\u000d", @"\r");
+                prod = prod.Replace(@"\u000a", @"\n");
                 
-                var rootObj = JsonConvert.DeserializeObject<RootObject>(prod);
+              
+                
                  ;
             }
         }

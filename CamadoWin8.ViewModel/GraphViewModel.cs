@@ -28,7 +28,7 @@ namespace CamadoWin8.ViewModel
         private IToastService toastService;
         private IStateService stateService;
         private IGraphService graphService;
-       
+
 
         private ObservableCollection<IDeviceInfo> deviceTileInfos;
 
@@ -60,10 +60,10 @@ namespace CamadoWin8.ViewModel
         //    }
         //}
         public RelayCommand<IDeviceInfo> SelectedCommand { get; set; }
-        public GraphViewModel( INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
-            ITileService tileService, IToastService toastService, IStateService stateService,IGraphService graphService)
+        public GraphViewModel(INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
+            ITileService tileService, IToastService toastService, IStateService stateService, IGraphService graphService)
         {
-            
+
             this.navigationService = navigationService;
             this.dialogService = dialogService;
             this.shareContractService = shareContractService;
@@ -77,7 +77,7 @@ namespace CamadoWin8.ViewModel
 
         private void InitializeCommands()
         {
-           
+
             //GoBack = new RelayCommand(() =>
             //{
             //    navigationService.GoBack();
@@ -94,13 +94,12 @@ namespace CamadoWin8.ViewModel
 
         public async void Initialize(object parameter)
         {
-            // SelectedTravelDetail = await travelDataService.GetTravelDetails(parameter.ToString());
 
-            // shareContractService.Initialize();
-           string bargraphjson =  await graphService.GetBarGraph(parameter.ToString());
-           // RootObject obj= await graphService.GetBarGraph2(parameter.ToString());
-            //   DeviceTileInfos = ideviceenumerableList.ToList();
-            // DeviceTileInfos = ideviceenumerableList.ToObservableCollection();
+
+            IRootObject obj = await graphService.GetBarGraph2(parameter.ToString());
+            RootObject obj2 = (RootObject)obj;
+
+
         }
     }
 }

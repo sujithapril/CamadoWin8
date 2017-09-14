@@ -50,7 +50,7 @@ namespace CamadoWin8.Contracts.Model
         public List<GraphRow> graphRows { get; set; }
     }
 
-    public class RootObject
+    public class RootObject:IRootObject
     {
         public int status { get; set; }
         public string message { get; set; }

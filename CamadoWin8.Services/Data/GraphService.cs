@@ -26,7 +26,7 @@ namespace CamadoWin8.Services.Data
             //Console.WriteLine(cc[0].DeviceId);
             return prod;
         }
-        public async Task<RootObject> GetBarGraph2(string deviceId)
+        public async Task<IRootObject> GetBarGraph2(string deviceId)
         {
 
             var c = new HttpClient();
@@ -34,7 +34,13 @@ namespace CamadoWin8.Services.Data
             var prod = await resp.Content.ReadAsStringAsync();
             // dynamic cc= JsonConvert.DeserializeObject<def>(prod);
             //Console.WriteLine(cc[0].DeviceId);
-           var rootObj= JsonConvert.DeserializeObject<RootObject>(prod);
+          System.Xml. XmlReader xmlReader = System.Xml.XmlReader.Create(new System.IO.StringReader(prod));
+            xmlReader.Read();
+            string inner = xmlReader.ReadInnerXml();
+            // xmlReader.Value
+            //string a = xmlDoc.InnerText;
+            var rootObj = JsonConvert.DeserializeObject<RootObject>(inner);
+            //var rootObj= JsonConvert.DeserializeObject<RootObject>(prod);
             return rootObj;
         }
     }

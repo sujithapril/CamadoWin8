@@ -28,25 +28,25 @@
     <AppXManifest Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-09-13T10:29:38.467</Modified>
+      <Modified>2017-09-14T05:22:31.046</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\CamadoWin8.App.exe">
       <PackagePath>CamadoWin8.App.exe</PackagePath>
-      <Modified>2017-09-13T10:29:27.250</Modified>
+      <Modified>2017-09-14T05:22:24.344</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\CamadoWin8.Contracts.dll">
       <PackagePath>CamadoWin8.Contracts.dll</PackagePath>
-      <Modified>2017-09-13T09:55:44.478</Modified>
+      <Modified>2017-09-13T18:23:47.335</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Model.dll">
       <PackagePath>CamadoWin8.Model.dll</PackagePath>
-      <Modified>2017-09-13T09:55:46.321</Modified>
+      <Modified>2017-09-13T18:23:49.626</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\CamadoWin8.Services.dll">
       <PackagePath>CamadoWin8.Services.dll</PackagePath>
-      <Modified>2017-09-13T09:55:56.804</Modified>
+      <Modified>2017-09-14T05:18:03.104</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\CamadoWin8.Shared.dll">
       <PackagePath>CamadoWin8.Shared.dll</PackagePath>
@@ -54,7 +54,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\CamadoWin8.ViewModel.dll">
       <PackagePath>CamadoWin8.ViewModel.dll</PackagePath>
-      <Modified>2017-09-13T09:55:59.044</Modified>
+      <Modified>2017-09-14T05:22:20.962</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\GalaSoft.MvvmLight.Extras.Win8.dll">
       <PackagePath>GalaSoft.MvvmLight.Extras.Win8.dll</PackagePath>
@@ -155,20 +155,20 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\GraphView.xbf">
       <PackagePath>Views\GraphView.xbf</PackagePath>
-      <Modified>2017-09-13T10:29:26.629</Modified>
+      <Modified>2017-09-13T18:24:00.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\HomeView.xbf">
       <PackagePath>Views\HomeView.xbf</PackagePath>
-      <Modified>2017-09-13T10:29:26.630</Modified>
+      <Modified>2017-09-13T18:24:00.348</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\LogInView.xbf">
       <PackagePath>Views\LogInView.xbf</PackagePath>
-      <Modified>2017-09-13T10:29:26.631</Modified>
+      <Modified>2017-09-13T18:24:00.349</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-09-13T09:56:10.602</Modified>
+      <Modified>2017-09-14T05:18:13.150</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -25,32 +25,32 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{3ED5A6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamadoWin8.ServerDto", "CamadoWin8.ServerDto\CamadoWin8.ServerDto.csproj", "{A52D73A1-6AA5-4BBB-B98E-694F43A49140}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{2843BE6F-2D3B-4D65-ADE0-29C78DF917B1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D0B865AF-4682-4D1C-905E-1CD30741774F} = {D0B865AF-4682-4D1C-905E-1CD30741774F}
+	EndProjectSection
+EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CamadoService", "http://localhost/CamadoService", "{D0B865AF-4682-4D1C-905E-1CD30741774F}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "false"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
 		ProjectReferences = "{a52d73a1-6aa5-4bbb-b98e-694f43a49140}|OnTheRoad.ServerDto.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/CamadoService"
-		Debug.AspNetCompiler.PhysicalPath = "C:\inetpub\wwwroot\CamadoService\"
+		Debug.AspNetCompiler.PhysicalPath = "CamadoService\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\CamadoService\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/CamadoService"
-		Release.AspNetCompiler.PhysicalPath = "C:\inetpub\wwwroot\CamadoService\"
+		Release.AspNetCompiler.PhysicalPath = "CamadoService\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\CamadoService\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "C:\inetpub\wwwroot\CamadoService\"
+		SlnRelativePath = "CamadoService\"
 		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{2843BE6F-2D3B-4D65-ADE0-29C78DF917B1}"
-	ProjectSection(ProjectDependencies) = postProject
-		{D0B865AF-4682-4D1C-905E-1CD30741774F} = {D0B865AF-4682-4D1C-905E-1CD30741774F}
 	EndProjectSection
 EndProject
 Global
@@ -259,26 +259,6 @@ Global
 		{A52D73A1-6AA5-4BBB-B98E-694F43A49140}.Release|Win32.ActiveCfg = Release|Any CPU
 		{A52D73A1-6AA5-4BBB-B98E-694F43A49140}.Release|x64.ActiveCfg = Release|Any CPU
 		{A52D73A1-6AA5-4BBB-B98E-694F43A49140}.Release|x86.ActiveCfg = Release|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|ARM.Build.0 = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|Win32.ActiveCfg = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|Win32.Build.0 = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|x64.Build.0 = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|x86.Build.0 = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|ARM.ActiveCfg = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|ARM.Build.0 = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|Win32.ActiveCfg = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|Win32.Build.0 = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|x64.ActiveCfg = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|x64.Build.0 = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|x86.ActiveCfg = Debug|Any CPU
-		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|x86.Build.0 = Debug|Any CPU
 		{2843BE6F-2D3B-4D65-ADE0-29C78DF917B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2843BE6F-2D3B-4D65-ADE0-29C78DF917B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2843BE6F-2D3B-4D65-ADE0-29C78DF917B1}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -299,6 +279,26 @@ Global
 		{2843BE6F-2D3B-4D65-ADE0-29C78DF917B1}.Release|x64.Build.0 = Release|Any CPU
 		{2843BE6F-2D3B-4D65-ADE0-29C78DF917B1}.Release|x86.ActiveCfg = Release|Any CPU
 		{2843BE6F-2D3B-4D65-ADE0-29C78DF917B1}.Release|x86.Build.0 = Release|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|ARM.Build.0 = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|Win32.Build.0 = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|x64.Build.0 = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Debug|x86.Build.0 = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|ARM.ActiveCfg = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|ARM.Build.0 = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|Win32.ActiveCfg = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|Win32.Build.0 = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|x64.ActiveCfg = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|x64.Build.0 = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|x86.ActiveCfg = Debug|Any CPU
+		{D0B865AF-4682-4D1C-905E-1CD30741774F}.Release|x86.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -313,7 +313,7 @@ Global
 		{22F99FF7-D1E2-43ED-92EC-D6FCE38A9B65} = {CD56930C-EB7C-4BAE-8203-18695355C461}
 		{6E87464B-B064-40CA-8161-7C18C337ADFF} = {CD56930C-EB7C-4BAE-8203-18695355C461}
 		{A52D73A1-6AA5-4BBB-B98E-694F43A49140} = {3ED5A68E-79EF-426F-A581-794BD9456844}
-		{D0B865AF-4682-4D1C-905E-1CD30741774F} = {3ED5A68E-79EF-426F-A581-794BD9456844}
 		{2843BE6F-2D3B-4D65-ADE0-29C78DF917B1} = {3ED5A68E-79EF-426F-A581-794BD9456844}
+		{D0B865AF-4682-4D1C-905E-1CD30741774F} = {3ED5A68E-79EF-426F-A581-794BD9456844}
 	EndGlobalSection
 EndGlobal
