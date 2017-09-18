@@ -29,6 +29,200 @@ namespace CamadoWin8.ViewModel
         private IStateService stateService;
         private IGraphService graphService;
 
+        public struct barDataModel
+        {
+            public string key;
+            public float value;
+        }
+
+
+        public barDataModel[] frequencyData { get; set; } = new barDataModel[]
+        {
+            new barDataModel() {key = "2017-06-20T11:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T12:30:00Z", value = 3339.39f },
+            new barDataModel() {key = "2017-06-20T13:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T14:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T15:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T16:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T17:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T18:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T19:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T20:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T21:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T22:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T23:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T00:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T01:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T02:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T03:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T04:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T05:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T06:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T07:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T08:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T09:30:00Z", value = 800.0f },
+            new barDataModel() {key = "2017-06-20T10:30:00Z", value = 800.0f }
+
+        };
+        public barDataModel[] humidityData { get; set; } = new barDataModel[]
+       {
+            new barDataModel() {key = "2017-06-20T11:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T12:30:00Z", value = 44.0f },
+            new barDataModel() {key = "2017-06-20T13:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T14:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T15:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T16:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T17:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T18:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T19:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T20:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T21:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T22:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T23:30:00Z", value = 10.0f },
+            new barDataModel() {key = "2017-06-20T00:30:00Z", value = 60.0f },
+            new barDataModel() {key = "2017-06-20T01:30:00Z", value = 40.0f },
+            new barDataModel() {key = "2017-06-20T02:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T03:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T04:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T05:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T06:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T07:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T08:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T09:30:00Z", value = 25.0f },
+            new barDataModel() {key = "2017-06-20T10:30:00Z", value = 25.0f }
+
+       };
+        public barDataModel[] splData { get; set; } = new barDataModel[]
+       {
+            new barDataModel() {key = "2017-06-20T11:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T12:30:00Z", value = 24.59f },
+            new barDataModel() {key = "2017-06-20T13:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T14:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T15:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T16:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T17:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T18:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T19:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T20:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T21:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T22:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T23:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T00:30:00Z", value = 150.0f },
+            new barDataModel() {key = "2017-06-20T01:30:00Z", value = 5.0f },
+            new barDataModel() {key = "2017-06-20T02:30:00Z", value = 150.0f },
+            new barDataModel() {key = "2017-06-20T03:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T04:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T05:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T06:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T07:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T08:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T09:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T10:30:00Z", value = 80.0f }
+
+       };
+        public barDataModel[] temperatureData { get; set; } = new barDataModel[]
+       {
+            new barDataModel() {key = "2017-06-20T11:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T12:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T13:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T14:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T15:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T16:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T17:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T18:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T19:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T20:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T21:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T22:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T23:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T00:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T01:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T02:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T03:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T04:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T05:30:00Z", value = 30.0f },
+            new barDataModel() {key = "2017-06-20T06:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T07:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T08:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T09:30:00Z", value = 35.0f },
+            new barDataModel() {key = "2017-06-20T10:30:00Z", value = 35.0f }
+
+       };
+        public barDataModel[] vibData { get; set; } = new barDataModel[]
+     {
+            new barDataModel() {key = "2017-06-20T11:30:00Z", value = 100.0f },
+            new barDataModel() {key = "2017-06-20T12:30:00Z", value = 120.0f },
+            new barDataModel() {key = "2017-06-20T13:30:00Z", value = 130.0f },
+            new barDataModel() {key = "2017-06-20T14:30:00Z", value = 140.0f },
+            new barDataModel() {key = "2017-06-20T15:30:00Z", value = 150.0f },
+            new barDataModel() {key = "2017-06-20T16:30:00Z", value = 160.0f },
+            new barDataModel() {key = "2017-06-20T17:30:00Z", value = 170.0f },
+            new barDataModel() {key = "2017-06-20T18:30:00Z", value = 180.0f },
+            new barDataModel() {key = "2017-06-20T19:30:00Z", value = 190.0f },
+            new barDataModel() {key = "2017-06-20T20:30:00Z", value = 200.0f },
+            new barDataModel() {key = "2017-06-20T21:30:00Z", value = 210.0f },
+            new barDataModel() {key = "2017-06-20T22:30:00Z", value = 220.0f },
+            new barDataModel() {key = "2017-06-20T23:30:00Z", value = 230.0f },
+            new barDataModel() {key = "2017-06-20T00:30:00Z", value = 240.0f },
+            new barDataModel() {key = "2017-06-20T01:30:00Z", value = 0.0f },
+            new barDataModel() {key = "2017-06-20T02:30:00Z", value = 10.0f },
+            new barDataModel() {key = "2017-06-20T03:30:00Z", value = 20.0f },
+            new barDataModel() {key = "2017-06-20T04:30:00Z", value = 30.0f },
+            new barDataModel() {key = "2017-06-20T05:30:00Z", value = 40.0f },
+            new barDataModel() {key = "2017-06-20T06:30:00Z", value = 50.0f },
+            new barDataModel() {key = "2017-06-20T07:30:00Z", value = 60.0f },
+            new barDataModel() {key = "2017-06-20T08:30:00Z", value = 70.0f },
+            new barDataModel() {key = "2017-06-20T09:30:00Z", value = 80.0f },
+            new barDataModel() {key = "2017-06-20T10:30:00Z", value = 90.0f }
+
+     };
+
+
+        public float getMaxFrequency()
+        {
+            return this.frequencyData.OfType<barDataModel>().Max(barDataModel => barDataModel.value);
+        }
+        public float getFrequncyForValue(string value)
+        {
+            barDataModel obj = Array.Find(frequencyData, barDataModel => barDataModel.key == value);
+            return obj.value;
+        }
+        public float getHumidityForValue(string value)
+        {
+            barDataModel obj = Array.Find(humidityData, barDataModel => barDataModel.key == value);
+            return obj.value;
+        }
+        public float getSplForValue(string value)
+        {
+            barDataModel obj = Array.Find(splData, barDataModel => barDataModel.key == value);
+            return obj.value;
+        }
+        public float getTemperatureForValue(string value)
+        {
+            barDataModel obj = Array.Find(temperatureData, barDataModel => barDataModel.key == value);
+            return obj.value;
+        }
+        public float getVibForValue(string value)
+        {
+            barDataModel obj = Array.Find(vibData, barDataModel => barDataModel.key == value);
+            return obj.value;
+        }
+        public float getMaxHumidity()
+        {
+            return this.humidityData.OfType<barDataModel>().Max(barDataModel => barDataModel.value);
+        }
+        public float getMaxspl()
+        {
+            return this.splData.OfType<barDataModel>().Max(barDataModel => barDataModel.value);
+        }
+        public float getMaxTemprature()
+        {
+            return this.temperatureData.OfType<barDataModel>().Max(barDataModel => barDataModel.value);
+        }
+        public float getMaxVib()
+        {
+            return this.vibData.OfType<barDataModel>().Max(barDataModel => barDataModel.value);
+        }
 
         private ObservableCollection<IDeviceInfo> deviceTileInfos;
 
@@ -96,8 +290,8 @@ namespace CamadoWin8.ViewModel
         {
 
 
-            IRootObject obj = await graphService.GetBarGraph2(parameter.ToString());
-            RootObject obj2 = (RootObject)obj;
+           // IRootObject obj = await graphService.GetBarGraph2(parameter.ToString());
+           // RootObject obj2 = (RootObject)obj;
 
 
         }
