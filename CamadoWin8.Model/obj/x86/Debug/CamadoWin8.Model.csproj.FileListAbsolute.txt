@@ -1,4 +1,12 @@
+D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Model.dll
+D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Model.pdb
+D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Model.pri
+D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Contracts.dll
+D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Contracts.pdb
+D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Contracts.pri
 D:\Projects\CamadoWin8\CamadoWin8.Model\obj\x86\Debug\CamadoWin8.Model.csprojResolveAssemblyReference.cache
+D:\Projects\CamadoWin8\CamadoWin8.Model\obj\x86\Debug\CamadoWin8.Model.dll
+D:\Projects\CamadoWin8\CamadoWin8.Model\obj\x86\Debug\CamadoWin8.Model.pdb
 D:\Projects\CamadoWin8\CamadoWin8.Model\obj\x86\Debug\priconfig.xml
 D:\Projects\CamadoWin8\CamadoWin8.Model\obj\x86\Debug\priconfig.xml.intermediate
 D:\Projects\CamadoWin8\CamadoWin8.Model\obj\x86\Debug\layout.resfiles
@@ -10,11 +18,3 @@ D:\Projects\CamadoWin8\CamadoWin8.Model\obj\x86\Debug\pri.resfiles.intermediate
 D:\Projects\CamadoWin8\CamadoWin8.Model\obj\x86\Debug\qualifiers.txt
 D:\Projects\CamadoWin8\CamadoWin8.Model\obj\x86\Debug\qualifiers.txt.intermediate
 D:\Projects\CamadoWin8\CamadoWin8.Model\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
-D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Model.dll
-D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Model.pdb
-D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Model.pri
-D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Contracts.dll
-D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Contracts.pdb
-D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Contracts.pri
-D:\Projects\CamadoWin8\CamadoWin8.Model\obj\x86\Debug\CamadoWin8.Model.dll
-D:\Projects\CamadoWin8\CamadoWin8.Model\obj\x86\Debug\CamadoWin8.Model.pdb

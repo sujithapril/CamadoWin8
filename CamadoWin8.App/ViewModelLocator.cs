@@ -23,17 +23,22 @@ namespace CamadoWin8.App
             //ViewModel registration
           
             InstanceFactory.RegisterType<ILogInViewModel, LogInViewModel>();
+            InstanceFactory.RegisterType<ILayOutViewModel, LayOutViewModel>();
             InstanceFactory.RegisterType<IHomeViewModel, HomeViewModel>();
             InstanceFactory.RegisterType<IGraphViewModel, GraphViewModel>();
-
+            InstanceFactory.RegisterType<ILocationViewModel, LocationViewModel>();
 
             //View registration
             InstanceFactory.RegisterType<ILogInView,
                LogInView>();
+            InstanceFactory.RegisterType<ILayOutView,
+               LayOutView>();
             InstanceFactory.RegisterType<IHomeView,
                 HomeView>();
             InstanceFactory.RegisterType<IGraphView,
                GraphView>();
+            InstanceFactory.RegisterType<ILocationView,
+             LocationView>();
             //Services registration
 
             InstanceFactory.RegisterType<INavigationService, 
@@ -63,6 +68,14 @@ namespace CamadoWin8.App
             }
         }
 
+        public ILayOutViewModel LayOutViewModel
+        {
+            get
+            {
+                return InstanceFactory.GetInstance<ILayOutViewModel>();
+            }
+        }
+
         public IHomeViewModel HomeViewModel
         {
             get
@@ -70,7 +83,13 @@ namespace CamadoWin8.App
                 return InstanceFactory.GetInstance<IHomeViewModel>();
             }
         }
-
+        public ILocationViewModel LocationViewModel
+        {
+            get
+            {
+                return InstanceFactory.GetInstance<ILocationViewModel>();
+            }
+        }
         public IGraphViewModel GraphViewModel
         {
             get

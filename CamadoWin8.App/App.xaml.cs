@@ -33,6 +33,12 @@ namespace CamadoWin8.App
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            this.UnhandledException += App_UnhandledException;
+        }
+
+        private void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            string a = e.Message;
         }
 
         /// <summary>

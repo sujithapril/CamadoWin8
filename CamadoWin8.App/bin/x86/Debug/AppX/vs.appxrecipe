@@ -28,33 +28,33 @@
     <AppXManifest Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-09-14T05:22:31.046</Modified>
+      <Modified>2017-09-18T05:16:21.292</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\CamadoWin8.App.exe">
       <PackagePath>CamadoWin8.App.exe</PackagePath>
-      <Modified>2017-09-14T05:22:24.344</Modified>
+      <Modified>2017-09-18T05:11:08.029</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Contracts\bin\x86\Debug\CamadoWin8.Contracts.dll">
       <PackagePath>CamadoWin8.Contracts.dll</PackagePath>
-      <Modified>2017-09-13T18:23:47.335</Modified>
+      <Modified>2017-09-18T04:57:37.240</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Model\bin\x86\Debug\CamadoWin8.Model.dll">
       <PackagePath>CamadoWin8.Model.dll</PackagePath>
-      <Modified>2017-09-13T18:23:49.626</Modified>
+      <Modified>2017-09-18T04:57:39.778</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\CamadoWin8.Services.dll">
       <PackagePath>CamadoWin8.Services.dll</PackagePath>
-      <Modified>2017-09-14T05:18:03.104</Modified>
+      <Modified>2017-09-18T04:57:43.341</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Shared\bin\x86\Debug\CamadoWin8.Shared.dll">
       <PackagePath>CamadoWin8.Shared.dll</PackagePath>
-      <Modified>2017-09-12T18:22:32.570</Modified>
+      <Modified>2017-09-18T04:57:37.412</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.ViewModel\bin\x86\Debug\CamadoWin8.ViewModel.dll">
       <PackagePath>CamadoWin8.ViewModel.dll</PackagePath>
-      <Modified>2017-09-14T05:22:20.962</Modified>
+      <Modified>2017-09-18T04:57:41.520</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\packages\Win8nl.1.0.8\lib\NetCore45\GalaSoft.MvvmLight.Extras.Win8.dll">
       <PackagePath>GalaSoft.MvvmLight.Extras.Win8.dll</PackagePath>
@@ -110,24 +110,68 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.Services\bin\x86\Debug\NotificationsExtensions.winmd">
       <PackagePath>NotificationsExtensions.winmd</PackagePath>
-      <Modified>2017-09-12T18:22:37.775</Modified>
+      <Modified>2017-09-18T04:57:41.122</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\a\devices.png">
+      <PackagePath>Assets\a\devices.png</PackagePath>
+      <Modified>2017-09-15T11:21:44.255</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\a\devices2.png">
+      <PackagePath>Assets\a\devices2.png</PackagePath>
+      <Modified>2017-09-15T11:21:09.739</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\a\locations.png">
+      <PackagePath>Assets\a\locations.png</PackagePath>
+      <Modified>2017-09-15T11:20:38.636</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\a\profile.png">
+      <PackagePath>Assets\a\profile.png</PackagePath>
+      <Modified>2017-09-15T11:09:33.927</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\a\settings.png">
+      <PackagePath>Assets\a\settings.png</PackagePath>
+      <Modified>2017-09-15T11:22:13.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\bg.png">
       <PackagePath>Assets\bg.png</PackagePath>
       <Modified>2017-09-12T18:19:03.532</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\command.png">
+      <PackagePath>Assets\command.png</PackagePath>
+      <Modified>2016-06-22T10:11:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\devices.png">
+      <PackagePath>Assets\devices.png</PackagePath>
+      <Modified>2016-06-22T10:11:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\locations.png">
+      <PackagePath>Assets\locations.png</PackagePath>
+      <Modified>2016-06-22T10:11:36.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\Logo.png">
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-08-11T13:33:08.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\photos.png">
+      <PackagePath>Assets\photos.png</PackagePath>
+      <Modified>2016-06-22T10:11:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\settings-1.png">
+      <PackagePath>Assets\settings-1.png</PackagePath>
+      <Modified>2016-06-22T10:11:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\settings-4.png">
+      <PackagePath>Assets\settings-4.png</PackagePath>
+      <Modified>2016-06-22T10:11:36.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\SmallLogo.png">
       <PackagePath>Assets\SmallLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-08-11T13:40:26.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\SplashScreen.png">
-      <PackagePath>Assets\SplashScreen.png</PackagePath>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-08-11T13:28:30.000</Modified>
     </AppxPackagedFile>
@@ -136,39 +180,63 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-08-11T13:40:14.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\user-3.png">
+      <PackagePath>Assets\user-3.png</PackagePath>
+      <Modified>2016-06-22T10:11:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\user.png">
+      <PackagePath>Assets\user.png</PackagePath>
+      <Modified>2016-06-22T10:11:36.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\WideLogo.png">
       <PackagePath>Assets\WideLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-08-11T13:34:52.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\wireless-internet.png">
+      <PackagePath>Assets\wireless-internet.png</PackagePath>
+      <Modified>2016-06-22T10:11:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\worldwide.png">
+      <PackagePath>Assets\worldwide.png</PackagePath>
+      <Modified>2016-06-22T10:11:36.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\CamadoWin8.App.xr.xml">
       <PackagePath>CamadoWin8.App.xr.xml</PackagePath>
-      <Modified>2017-09-13T10:29:26.215</Modified>
+      <Modified>2017-09-15T12:36:53.843</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2017-09-12T18:22:44.999</Modified>
+      <Modified>2017-09-18T04:57:51.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Common\StandardStyles.xbf">
       <PackagePath>Common\StandardStyles.xbf</PackagePath>
-      <Modified>2017-09-12T18:22:44.999</Modified>
+      <Modified>2017-09-18T04:57:51.261</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\LocationView.xbf">
+      <PackagePath>Views\LocationView.xbf</PackagePath>
+      <Modified>2017-09-18T04:57:51.261</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\LayOutView.xbf">
+      <PackagePath>Views\LayOutView.xbf</PackagePath>
+      <Modified>2017-09-18T04:57:51.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\GraphView.xbf">
       <PackagePath>Views\GraphView.xbf</PackagePath>
-      <Modified>2017-09-13T18:24:00.348</Modified>
+      <Modified>2017-09-18T04:57:51.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\HomeView.xbf">
       <PackagePath>Views\HomeView.xbf</PackagePath>
-      <Modified>2017-09-13T18:24:00.348</Modified>
+      <Modified>2017-09-18T05:11:07.395</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\LogInView.xbf">
       <PackagePath>Views\LogInView.xbf</PackagePath>
-      <Modified>2017-09-13T18:24:00.349</Modified>
+      <Modified>2017-09-18T04:57:51.261</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-09-14T05:18:13.150</Modified>
+      <Modified>2017-09-18T05:16:09.944</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

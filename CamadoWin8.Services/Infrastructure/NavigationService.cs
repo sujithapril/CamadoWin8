@@ -52,6 +52,10 @@ namespace CamadoWin8.Services.Infrastructure
                     Navigate<IHomeView>(parameter); break;
                 case PageNames.GraphView:
                     Navigate<IGraphView>(parameter); break;
+                case PageNames.LayOutView:
+                    Navigate<ILayOutView>(parameter); break;
+                case PageNames.LocationView:
+                   Navigate<ILocationView>(parameter); break;
             }
         }
 
@@ -108,7 +112,8 @@ namespace CamadoWin8.Services.Infrastructure
             var view = e.Content as IView;
             if (view == null)
                 return;
-
+            Type t = e.SourcePageType;
+           
             var viewModel = view.ViewModel;
             if (viewModel != null)
             {

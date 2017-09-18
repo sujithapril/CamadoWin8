@@ -74,10 +74,11 @@ namespace CamadoWin8.ViewModel
             SignInCommand= new RelayCommand(() =>
             {
 
-                navigationService.Navigate(PageNames.HomeView, UserName);
+                //navigationService.Navigate(PageNames.HomeView, UserName);
+                navigationService.Navigate(PageNames.LayOutView, UserName);
 
                 //toastService.SendSimpleTextToast(UserName + Password);
-                
+
             });
             //GoBack = new RelayCommand(() =>
             //{

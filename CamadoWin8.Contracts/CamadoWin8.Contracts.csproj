@@ -116,10 +116,14 @@
     <Compile Include="Services\IToastService.cs" />
     <Compile Include="Services\IDeviceService.cs" />
     <Compile Include="ViewModels\IGraphViewModel.cs" />
+    <Compile Include="ViewModels\ILocationViewModel.cs" />
+    <Compile Include="ViewModels\ILayOutViewModel.cs" />
     <Compile Include="ViewModels\IHomeViewModel.cs" />
     <Compile Include="ViewModels\ILogInViewModel.cs" />
     <Compile Include="ViewModels\IViewModel.cs" />
     <Compile Include="View\IGraphView.cs" />
+    <Compile Include="View\ILocationView.cs" />
+    <Compile Include="View\ILayOutView.cs" />
     <Compile Include="View\IHomeView.cs" />
     <Compile Include="View\ILogInView.cs" />
     <Compile Include="View\IView.cs" />

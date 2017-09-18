@@ -6,12 +6,25 @@
              mc:Ignorable="d">
     <Application.Resources>
         <ResourceDictionary>
+           
             <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <!--<SolidColorBrush x:Key="ListBoxItemSelectedPointerOverBackgroundThemeBrush" Color="#007700" />
+                    <SolidColorBrush x:Key="ListBoxItemSelectedPointerOverBorderThemeBrush" Color="#007700" />
+                    <SolidColorBrush x:Key="ListBoxItemSelectedBackgroundThemeBrush" Color="#007700" />
+                    <SolidColorBrush x:Key="ListBoxItemLostFocusBackgroundThemeBrush" Color="Red" />
+                    <SolidColorBrush x:Key="HighlightBrushKey}" Color="Red"/>
+                    <SolidColorBrush x:Key="ControlBrushKey}" Color="Red"/>-->
+                    <SolidColorBrush x:Key="ListBoxItemSelectedPointerOverBackgroundThemeBrush" Color="#007700" />
+                    <SolidColorBrush x:Key="ListBoxItemSelectedPointerOverBorderThemeBrush" Color="#007700" />
+                    <SolidColorBrush x:Key="ListBoxItemSelectedBackgroundThemeBrush" Color="#007700" />
+                </ResourceDictionary>
                 <!-- 
                     Styles that define common aspects of the platform look and feel
                     Required by Visual Studio project and item templates
                  -->
                 <ResourceDictionary Source="Common/StandardStyles.xaml" />
+              
             </ResourceDictionary.MergedDictionaries>
             <local:ViewModelLocator x:Key="MainViewModelLocator"  />
             <converter:DoNothingConverter x:Key="LocalDoNothingConverter"></converter:DoNothingConverter>
