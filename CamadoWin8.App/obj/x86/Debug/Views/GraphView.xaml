@@ -9,6 +9,7 @@ DataContext="{Binding GraphViewModel, Source={StaticResource MainViewModelLocato
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Win8nl_Behavior="using:Win8nl.Behaviors"
 	xmlns:WinRtBehaviors="using:WinRtBehaviors"
+    xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -21,26 +22,39 @@ DataContext="{Binding GraphViewModel, Source={StaticResource MainViewModelLocato
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Style="{StaticResource LayoutRootStyle}" Name="LayoutRoot" Background="Black">
+    <Grid Style="{StaticResource LayoutRootStyle}" Name="LayoutRoot" Background="White">
         <!--<Grid.Background>
             <ImageBrush ImageSource="/Assets/bg.png" Stretch="UniformToFill"/>
         </Grid.Background>-->
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="140"/>
+            <RowDefinition Height="70"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <!-- Back button and page title -->
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Button x:Name="backButton"  IsEnabled="False" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Text="Graph" Grid.Column="1" Style="{StaticResource PageHeaderTextStyle}"/>
-        </Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.15*"/>
+            <ColumnDefinition Width="0.7*"/>
+            <ColumnDefinition Width="0.15*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="1" Background="White" Orientation="Horizontal">
+            <Rectangle Fill="Blue" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
+            <TextBlock Text="Humidity" Foreground="Black" VerticalAlignment="Center" FontSize="18.667" Width="61" Margin="5,0,0,0" FontFamily="Times New Roman"></TextBlock>
+            <Rectangle Fill="Green" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
+            <TextBlock Text="Sound"  Foreground="Black"   VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0" FontFamily="Times New Roman"></TextBlock>
+            <Rectangle Fill="Yellow" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
+            <TextBlock Text="Temprature"  Foreground="Black"  VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0" FontFamily="Times New Roman"></TextBlock>
+            <Rectangle Fill="Black" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
+            <TextBlock Text="Vibration" Foreground="Black" VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0" FontFamily="Times New Roman"></TextBlock>
+            <Rectangle Fill="Red" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
+            <TextBlock Text="Frequency" Foreground="Black" VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0" FontFamily="Times New Roman"></TextBlock>
+        </StackPanel>
+        <canvas:CanvasControl x:ConnectionId='1' Grid.Column="0" Grid.Row="1" ClearColor="White"   x:Name="canvas"                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="2,40,0,5"/>
+        <ScrollViewer Background="Red" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible"  VerticalScrollBarVisibility="Hidden" Margin="0,40,0,5">
+            <canvas:CanvasControl x:ConnectionId='3'   Width="3360" ClearColor="White"  x:Name="barcanvas"                           HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+        </ScrollViewer>
+        <canvas:CanvasControl x:ConnectionId='2' Grid.Column="2" Grid.Row="1" ClearColor="White"  x:Name="canvasright"                           VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,40,2,5"/>
+        <!-- <Button x:Name="backButton"  IsEnabled="False" Style="{StaticResource BackButtonStyle}"/>
+            <TextBlock x:Name="pageTitle" Text="Graph" Grid.Column="1" Style="{StaticResource PageHeaderTextStyle}"/> -->
 
 
       
