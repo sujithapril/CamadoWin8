@@ -102,6 +102,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="CommonRequest.cs" />
+    <Compile Include="DeviceResponse.cs" />
+    <Compile Include="LogInResponse.cs" />
     <Compile Include="Menu.cs" />
     <Compile Include="RootObject.cs" />
     <Compile Include="DeviceInfo.cs" />

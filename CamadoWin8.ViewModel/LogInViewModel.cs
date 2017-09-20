@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CamadoWin8.Model;
 
 namespace CamadoWin8.ViewModel
 {
@@ -21,6 +22,7 @@ namespace CamadoWin8.ViewModel
 
        // private ITravelDataService travelDataService;
         private INavigationService navigationService;
+        private IAuthenticateService authenticateService;
         private IDialogService dialogService;
         private IShareContractService shareContractService;
         private ITileService tileService;
@@ -53,23 +55,9 @@ namespace CamadoWin8.ViewModel
                 RaisePropertyChanged("Password");
             }
         }
-
-        private string organization;
-        public string Organization
-        {
-            get
-            {
-                return organization;
-            }
-            set
-            {
-                organization = value;
-                RaisePropertyChanged("Organization");
-            }
-        }
         public RelayCommand SignInCommand { get; set; }
         public LogInViewModel( INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
-            ITileService tileService, IToastService toastService, IStateService stateService)
+            ITileService tileService, IToastService toastService, IStateService stateService, IAuthenticateService authenticateService)
         {
             
             this.navigationService = navigationService;
@@ -78,48 +66,38 @@ namespace CamadoWin8.ViewModel
             this.tileService = tileService;
             this.toastService = toastService;
             this.stateService = stateService;
-
+            this.authenticateService = authenticateService;
             InitializeCommands();
 
         }
 
         private void InitializeCommands()
         {
-            SignInCommand= new RelayCommand(() =>
+            SignInCommand= new RelayCommand(async() =>
             {
 
                 //navigationService.Navigate(PageNames.HomeView, UserName);
-                if(username!= null && password != null && username.Length > 0 && password.Length>0)
+                LogInResponse logInResponse= (LogInResponse)await authenticateService.Authenticate(UserName,Password);
+                if (logInResponse.status == "1")
                 {
+                    stateService.SetItem("currentUserToken", logInResponse.authToken);
+                    stateService.SetItem("currentUserId", logInResponse.userId);
+                    stateService.SetItem("currentUserOrgId", logInResponse.orgId);
                     navigationService.Navigate(PageNames.LayOutView, UserName);
                 }
                 else
                 {
-                    dialogService.ShowDialog("Please enter username and password");
+                    toastService.SendSimpleTextToast("Error while logging in");
                 }
-
-                //toastService.SendSimpleTextToast(UserName + Password);
+               
 
             });
-            //GoBack = new RelayCommand(() =>
-            //{
-            //    navigationService.GoBack();
-            //});
-            //GoHome = new RelayCommand(() =>
-            //{
-            //    navigationService.Navigate(PageNames.PopularTravelView);
-            //});
-            //AddToFavorites = new RelayCommand(() => 
-            //{
-            //    dialogService.ShowAddToFavoriteConfirmation();
-            //});
+          
         }
 
         public async void Initialize(object parameter)
         {
-           // SelectedTravelDetail = await travelDataService.GetTravelDetails(parameter.ToString());
-
-           // shareContractService.Initialize();
+          
         }
     }
 }

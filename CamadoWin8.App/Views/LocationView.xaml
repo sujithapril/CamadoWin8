@@ -1,7 +1,7 @@
 ﻿<Page
     x:Name="pageRoot"
     x:Class="CamadoWin8.App.Views.LocationView"
-DataContext="{Binding HomeViewModel, Source={StaticResource MainViewModelLocator}}"
+DataContext="{Binding LocationViewModel, Source={StaticResource MainViewModelLocator}}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:CamadoWin8.App.Views"  
@@ -37,7 +37,7 @@ DataContext="{Binding HomeViewModel, Source={StaticResource MainViewModelLocator
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="backButton"  IsEnabled="False" Style="{StaticResource BackButtonStyle}"/>
+            <Button x:Name="backButton"  IsEnabled="True" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Text="Locations" Grid.Column="1" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
 

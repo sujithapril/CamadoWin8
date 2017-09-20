@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace CamadoWin8.Contracts.Services
 {
-    public interface IGraphService
+    public interface IAuthenticateService
     {
-        Task<string> GetBarGraph(string deviceId);
-        Task<IRootObject> GetBarGraph2(string deviceId, string devicemacId);
-        
-     }
+        Task<ILogInResponse> Authenticate(string UserName,string Password);
+    }
 }
