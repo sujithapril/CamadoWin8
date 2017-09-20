@@ -107,9 +107,9 @@ namespace CamadoWin8.ViewModel
         {
             SelectedCommand = new RelayCommand<IDeviceInfo>((deviceObj) =>
              {
-                 toastService.SendSimpleTextToast("Hello YOU  clicked me!");
+                // toastService.SendSimpleTextToast("Hello YOU  clicked me!");
                  navigationService.Navigate(PageNames.GraphView,
-                     deviceObj.DeviceId);
+                     deviceObj);
              });
 
             //SelectedCommand = new RelayCommand(() =>

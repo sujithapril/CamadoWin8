@@ -10,7 +10,7 @@ namespace CamadoWin8.Services.Infrastructure
 {
     public class StateService : IStateService
     {
-        ApplicationDataContainer localSettings = null;
+         ApplicationDataContainer localSettings = null;
         public string Parameter { get; set; }
         public string ViewName { get; set; }
 
@@ -19,6 +19,11 @@ namespace CamadoWin8.Services.Infrastructure
             localSettings = ApplicationData.Current.LocalSettings;
 
         }
+        //public ApplicationDataContainer LocalSettings {
+
+        //    get { return localSettings; }
+        //    set { localSettings = value; }
+        //}
 
         public void AddState(string viewName, string parameter)
         {
@@ -28,8 +33,11 @@ namespace CamadoWin8.Services.Infrastructure
 
         public void SaveState()
         {
-            localSettings.Values["viewName"] = ViewName;
-            localSettings.Values["parameter"] = Parameter;
+            if (ViewName != null && Parameter != null)
+            {
+                localSettings.Values["viewName"] = ViewName;
+                localSettings.Values["parameter"] = Parameter;
+            }
         }
 
         public void LoadState()
@@ -40,6 +48,23 @@ namespace CamadoWin8.Services.Infrastructure
                 Parameter = localSettings.Values["parameter"].ToString();
             }
             catch { }
+        }
+
+
+        public void SetItem(string name,string value)
+        {
+            localSettings.Values[name] = value;
+          
+        }
+
+        public object GetItem(string name)
+        {
+            try
+            {
+              return localSettings.Values[name];
+              
+            }
+            catch { return string.Empty; }
         }
     }
 }

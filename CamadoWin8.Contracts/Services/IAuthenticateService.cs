@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 
 namespace CamadoWin8.Contracts.Services
 {
-    public interface IDeviceService
+    public interface IAuthenticateService
     {
-        Task<IEnumerable<IDeviceInfo>> GetDeviceList();
-        Task<IEnumerable<IDeviceInfo>> GetDeviceList(string userId,string orgId,string Token);
+        Task<ILogInResponse> Authenticate(string UserName,string Password);
     }
 }

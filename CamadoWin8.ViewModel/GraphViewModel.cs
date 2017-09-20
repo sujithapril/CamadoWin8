@@ -272,10 +272,10 @@ namespace CamadoWin8.ViewModel
         private void InitializeCommands()
         {
 
-            //GoBack = new RelayCommand(() =>
-            //{
-            //    navigationService.GoBack();
-            //});
+            GoBack = new RelayCommand(() =>
+            {
+                navigationService.GoBack();
+            });
             //GoHome = new RelayCommand(() =>
             //{
             //    navigationService.Navigate(PageNames.PopularTravelView);
@@ -288,9 +288,10 @@ namespace CamadoWin8.ViewModel
 
         public async void Initialize(object parameter)
         {
+            IDeviceInfo deviceObj=parameter as IDeviceInfo;
 
+            RootObject barGraphdata = (RootObject)await graphService.GetBarGraph2(deviceObj.DeviceId.ToString(), deviceObj.DeviceMacId);
 
-           // IRootObject obj = await graphService.GetBarGraph2(parameter.ToString());
            // RootObject obj2 = (RootObject)obj;
 
 

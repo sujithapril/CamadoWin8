@@ -36,6 +36,7 @@ DataContext="{Binding GraphViewModel, Source={StaticResource MainViewModelLocato
             <ColumnDefinition Width="0.7*"/>
             <ColumnDefinition Width="0.15*"/>
         </Grid.ColumnDefinitions>
+        <Button x:Name="backButton" Grid.Column="0" Grid.Row="0"  IsEnabled="True" Style="{StaticResource BackButtonStyle}"  Command="{Binding GoBack }" Height="38" Margin="36,0,0,10" Width="145"/>
         <StackPanel Grid.Row="0" Grid.Column="1" Background="White" Orientation="Horizontal">
             <Rectangle Fill="Blue" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
             <TextBlock Text="Humidity" Foreground="Black" VerticalAlignment="Center" FontSize="18.667" Width="61" Margin="5,0,0,0" FontFamily="Times New Roman"></TextBlock>
@@ -53,11 +54,11 @@ DataContext="{Binding GraphViewModel, Source={StaticResource MainViewModelLocato
             <canvas:CanvasControl   Width="3360" ClearColor="White"  x:Name="barcanvas" Draw="drawingcanvas_Draw" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
         </ScrollViewer>
         <canvas:CanvasControl Grid.Column="2" Grid.Row="1" ClearColor="White"  x:Name="canvasright" Draw="canvasright_Draw"   VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,40,2,5"/>
-        <!-- <Button x:Name="backButton"  IsEnabled="False" Style="{StaticResource BackButtonStyle}"/>
-            <TextBlock x:Name="pageTitle" Text="Graph" Grid.Column="1" Style="{StaticResource PageHeaderTextStyle}"/> -->
+
+        <!--<TextBlock x:Name="pageTitle" Text="Graph" Grid.Column="1" Grid.Row="0" Style="{StaticResource PageHeaderTextStyle}"/>-->
 
 
-      
+
 
     </Grid>
 

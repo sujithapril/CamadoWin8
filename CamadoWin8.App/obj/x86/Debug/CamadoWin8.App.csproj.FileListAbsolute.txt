@@ -105,3 +105,6 @@ D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\qualifiers.txt
 D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\qualifiers.txt.intermediate
 D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\priyanka\Documents\Camado_Win8_App_Git\CamadoWin8\CamadoWin8.App\obj\x86\Debug\CamadoWin8.App.csprojResolveAssemblyReference.cache
+C:\Users\priyanka\Documents\Camado_Win8_App_Git\CamadoWin8\CamadoWin8.App\obj\x86\Debug\CamadoWin8.App.exe
+C:\Users\priyanka\Documents\Camado_Win8_App_Git\CamadoWin8\CamadoWin8.App\obj\x86\Debug\CamadoWin8.App.pdb

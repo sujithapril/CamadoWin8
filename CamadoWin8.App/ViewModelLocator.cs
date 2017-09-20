@@ -3,6 +3,7 @@ using CamadoWin8.Contracts.Model;
 using CamadoWin8.Contracts.Services;
 using CamadoWin8.Contracts.View;
 using CamadoWin8.Contracts.ViewModels;
+using CamadoWin8.Model;
 using CamadoWin8.Services;
 using CamadoWin8.Services.Data;
 using CamadoWin8.Services.Infrastructure;
@@ -40,7 +41,8 @@ namespace CamadoWin8.App
             InstanceFactory.RegisterType<ILocationView,
              LocationView>();
             //Services registration
-
+            InstanceFactory.RegisterType<IAuthenticateService,
+                AuthenticateService>();
             InstanceFactory.RegisterType<INavigationService, 
                 NavigationService>();
             InstanceFactory.RegisterType<IDialogService, DialogService>();
@@ -56,6 +58,7 @@ namespace CamadoWin8.App
 
             //Model
             InstanceFactory.RegisterType<IDeviceInfo, DeviceInfo>();
+            InstanceFactory.RegisterType<ILogInResponse, LogInResponse>();
         }
 
 
