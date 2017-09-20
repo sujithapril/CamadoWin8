@@ -254,6 +254,9 @@
     <Content Include="Assets\bg.png" />
     <Content Include="Assets\command.png" />
     <Content Include="Assets\devices.png" />
+    <Content Include="Assets\ic_home.png" />
+    <Content Include="Assets\ic_location.png" />
+    <Content Include="Assets\ic_profile.png" />
     <Content Include="Assets\locations.png" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Assets\photos.png" />
