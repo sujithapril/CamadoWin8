@@ -99,8 +99,8 @@ namespace CamadoWin8.App
         private void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
-            var stateService = InstanceFactory.GetInstance<IStateService>();
-            stateService.SaveState();
+            //var stateService = InstanceFactory.GetInstance<IStateService>();
+            //stateService.SaveState();
             deferral.Complete();
         }
     }
