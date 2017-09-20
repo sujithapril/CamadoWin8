@@ -250,6 +250,7 @@
     <Content Include="Assets\a\locations.png" />
     <Content Include="Assets\a\profile.png" />
     <Content Include="Assets\a\settings.png" />
+    <Content Include="Assets\background.png" />
     <Content Include="Assets\bg.png" />
     <Content Include="Assets\command.png" />
     <Content Include="Assets\devices.png" />
