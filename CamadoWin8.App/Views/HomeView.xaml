@@ -21,7 +21,7 @@ DataContext="{Binding HomeViewModel, Source={StaticResource MainViewModelLocator
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Style="{StaticResource LayoutRootStyle}" Name="LayoutRoot" Background="#101010">
+    <Grid Style="{StaticResource LayoutRootStyle}" Name="LayoutRoot">
         <!--<Grid.Background>
             <ImageBrush ImageSource="/Assets/bg.png" Stretch="UniformToFill"/>
         </Grid.Background>-->
@@ -46,7 +46,7 @@ DataContext="{Binding HomeViewModel, Source={StaticResource MainViewModelLocator
         <GridView x:Name="deviceGridView" Grid.Row="1" Margin="116,0,40,46" ItemsSource="{Binding DeviceTileInfos}">
             <GridView.ItemTemplate>
                 <DataTemplate>
-                   
+
                     <Grid Width="190" Height="190" Background="#047398">
                         <StackPanel Orientation="Vertical">
                         <Path Width="50" Height="50" Fill="#FFcdc5ae" Stretch="Uniform" Data="M105,42H85.5c-4.143,0-7.5-3.357-7.5-7.5s3.357-7.5,7.5-7.5H105V0H12v27h20.5c4.143,0,7.5,3.357,7.5,7.5 S36.643,42,32.5,42H12H0v98h118V42H105z" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15"/>
