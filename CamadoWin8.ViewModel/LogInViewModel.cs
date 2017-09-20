@@ -53,6 +53,20 @@ namespace CamadoWin8.ViewModel
                 RaisePropertyChanged("Password");
             }
         }
+
+        private string organization;
+        public string Organization
+        {
+            get
+            {
+                return organization;
+            }
+            set
+            {
+                organization = value;
+                RaisePropertyChanged("Organization");
+            }
+        }
         public RelayCommand SignInCommand { get; set; }
         public LogInViewModel( INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
             ITileService tileService, IToastService toastService, IStateService stateService)
@@ -75,7 +89,14 @@ namespace CamadoWin8.ViewModel
             {
 
                 //navigationService.Navigate(PageNames.HomeView, UserName);
-                navigationService.Navigate(PageNames.LayOutView, UserName);
+                if(username!= null && password != null && username.Length > 0 && password.Length>0)
+                {
+                    navigationService.Navigate(PageNames.LayOutView, UserName);
+                }
+                else
+                {
+                    dialogService.ShowDialog("Please enter username and password");
+                }
 
                 //toastService.SendSimpleTextToast(UserName + Password);
 
