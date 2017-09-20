@@ -75,9 +75,9 @@ namespace CamadoWin8.ViewModel
         {
             SignInCommand= new RelayCommand(async() =>
             {
-
+                if (UserName != null && Password != null && UserName.Length > 0 && Password.Length > 0) { 
                 //navigationService.Navigate(PageNames.HomeView, UserName);
-                LogInResponse logInResponse= (LogInResponse)await authenticateService.Authenticate(UserName,Password);
+                LogInResponse logInResponse = (LogInResponse)await authenticateService.Authenticate(UserName, Password);
                 if (logInResponse.status == "1")
                 {
                     stateService.SetItem("currentUserToken", logInResponse.authToken);
@@ -89,8 +89,12 @@ namespace CamadoWin8.ViewModel
                 {
                     toastService.SendSimpleTextToast("Error while logging in");
                 }
-               
 
+            }
+                else
+                {
+                    toastService.SendSimpleTextToast("Please enter Username and Password");
+                }
             });
           
         }
