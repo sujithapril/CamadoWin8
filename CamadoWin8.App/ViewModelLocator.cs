@@ -28,6 +28,7 @@ namespace CamadoWin8.App
             InstanceFactory.RegisterType<IHomeViewModel, HomeViewModel>();
             InstanceFactory.RegisterType<IGraphViewModel, GraphViewModel>();
             InstanceFactory.RegisterType<ILocationViewModel, LocationViewModel>();
+            InstanceFactory.RegisterType<IDetailGraphViewModel, DetailGraphViewModel>();
 
             //View registration
             InstanceFactory.RegisterType<ILogInView,
@@ -40,6 +41,9 @@ namespace CamadoWin8.App
                GraphView>();
             InstanceFactory.RegisterType<ILocationView,
              LocationView>();
+            InstanceFactory.RegisterType<IDetailGraphView,
+               DetailGraphView>();
+
             //Services registration
             InstanceFactory.RegisterType<IAuthenticateService,
                 AuthenticateService>();
@@ -62,6 +66,13 @@ namespace CamadoWin8.App
         }
 
 
+        public IDetailGraphViewModel DetailGraphViewModel
+        {
+            get
+            {
+                return InstanceFactory.GetInstance<IDetailGraphViewModel>();
+            }
+        }
 
         public ILogInViewModel LogInViewModel
         {
@@ -100,5 +111,8 @@ namespace CamadoWin8.App
                 return InstanceFactory.GetInstance<IGraphViewModel>();
             }
         }
+
     }
+
+
 }

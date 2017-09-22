@@ -26,6 +26,8 @@ using Windows.UI;
 using SM = System.Math;
 using System.Globalization;
 using CamadoWin8.Contracts.Services;
+
+
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
 namespace CamadoWin8.App.Views
@@ -33,12 +35,16 @@ namespace CamadoWin8.App.Views
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class GraphView : Page, IGraphView
+    public sealed partial class DetailGraphView : Page, IDetailGraphView
     {
-
+       /* public DetailGraphView()
+        {
+            this.InitializeComponent();
+        }*/
+        
         static int numberOfIntervals = 10;
         static int heightOffset = 60;
-        GraphViewModel graphModel;
+        DetailGraphViewModel graphModel;
         struct AxisData
         {
             public string key;
@@ -55,10 +61,11 @@ namespace CamadoWin8.App.Views
             WordWrapping = CanvasWordWrapping.Wrap,
             HorizontalAlignment = CanvasHorizontalAlignment.Center,
         };
-        public GraphView()
+        public DetailGraphView()
         {
             this.InitializeComponent();
-            graphModel = (GraphViewModel)this.ViewModel;
+
+            graphModel = (DetailGraphViewModel)this.ViewModel;
 
             xAxisData = new AxisData[] {
             new AxisData() {key = "2017-06-20T11:30:00Z", value = "11:30" },
@@ -87,7 +94,7 @@ namespace CamadoWin8.App.Views
             new AxisData() {key = "2017-06-20T10:30:00Z", value = "10:30" }
             };
 
-//            yAxisData_Right = this.plotPoints(graphModel.getMaxFrequency());
+            //            yAxisData_Right = this.plotPoints(graphModel.getMaxFrequency());
 
         }
 
@@ -100,7 +107,7 @@ namespace CamadoWin8.App.Views
             yAxisPlotter.AxisLabel = "(Humidity, Sound, Temperature, Vibration)";
             float[] maxDataValues = new float[4] { graphModel.getMaxHumidity(), graphModel.getMaxspl(), graphModel.getMaxTemprature(), graphModel.getMaxVib() };
             yAxisPlotter.MaximumOffset = maxDataValues.Max();
-            YAxisMaxValue_Left =  yAxisPlotter.renderLeftYAxis(sender, args);
+            YAxisMaxValue_Left = yAxisPlotter.renderLeftYAxis(sender, args);
 
         }
 
@@ -115,7 +122,6 @@ namespace CamadoWin8.App.Views
             this.canvasright.RemoveFromVisualTree();
             this.canvasright = null;
         }
-
         private void drawingcanvas_Draw(CanvasControl sender, CanvasDrawEventArgs args)
         {
             var width = (float)sender.ActualWidth;
@@ -130,7 +136,7 @@ namespace CamadoWin8.App.Views
                 cpb.AddLine(new Vector2() { X = width, Y = height });
                 cpb.EndFigure(CanvasFigureLoop.Open);
                 args.DrawingSession.DrawGeometry(CanvasGeometry.CreatePath(cpb), Colors.Black, 1);
-
+                Vector2 startingPoint = new Vector2() { X = startPoint, Y = height };
                 for (int i = 0; i < xAxisData.Length; i++)
                 {
                     string key = xAxisData[i].key;
@@ -142,19 +148,26 @@ namespace CamadoWin8.App.Views
                     float temprature = yReference_Left * graphModel.getTemperatureForValue(key);
                     float vib = yReference_Left * graphModel.getVibForValue(key);
                     float frequency = yReference_Right * graphModel.getFrequncyForValue(key);
+                    System.Diagnostics.Debug.WriteLine("startingPoint => " + startingPoint.X + " " + startingPoint.Y);
+                    cpb.BeginFigure(startingPoint);
+                    cpb.AddLine(new Vector2() { X = startPoint, Y = height - humidity });
+                    cpb.EndFigure(CanvasFigureLoop.Open);
+                    args.DrawingSession.DrawGeometry(CanvasGeometry.CreatePath(cpb), Colors.Black, 1);
 
-                    args.DrawingSession.DrawText(xAxisData[i].value, new Vector2() { X = startPoint + 60, Y = height + 20 }, Colors.Black, format);
-                    args.DrawingSession.DrawLine(new Vector2() { X = startPoint + 60, Y = height }, new Vector2() { X = startPoint + 60, Y = height + 15 }, Colors.Black);
-                    args.DrawingSession.FillRectangle(startPoint, height - humidity, 25, humidity, Colors.Blue);
-                    startPoint = startPoint + 25;
-                    args.DrawingSession.FillRectangle(startPoint, height - spl, 25, spl, Colors.Green);
-                    startPoint = startPoint + 25;
-                    args.DrawingSession.FillRectangle(startPoint, height - temprature, 25, temprature, Colors.Yellow);
-                    startPoint = startPoint + 25;
-                    args.DrawingSession.FillRectangle(startPoint, height - vib, 25, vib, Colors.Black);
-                    startPoint = startPoint + 25;
-                    args.DrawingSession.FillRectangle(startPoint, height - frequency, 25, frequency, Colors.Red);
-                    startPoint = startPoint + 40;
+                    startingPoint = new Vector2() { X = startPoint, Y = height - humidity };
+                     startPoint = startPoint + 25;
+                    /* args.DrawingSession.DrawText(xAxisData[i].value, new Vector2() { X = startPoint + 60, Y = height + 20 }, Colors.Black, format);
+                     args.DrawingSession.DrawLine(new Vector2() { X = startPoint + 60, Y = height }, new Vector2() { X = startPoint + 60, Y = height + 15 }, Colors.Black);
+                     args.DrawingSession.FillRectangle(startPoint, height - humidity, 25, humidity, Colors.Blue);
+                     startPoint = startPoint + 25;
+                     args.DrawingSession.FillRectangle(startPoint, height - spl, 25, spl, Colors.Green);
+                     startPoint = startPoint + 25;
+                     args.DrawingSession.FillRectangle(startPoint, height - temprature, 25, temprature, Colors.Yellow);
+                     startPoint = startPoint + 25;
+                     args.DrawingSession.FillRectangle(startPoint, height - vib, 25, vib, Colors.Black);
+                     startPoint = startPoint + 25;
+                     args.DrawingSession.FillRectangle(startPoint, height - frequency, 25, frequency, Colors.Red);
+                     startPoint = startPoint + 40;*/
                 }
             }
         }
@@ -170,6 +183,14 @@ namespace CamadoWin8.App.Views
             YAxisMaxValue_Right = yAxisPlotter.renderLeftYAxis(sender, args);
 
         }
+        
+        public IViewModel ViewModel
+        {
+            get { return this.DataContext as IViewModel; }
+        }
+
+
+
         /// <summary>
         /// Invoked when this page is about to be displayed in a Frame.
         /// </summary>
@@ -177,19 +198,8 @@ namespace CamadoWin8.App.Views
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-        }
-
-        public IViewModel ViewModel
-        {
-            get { return this.DataContext as IViewModel; }
-        }
-
-        private void barcanvas_Tapped(object sender, TappedRoutedEventArgs e)
-        {
-            Point point = e.GetPosition((CanvasControl)sender);
-            System.Diagnostics.Debug.WriteLine("Tapped at " + point.X + " " + point.Y);
-            graphModel.LoadDetailView();
 
         }
+
     }
 }
