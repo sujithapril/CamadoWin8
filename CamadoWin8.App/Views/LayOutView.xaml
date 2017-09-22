@@ -29,7 +29,7 @@ DataContext="{Binding LayOutViewModel, Source={StaticResource MainViewModelLocat
             <ColumnDefinition Width="2*"  MinWidth="230" MaxWidth="600"/>
             <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
-        <Grid x:Name="LeftPane" Background="#35414F"  Grid.Column="0">
+        <Grid x:Name="LeftPane" Background="#222222"  Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="115"/>
                 <RowDefinition Height="*"/>

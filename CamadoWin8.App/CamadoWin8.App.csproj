@@ -267,6 +267,7 @@
     <Content Include="Assets\ic_profile.png" />
     <Content Include="Assets\locations.png" />
     <Content Include="Assets\Logo.png" />
+    <Content Include="Assets\noimage.png" />
     <Content Include="Assets\photos.png" />
     <Content Include="Assets\settings-1.png" />
     <Content Include="Assets\settings-4.png" />

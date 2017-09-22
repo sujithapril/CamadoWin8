@@ -102,6 +102,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Model\LocationInfo.cs" />
     <Compile Include="Model\IDeviceResponse.cs" />
     <Compile Include="Model\ILogInResponse.cs" />
     <Compile Include="Model\IRootObject.cs" />
@@ -109,6 +110,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ICacheDataService.cs" />
     <Compile Include="Services\IAuthenticateService.cs" />
+    <Compile Include="Services\ILocationService.cs" />
     <Compile Include="Services\IGraphService.cs" />
     <Compile Include="Services\IDIalogService.cs" />
     <Compile Include="Services\INavigationService.cs" />

@@ -67,3 +67,4 @@ C:\Users\priyanka\Documents\Camado_Win8_App_Git\CamadoWin8\CamadoWin8.Contracts\
 C:\Users\priyanka\Documents\Camado_Win8_App_Git\CamadoWin8\CamadoWin8.Contracts\obj\x86\Debug\qualifiers.txt
 C:\Users\priyanka\Documents\Camado_Win8_App_Git\CamadoWin8\CamadoWin8.Contracts\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\priyanka\Documents\Camado_Win8_App_Git\CamadoWin8\CamadoWin8.Contracts\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\Projects\CamadoWin8\CamadoWin8.Contracts\obj\x86\Debug\CamadoWin8.Contracts.csprojResolveAssemblyReference.cache

@@ -103,6 +103,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CommonRequest.cs" />
+    <Compile Include="LocationInfo.cs" />
+    <Compile Include="LocationResponse.cs" />
     <Compile Include="DeviceResponse.cs" />
     <Compile Include="LogInResponse.cs" />
     <Compile Include="Menu.cs" />

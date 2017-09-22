@@ -123,6 +123,7 @@
   <ItemGroup>
     <Compile Include="Data\CacheDataService.cs" />
     <Compile Include="Data\AuthenticationService.cs" />
+    <Compile Include="Data\LocationService.cs" />
     <Compile Include="Data\GraphService.cs" />
     <Compile Include="Data\DeviceService.cs" />
     <Compile Include="Infrastructure\DialogService.cs" />

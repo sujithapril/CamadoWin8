@@ -28,68 +28,30 @@ namespace CamadoWin8.ViewModel
         private ITileService tileService;
         private IToastService toastService;
         private IStateService stateService;
-        private IDeviceService deviceService;
-        private string username;
-        public string UserName
+        private ILocationService locationService;
+ 
+
+
+        private ObservableCollection<ILocationInfo> locationTileInfos;
+
+        public ObservableCollection<ILocationInfo>LocationTileInfos
         {
             get
             {
-                return username;
+                return locationTileInfos;
             }
             set
             {
-                username = value;
-                RaisePropertyChanged("UserName");
-            }
-        }
-        private string password;
-        public string Password
-        {
-            get
-            {
-                return password;
-            }
-            set
-            {
-                password = value;
-                RaisePropertyChanged("Password");
+                locationTileInfos = value;
+                RaisePropertyChanged("LocationTileInfos");
             }
         }
 
-
-        private ObservableCollection<IDeviceInfo> deviceTileInfos;
-
-        public ObservableCollection<IDeviceInfo> DeviceTileInfos
-        {
-            get
-            {
-                return deviceTileInfos;
-            }
-            set
-            {
-                deviceTileInfos = value;
-                RaisePropertyChanged("DeviceTileInfos");
-            }
-        }
-
-        //private List<IDeviceInfo> deviceTileInfos;
-
-        //public List<IDeviceInfo> DeviceTileInfos
-        //{
-        //    get
-        //    {
-        //        return deviceTileInfos;
-        //    }
-        //    set
-        //    {
-        //        deviceTileInfos = value;
-        //        RaisePropertyChanged("DeviceTileInfos");
-        //    }
-        //}
+   
           public RelayCommand<IDeviceInfo> SelectedCommand { get; set; }
        // public RelayCommand SelectedCommand { get; set; }
         public LocationViewModel( INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
-            ITileService tileService, IToastService toastService, IStateService stateService,IDeviceService deviceService)
+            ITileService tileService, IToastService toastService, IStateService stateService,ILocationService locationService)
         {
             
             this.navigationService = navigationService;
@@ -98,7 +60,7 @@ namespace CamadoWin8.ViewModel
             this.tileService = tileService;
             this.toastService = toastService;
             this.stateService = stateService;
-            this.deviceService = deviceService;
+            this.locationService = locationService;
             InitializeCommands();
 
         }
@@ -108,36 +70,19 @@ namespace CamadoWin8.ViewModel
             SelectedCommand = new RelayCommand<IDeviceInfo>((deviceObj) =>
              {
                  toastService.SendSimpleTextToast("Hello YOU  clicked me!");
-                 navigationService.Navigate(PageNames.GraphView,
-                     deviceObj.DeviceId);
+                 //navigationService.Navigate(PageNames.GraphView,
+                 //    deviceObj.DeviceId);
              });
 
-            //SelectedCommand = new RelayCommand(() =>
-            //{
-            //    toastService.SendSimpleTextToast("Hello clicked me!");
-            //});
-            //GoBack = new RelayCommand(() =>
-            //{
-            //    navigationService.GoBack();
-            //});
-            //GoHome = new RelayCommand(() =>
-            //{
-            //    navigationService.Navigate(PageNames.PopularTravelView);
-            //});
-            //AddToFavorites = new RelayCommand(() => 
-            //{
-            //    dialogService.ShowAddToFavoriteConfirmation();
-            //});
+          
         }
 
         public async void Initialize(object parameter)
         {
-            // SelectedTravelDetail = await travelDataService.GetTravelDetails(parameter.ToString());
+           
+            IEnumerable<ILocationInfo> ilocationenumerableList =  await locationService.GetLocationList();
 
-            // shareContractService.Initialize();
-            IEnumerable<IDeviceInfo> ideviceenumerableList =  await deviceService.GetDeviceList();
-         //   DeviceTileInfos = ideviceenumerableList.ToList();
-            DeviceTileInfos = ideviceenumerableList.ToObservableCollection();
+            LocationTileInfos = ilocationenumerableList.ToObservableCollection();
         }
     }
 }

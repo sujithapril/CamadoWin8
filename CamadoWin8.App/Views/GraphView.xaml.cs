@@ -146,6 +146,7 @@ namespace CamadoWin8.App.Views
                     args.DrawingSession.DrawText(xAxisData[i].value, new Vector2() { X = startPoint + 60, Y = height + 20 }, Colors.Black, format);
                     args.DrawingSession.DrawLine(new Vector2() { X = startPoint + 60, Y = height }, new Vector2() { X = startPoint + 60, Y = height + 15 }, Colors.Black);
                     args.DrawingSession.FillRectangle(startPoint, height - humidity, 25, humidity, Colors.Blue);
+
                     startPoint = startPoint + 25;
                     args.DrawingSession.FillRectangle(startPoint, height - spl, 25, spl, Colors.Green);
                     startPoint = startPoint + 25;

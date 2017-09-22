@@ -134,6 +134,9 @@
       <PackagePath>Assets\Logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\noimage.png">
+      <PackagePath>Assets\noimage.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Projects\CamadoWin8\CamadoWin8.App\Assets\photos.png">
       <PackagePath>Assets\photos.png</PackagePath>
     </AppxPackagedFile>

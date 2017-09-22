@@ -59,9 +59,11 @@ namespace CamadoWin8.App
 
             InstanceFactory.RegisterType<IDeviceService, DeviceService>();
             InstanceFactory.RegisterType<IGraphService, GraphService>();
+            InstanceFactory.RegisterType<ILocationService, LocationService>();
 
             //Model
             InstanceFactory.RegisterType<IDeviceInfo, DeviceInfo>();
+            InstanceFactory.RegisterType<ILocationInfo, LocationInfo>();
             InstanceFactory.RegisterType<ILogInResponse, LogInResponse>();
         }
 
