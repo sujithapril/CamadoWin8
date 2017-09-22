@@ -10,15 +10,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
-
+using CamadoWin8.Contracts.View;
 
 namespace CamadoWin8.ViewModel
 {
-    public class GraphViewModel : ViewModelBase, IGraphViewModel
+     public class DetailGraphViewModel : ViewModelBase, IDetailGraphViewModel
     {
         public RelayCommand GoBack { get; set; }
         public RelayCommand GoHome { get; set; }
         public RelayCommand AddToFavorites { get; set; }
+
 
 
         private INavigationService navigationService;
@@ -27,8 +28,10 @@ namespace CamadoWin8.ViewModel
         private ITileService tileService;
         private IToastService toastService;
         private IStateService stateService;
-        private IGraphService graphService;
-
+        private IDeviceService deviceService;
+        public async void Initialize(object parameter)
+        {
+        }
         public struct barDataModel
         {
             public string key;
@@ -222,84 +225,6 @@ namespace CamadoWin8.ViewModel
         public float getMaxVib()
         {
             return this.vibData.OfType<barDataModel>().Max(barDataModel => barDataModel.value);
-        }
-
-        private ObservableCollection<IDeviceInfo> deviceTileInfos;
-
-        public ObservableCollection<IDeviceInfo> DeviceTileInfos
-        {
-            get
-            {
-                return deviceTileInfos;
-            }
-            set
-            {
-                deviceTileInfos = value;
-                RaisePropertyChanged("DeviceTileInfos");
-            }
-        }
-
-        //private List<IDeviceInfo> deviceTileInfos;
-
-        //public List<IDeviceInfo> DeviceTileInfos
-        //{
-        //    get
-        //    {
-        //        return deviceTileInfos;
-        //    }
-        //    set
-        //    {
-        //        deviceTileInfos = value;
-        //        RaisePropertyChanged("DeviceTileInfos");
-        //    }
-        //}
-        public RelayCommand<IDeviceInfo> SelectedCommand { get; set; }
-        public GraphViewModel(INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
-            ITileService tileService, IToastService toastService, IStateService stateService, IGraphService graphService)
-        {
-
-            this.navigationService = navigationService;
-            this.dialogService = dialogService;
-            this.shareContractService = shareContractService;
-            this.tileService = tileService;
-            this.toastService = toastService;
-            this.stateService = stateService;
-            this.graphService = graphService;
-            InitializeCommands();
-
-        }
-
-        private void InitializeCommands()
-        {
-
-            GoBack = new RelayCommand(() =>
-            {
-                navigationService.GoBack();
-            });
-            //GoHome = new RelayCommand(() =>
-            //{
-            //    navigationService.Navigate(PageNames.PopularTravelView);
-            //});
-            //AddToFavorites = new RelayCommand(() => 
-            //{
-            //    dialogService.ShowAddToFavoriteConfirmation();
-            //});
-        }
-        public void LoadDetailView()
-        {
-            navigationService.Navigate(PageNames.DetailGraphView,null);
-
-        }
-
-        public async void Initialize(object parameter)
-        {
-            IDeviceInfo deviceObj=parameter as IDeviceInfo;
-
-            RootObject barGraphdata = (RootObject)await graphService.GetBarGraph2(deviceObj.DeviceId.ToString(), deviceObj.DeviceMacId);
-            System.Diagnostics.Debug.WriteLine("GraphData => ", barGraphdata);
-          //  RootObject obj2 = (RootObject)obj;
-
-
         }
     }
 }
