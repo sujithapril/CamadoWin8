@@ -124,19 +124,15 @@ namespace CamadoWin8.App.Views
         }
         private void drawingcanvas_Draw(CanvasControl sender, CanvasDrawEventArgs args)
         {
-            var width = (float)sender.ActualWidth;
-            var height = (float)(sender.ActualHeight) - heightOffset;
-            var startPoint = 5;
+            var width = (float)canvas.ActualWidth;
+            var height = (float)(canvas.ActualHeight) - heightOffset;
+            var startPointX = 5;
+            var startPointY = height;
             float offset = height / numberOfIntervals;
 
             using (var cpb = new CanvasPathBuilder(args.DrawingSession))
             {
-                // Verical line
-                cpb.BeginFigure(new Vector2() { X = 0, Y = height });
-                cpb.AddLine(new Vector2() { X = width, Y = height });
-                cpb.EndFigure(CanvasFigureLoop.Open);
-                args.DrawingSession.DrawGeometry(CanvasGeometry.CreatePath(cpb), Colors.Black, 1);
-                Vector2 startingPoint = new Vector2() { X = startPoint, Y = height };
+                System.Diagnostics.Debug.WriteLine("startingPoint => " + startPointX + " " + startPointY);
                 for (int i = 0; i < xAxisData.Length; i++)
                 {
                     string key = xAxisData[i].key;
@@ -148,26 +144,9 @@ namespace CamadoWin8.App.Views
                     float temprature = yReference_Left * graphModel.getTemperatureForValue(key);
                     float vib = yReference_Left * graphModel.getVibForValue(key);
                     float frequency = yReference_Right * graphModel.getFrequncyForValue(key);
-                    System.Diagnostics.Debug.WriteLine("startingPoint => " + startingPoint.X + " " + startingPoint.Y);
-                    cpb.BeginFigure(startingPoint);
-                    cpb.AddLine(new Vector2() { X = startPoint, Y = height - humidity });
-                    cpb.EndFigure(CanvasFigureLoop.Open);
-                    args.DrawingSession.DrawGeometry(CanvasGeometry.CreatePath(cpb), Colors.Black, 1);
-
-                    startingPoint = new Vector2() { X = startPoint, Y = height - humidity };
-                     startPoint = startPoint + 25;
-                    /* args.DrawingSession.DrawText(xAxisData[i].value, new Vector2() { X = startPoint + 60, Y = height + 20 }, Colors.Black, format);
-                     args.DrawingSession.DrawLine(new Vector2() { X = startPoint + 60, Y = height }, new Vector2() { X = startPoint + 60, Y = height + 15 }, Colors.Black);
-                     args.DrawingSession.FillRectangle(startPoint, height - humidity, 25, humidity, Colors.Blue);
-                     startPoint = startPoint + 25;
-                     args.DrawingSession.FillRectangle(startPoint, height - spl, 25, spl, Colors.Green);
-                     startPoint = startPoint + 25;
-                     args.DrawingSession.FillRectangle(startPoint, height - temprature, 25, temprature, Colors.Yellow);
-                     startPoint = startPoint + 25;
-                     args.DrawingSession.FillRectangle(startPoint, height - vib, 25, vib, Colors.Black);
-                     startPoint = startPoint + 25;
-                     args.DrawingSession.FillRectangle(startPoint, height - frequency, 25, frequency, Colors.Red);
-                     startPoint = startPoint + 40;*/
+                    args.DrawingSession.DrawLine(new Vector2() { X = startPointX , Y = startPointY }, new Vector2() { X = startPointX, Y = height - humidity }, Colors.Black);
+                    startPointX = startPointX+ 25;
+                    startPointY = height - humidity;
                 }
             }
         }
