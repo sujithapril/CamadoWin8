@@ -21,12 +21,15 @@ DataContext="{Binding LayOutViewModel, Source={StaticResource MainViewModelLocat
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/background.png"/>
+        </Grid.Background>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="2*"  MinWidth="230" MaxWidth="600"/>
             <ColumnDefinition Width="8*"/>
         </Grid.ColumnDefinitions>
-        <Grid x:Name="LeftPane" Background="#222222"  Grid.Column="0">
+        <Grid x:Name="LeftPane" Background="#0091BD"  Grid.Column="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="115"/>
                 <RowDefinition Height="*"/>
@@ -77,7 +80,7 @@ DataContext="{Binding LayOutViewModel, Source={StaticResource MainViewModelLocat
                 </StackPanel>
             </StackPanel>
         </Grid>
-        <Frame Grid.Column="1" x:Name="ContentFrame" Margin="0,0,0,0" Background="#EBEBEB" />
+        <Frame Grid.Column="1" x:Name="ContentFrame" Margin="0,0,0,0"/>
     </Grid>
 
 

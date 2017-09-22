@@ -271,7 +271,7 @@
     <Content Include="Assets\settings-1.png" />
     <Content Include="Assets\settings-4.png" />
     <Content Include="Assets\SmallLogo.png" />
-    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\user-3.png" />
     <Content Include="Assets\user.png" />

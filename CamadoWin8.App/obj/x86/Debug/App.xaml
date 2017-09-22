@@ -6,7 +6,7 @@
              mc:Ignorable="d">
     <Application.Resources>
         <ResourceDictionary>
-           
+
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary>
                     <!--<SolidColorBrush x:Key="ListBoxItemSelectedPointerOverBackgroundThemeBrush" Color="#007700" />
@@ -24,7 +24,7 @@
                     Required by Visual Studio project and item templates
                  -->
                 <ResourceDictionary Source="Common/StandardStyles.xaml" />
-              
+
             </ResourceDictionary.MergedDictionaries>
             <local:ViewModelLocator x:Key="MainViewModelLocator"  />
             <converter:DoNothingConverter x:Key="LocalDoNothingConverter"></converter:DoNothingConverter>

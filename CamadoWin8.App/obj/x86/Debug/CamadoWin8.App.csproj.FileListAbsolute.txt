@@ -108,3 +108,13 @@ D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\ProjectArchitectures.txt
 C:\Users\priyanka\Documents\Camado_Win8_App_Git\CamadoWin8\CamadoWin8.App\obj\x86\Debug\CamadoWin8.App.csprojResolveAssemblyReference.cache
 C:\Users\priyanka\Documents\Camado_Win8_App_Git\CamadoWin8\CamadoWin8.App\obj\x86\Debug\CamadoWin8.App.exe
 C:\Users\priyanka\Documents\Camado_Win8_App_Git\CamadoWin8\CamadoWin8.App\obj\x86\Debug\CamadoWin8.App.pdb
+D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Microsoft.Graphics.Canvas.Numerics.dll
+D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Microsoft.Graphics.Canvas.winmd
+D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Microsoft.Graphics.Canvas.dll
+D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Microsoft.Graphics.Canvas.xml
+D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Microsoft.Graphics.Canvas.Numerics.xml
+D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\Views\DetailGraphView.g.i.cs
+D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\Views\DetailGraphView.g.cs
+D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\Views\DetailGraphView.xaml
+D:\Projects\CamadoWin8\CamadoWin8.App\obj\x86\Debug\Views\DetailGraphView.xbf
+D:\Projects\CamadoWin8\CamadoWin8.App\bin\x86\Debug\Views\DetailGraphView.xbf

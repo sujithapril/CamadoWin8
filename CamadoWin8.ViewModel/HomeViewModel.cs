@@ -91,7 +91,7 @@ namespace CamadoWin8.ViewModel
         public HomeViewModel( INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
             ITileService tileService, IToastService toastService, IStateService stateService,IDeviceService deviceService)
         {
-            
+            DeviceTileInfos = new ObservableCollection<IDeviceInfo>();
             this.navigationService = navigationService;
             this.dialogService = dialogService;
             this.shareContractService = shareContractService;
@@ -132,12 +132,15 @@ namespace CamadoWin8.ViewModel
 
         public async void Initialize(object parameter)
         {
-            // SelectedTravelDetail = await travelDataService.GetTravelDetails(parameter.ToString());
+            if (DeviceTileInfos.Count == 0)
+            {
+                // SelectedTravelDetail = await travelDataService.GetTravelDetails(parameter.ToString());
 
-            // shareContractService.Initialize();
-            IEnumerable<IDeviceInfo> ideviceenumerableList =  await deviceService.GetDeviceList();
-         //   DeviceTileInfos = ideviceenumerableList.ToList();
-            DeviceTileInfos = ideviceenumerableList.ToObservableCollection();
+                // shareContractService.Initialize();
+                IEnumerable<IDeviceInfo> ideviceenumerableList = await deviceService.GetDeviceList();
+                //   DeviceTileInfos = ideviceenumerableList.ToList();
+                DeviceTileInfos = ideviceenumerableList.ToObservableCollection();
+            }
         }
     }
 }
