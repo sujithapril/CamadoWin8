@@ -30,7 +30,6 @@
     <RootPropertyPathName Name="SignInCommand" />
     <RootPropertyPathName Name="Password" />
     <RootPropertyPathName Name="UserName" />
-    <RootPropertyPathName Name="Organization" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
@@ -221,7 +220,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="CornerRadius" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.VisualStateManager">
       <RootMethod Name="GetVisualStateGroups" />
