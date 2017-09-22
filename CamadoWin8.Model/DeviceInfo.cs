@@ -12,5 +12,19 @@ namespace CamadoWin8.Contracts.Model
         public string DeviceMacId { get; set; }
         public string NickName { get; set; }
         public string Description { get; set; }
+        public string BasePath = @"http://iot.cabotprojects.com:3001/public/assets/images/";
+        private string fileName;
+        public string FileName
+        {
+            get
+            {
+                if (!(string.IsNullOrEmpty(fileName)))
+                    return BasePath + fileName;
+                return "/Assets/noimage.png";
+
+            }
+            set { fileName = value; }
+        }
     }
 }
+

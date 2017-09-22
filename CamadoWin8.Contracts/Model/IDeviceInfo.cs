@@ -12,5 +12,6 @@ namespace CamadoWin8.Contracts.Model
         string DeviceMacId { get; set; }
         string NickName { get; set; }
         string Description { get; set; }
+        string FileName { get; set; }
     }
 }

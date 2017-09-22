@@ -69,8 +69,8 @@ DataContext="{Binding HomeViewModel, Source={StaticResource MainViewModelLocator
                 <DataTemplate>
                     <Grid HorizontalAlignment="Left" Width="250" Height="250">
                         <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}">
-                            <!--<Image Source="{Binding ImageUrl}" Stretch="UniformToFill"/>-->
-                            <Image Source="/Assets/noimage.png" Stretch="UniformToFill"/>
+                            <Image Source="{Binding FileName}" Stretch="UniformToFill"/>
+                            <!--<Image Source="/Assets/noimage.png" Stretch="UniformToFill"/>-->
                         </Border>
                         <StackPanel VerticalAlignment="Bottom" Background="#007700" >
                             <TextBlock Text="{Binding NickName}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="20" Margin="15,0,15,0"/>
