@@ -13,5 +13,7 @@ namespace CamadoWin8.Shared
         public const string HomeView = "CamadoWin8.App.Views.HomeView";
         public const string LocationView = "CamadoWin8.App.Views.LocationView";
         public const string GraphView = "CamadoWin8.App.Views.GraphView";
+        public const string DetailGraphView = "CamadoWin8.App.Views.DetailGraphView";
+
     }
 }
