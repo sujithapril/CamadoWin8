@@ -56,6 +56,8 @@ namespace CamadoWin8.Services.Infrastructure
                     Navigate<ILayOutView>(parameter); break;
                 case PageNames.LocationView:
                    Navigate<ILocationView>(parameter); break;
+                case PageNames.DetailGraphView:
+                    Navigate<IDetailGraphView>(parameter);break;
             }
         }
 
