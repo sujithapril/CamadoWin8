@@ -16,21 +16,3 @@ D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\No
 D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\NotificationsExtensions\obj\Win32\Debug\qualifiers.txt
 D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\NotificationsExtensions\obj\Win32\Debug\qualifiers.txt.intermediate
 D:\Test\5-win8-realworldmvvm-m5-test-exercise-files\On The Road\OnTheRoad.App\NotificationsExtensions\obj\Win32\Debug\MultipleQualifiersPerDimensionFound.txt
-D:\Projects\CamadoWin8\NotificationsExtensions\bin\x86\Debug\NotificationsExtensions.winmd
-D:\Projects\CamadoWin8\NotificationsExtensions\bin\x86\Debug\NotificationsExtensions.pdb
-D:\Projects\CamadoWin8\NotificationsExtensions\bin\x86\Debug\NotificationsExtensions.pri
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\NotificationsExtensions.winmd
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\NotificationsExtensions.pdb
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\NotificationsExtensions.winmdobj
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\NotificationsExtensions.compile.pdb
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\priconfig.xml
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\priconfig.xml.intermediate
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\layout.resfiles
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\layout.resfiles.intermediate
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\resources.resfiles
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\resources.resfiles.intermediate
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\pri.resfiles
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\pri.resfiles.intermediate
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\qualifiers.txt
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\qualifiers.txt.intermediate
-D:\Projects\CamadoWin8\NotificationsExtensions\obj\Win32\Debug\MultipleQualifiersPerDimensionFound.txt

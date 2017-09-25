@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
-
+using System.Threading;
 
 namespace CamadoWin8.ViewModel
 {
@@ -255,6 +255,8 @@ namespace CamadoWin8.ViewModel
         //    }
         //}
         public RelayCommand<IDeviceInfo> SelectedCommand { get; set; }
+
+        public bool IsEntered = false;
         public GraphViewModel(INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
             ITileService tileService, IToastService toastService, IStateService stateService, IGraphService graphService)
         {
@@ -294,19 +296,25 @@ namespace CamadoWin8.ViewModel
         
         public async void Initialize(object parameter)
         {
-            if(parameter!=null)            
+
+
+            //if (!IsEntered)
+            //{
+            //    IsEntered = true;
+                if (parameter != null)
 
                 {
                     IDeviceInfo deviceObj = parameter as IDeviceInfo;
                     RootObject barGraphdata = null;
                     if (deviceObj != null)
                     {
-                        // toastService.SendSimpleTextToast(deviceObj.DeviceId.ToString() + "   " + deviceObj.DeviceMacId);
-                     //   barGraphdata = (RootObject)await graphService.GetBarGraph2(deviceObj.DeviceId.ToString(), deviceObj.DeviceMacId);
+
+                        //toastService.SendSimpleTextToast(deviceObj.DeviceId.ToString() + "   " + deviceObj.DeviceMacId);
+                        barGraphdata = (RootObject)await graphService.GetBarGraph2(deviceObj.DeviceId.ToString(), deviceObj.DeviceMacId);
                     }
-                    //System.Diagnostics.Debug.WriteLine("GraphData => ", barGraphdata);
-                    //  RootObject obj2 = (RootObject)obj;
+
                 }
+            //}
 
         }
     }

@@ -1,9 +1,0 @@
-D:\Projects\CamadoWin8\CamadoWin8.Contracts\CamadoWin8.Contracts.csproj;x86
-D:\Projects\CamadoWin8\CamadoWin8.Contracts\CamadoWin8.Contracts.csproj;x86
-D:\Projects\CamadoWin8\CamadoWin8.Contracts\CamadoWin8.Contracts.csproj;x86
-D:\Projects\CamadoWin8\CamadoWin8.Model\CamadoWin8.Model.csproj;x86
-D:\Projects\CamadoWin8\CamadoWin8.Model\CamadoWin8.Model.csproj;x86
-D:\Projects\CamadoWin8\CamadoWin8.Shared\CamadoWin8.Shared.csproj;x86
-D:\Projects\CamadoWin8\CamadoWin8.Shared\CamadoWin8.Shared.csproj;x86
-D:\Projects\CamadoWin8\CamadoWin8.Tests\CamadoWin8.Tests.csproj;x86
-D:\Projects\CamadoWin8\CamadoWin8.ViewModel\CamadoWin8.ViewModel.csproj;x86

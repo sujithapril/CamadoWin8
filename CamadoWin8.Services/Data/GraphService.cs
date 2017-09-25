@@ -35,38 +35,33 @@ namespace CamadoWin8.Services.Data
         public async Task<IRootObject> GetBarGraph2(string deviceId,string devicemacId)
         {
 
-            //  var c = new HttpClient();
-            //  var resp = await c.GetAsync(new Uri("http://localhost/CamadoService/CamadoService.svc/BarGraph/" + deviceId));
-            //  var prod = await resp.Content.ReadAsStringAsync();
-            //  // dynamic cc= JsonConvert.DeserializeObject<def>(prod);
-            //  //Console.WriteLine(cc[0].DeviceId);
-            //System.Xml. XmlReader xmlReader = System.Xml.XmlReader.Create(new System.IO.StringReader(prod));
-            //  xmlReader.Read();
-            //  string inner = xmlReader.ReadInnerXml();
-            //  // xmlReader.Value
-            //  //string a = xmlDoc.InnerText;
-            //  var rootObj = JsonConvert.DeserializeObject<RootObject>(inner);
-            //  //var rootObj= JsonConvert.DeserializeObject<RootObject>(prod);
-            //  return rootObj;
+          
 
             string requestBodyField = string.Empty; ;
             string startDate = string.Empty; ;
             string timeZone = string.Empty; ;
             TimeSpan t = (new DateTime(DateTime.Now.Year,DateTime.Now.Month,DateTime.Now.Day,0,0,0)).ToUniversalTime() - new DateTime(1970, 1, 1);
             int secondsSinceEpoch = (int)t.TotalSeconds;
-            // startDate = secondsSinceEpoch.ToString();
-            startDate = "1506317400";
+             startDate = secondsSinceEpoch.ToString();
+            //startDate = "1506038400";
             timeZone = "19800";
             //RequestBodyField=
             string resourceAddress = "http://iot.cabotprojects.com:3001/tokenValidate";
-            var httpClient = new HttpClient();        
+            var httpClient = new HttpClient();
+
+            httpClient.DefaultRequestHeaders.UserAgent.TryParseAdd("Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36");
+            httpClient.DefaultRequestHeaders.Accept.TryParseAdd("application/json, text/plain, */*");
+            httpClient.DefaultRequestHeaders.AcceptEncoding.TryParseAdd("gzip, deflate");
+            httpClient.DefaultRequestHeaders.AcceptLanguage.TryParseAdd("en-US,en;q=0.8,en-CA;q=0.6");
+
             httpClient.DefaultRequestHeaders.Add("authtoken", stateService.GetItem("currentUserToken").ToString());
             httpClient.DefaultRequestHeaders.Add("orgId", stateService.GetItem("currentUserOrgId").ToString());
             httpClient.DefaultRequestHeaders.Add("userId", stateService.GetItem("currentUserId").ToString());
             httpClient.DefaultRequestHeaders.Add("deviceToken", "123");
             httpClient.DefaultRequestHeaders.Add("clientDeviceId", "12");
             CommonRequest r = new CommonRequest();
-            r.data = "{\"deviceId\":" + deviceId + ",\"deviceMacId\": " + devicemacId + ",\"startDate\":"+ startDate + ",\"timeZone\":"+timeZone+" } ";
+            // r.data = "{\"deviceId\":" + deviceId + ",\"deviceMacId\": " + devicemacId + ",\"startDate\":"+ startDate + ",\"timeZone\":"+timeZone+" } ";
+            r.data = "{\"deviceId\":" + deviceId + ",\"deviceMacId\": \"" + devicemacId + "\",\"startDate\":\"" + startDate + "\",\"timeZone\":" + timeZone + " } ";
             //"{"deviceId":"118","deviceMacId":"101","startDate":"1505889000","timeZone":19800}"
             r.method = "post";
             r.endpoint = "compare";
@@ -74,6 +69,8 @@ namespace CamadoWin8.Services.Data
 
             HttpResponseMessage response = await httpClient.PostAsync(new Uri(resourceAddress),
                      new HttpStringContent(requestBodyField, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/json"));
+            //HttpResponseMessage response = await httpClient.PostAsync(new Uri(resourceAddress),
+            //    new HttpStringContent(requestBodyField));
             var bargraphstring = await response.Content.ReadAsStringAsync();
             RootObject rootObj=new RootObject();
             try
@@ -84,5 +81,6 @@ namespace CamadoWin8.Services.Data
 
             return rootObj;
         }
+
     }
 }

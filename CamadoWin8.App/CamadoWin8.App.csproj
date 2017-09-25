@@ -276,6 +276,7 @@
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\user-3.png" />
     <Content Include="Assets\user.png" />
+    <Content Include="Assets\users.png" />
     <Content Include="Assets\WideLogo.png" />
     <Content Include="Assets\wireless-internet.png" />
     <Content Include="Assets\worldwide.png" />

@@ -44,7 +44,8 @@ namespace CamadoWin8.App.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             // this.navigationService.Frame = ContentFrame;
-            ((CamadoWin8.ViewModel.LayOutViewModel)ViewModel).navigationService.Frame = this.ContentFrame;
+         
+           ((CamadoWin8.ViewModel.LayOutViewModel)ViewModel).navigationService.Frame = this.ContentFrame;
 
 
         }
