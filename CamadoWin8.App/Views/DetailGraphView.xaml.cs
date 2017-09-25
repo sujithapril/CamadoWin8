@@ -87,7 +87,7 @@ namespace CamadoWin8.App.Views
         {
             var width = (float)canvas.ActualWidth;
             var height = (float)(canvas.ActualHeight) - heightOffset;
-            var startPointX = 0;
+            var startPointX = -62;
             var startPointY = height;
             float offset = height / numberOfIntervals;
 
