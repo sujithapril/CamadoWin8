@@ -37,65 +37,26 @@ namespace CamadoWin8.App.Views
     /// </summary>
     public sealed partial class DetailGraphView : Page, IDetailGraphView
     {
-       /* public DetailGraphView()
-        {
-            this.InitializeComponent();
-        }*/
-        
+       
+
         static int numberOfIntervals = 10;
         static int heightOffset = 60;
         DetailGraphViewModel graphModel;
-        struct AxisData
-        {
-            public string key;
-            public string value;
-        }
+        public enum BarType { Frequency, Humidity, Spl, Vibration, Temprature };
 
-        AxisData[] xAxisData;
         float YAxisMaxValue_Left;
         float YAxisMaxValue_Right;
         CanvasTextFormat format = new CanvasTextFormat()
         {
             FontSize = 14,
-            FontFamily = "Times New Roman",
             WordWrapping = CanvasWordWrapping.Wrap,
             HorizontalAlignment = CanvasHorizontalAlignment.Center,
         };
         public DetailGraphView()
         {
             this.InitializeComponent();
-
             graphModel = (DetailGraphViewModel)this.ViewModel;
-
-            xAxisData = new AxisData[] {
-            new AxisData() {key = "2017-06-20T11:30:00Z", value = "11:30" },
-            new AxisData() {key = "2017-06-20T12:30:00Z", value = "12.30" },
-            new AxisData() {key = "2017-06-20T13:30:00Z", value = "13:30" },
-            new AxisData() {key = "2017-06-20T14:30:00Z", value = "14:30" },
-            new AxisData() {key = "2017-06-20T15:30:00Z", value = "15:30" },
-            new AxisData() {key = "2017-06-20T16:30:00Z", value = "16:30" },
-            new AxisData() {key = "2017-06-20T17:30:00Z", value = "17:30" },
-            new AxisData() {key = "2017-06-20T18:30:00Z", value = "18:30" },
-            new AxisData() {key = "2017-06-20T19:30:00Z", value = "19:30" },
-            new AxisData() {key = "2017-06-20T20:30:00Z", value = "20:30" },
-            new AxisData() {key = "2017-06-20T21:30:00Z", value = "21:30" },
-            new AxisData() {key = "2017-06-20T22:30:00Z", value = "22:30" },
-            new AxisData() {key = "2017-06-20T23:30:00Z", value = "23:30" },
-            new AxisData() {key = "2017-06-20T00:30:00Z", value = "00:30" },
-            new AxisData() {key = "2017-06-20T01:30:00Z", value = "01:30" },
-            new AxisData() {key = "2017-06-20T02:30:00Z", value = "02:30" },
-            new AxisData() {key = "2017-06-20T03:30:00Z", value = "03:30" },
-            new AxisData() {key = "2017-06-20T04:30:00Z", value = "04:30" },
-            new AxisData() {key = "2017-06-20T05:30:00Z", value = "05:30" },
-            new AxisData() {key = "2017-06-20T06:30:00Z", value = "06:30" },
-            new AxisData() {key = "2017-06-20T07:30:00Z", value = "07:30" },
-            new AxisData() {key = "2017-06-20T08:30:00Z", value = "08:30" },
-            new AxisData() {key = "2017-06-20T09:30:00Z", value = "09:30" },
-            new AxisData() {key = "2017-06-20T10:30:00Z", value = "10:30" }
-            };
-
-            //            yAxisData_Right = this.plotPoints(graphModel.getMaxFrequency());
-
+           
         }
 
 
@@ -126,16 +87,16 @@ namespace CamadoWin8.App.Views
         {
             var width = (float)canvas.ActualWidth;
             var height = (float)(canvas.ActualHeight) - heightOffset;
-            var startPointX = 5;
+            var startPointX = 0;
             var startPointY = height;
             float offset = height / numberOfIntervals;
 
             using (var cpb = new CanvasPathBuilder(args.DrawingSession))
             {
                 System.Diagnostics.Debug.WriteLine("startingPoint => " + startPointX + " " + startPointY);
-                for (int i = 0; i < xAxisData.Length; i++)
+                for (int i = 0; i < graphModel.graphData.Length; i++)
                 {
-                    string key = xAxisData[i].key;
+                    string key = graphModel.graphData[i].key;
                     float yReference_Left = height / YAxisMaxValue_Left;
                     float yReference_Right = height / YAxisMaxValue_Right;
 
@@ -144,9 +105,18 @@ namespace CamadoWin8.App.Views
                     float temprature = yReference_Left * graphModel.getTemperatureForValue(key);
                     float vib = yReference_Left * graphModel.getVibForValue(key);
                     float frequency = yReference_Right * graphModel.getFrequncyForValue(key);
-                    args.DrawingSession.DrawLine(new Vector2() { X = startPointX , Y = startPointY }, new Vector2() { X = startPointX, Y = height - humidity }, Colors.Black);
-                    startPointX = startPointX+ 25;
+                    if (i == 0)
+                    {
+                        // args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = startPointY }, new Vector2() { X = startPointX, Y = height - humidity }, Colors.GreenYellow);
+                    }
+                    else
+                    {
+                        args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = startPointY }, new Vector2() { X = startPointX + 58, Y = height - humidity }, Colors.GreenYellow);
+                        args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - humidity }, 4, Colors.Red);
+                    }
+                    startPointX = startPointX + 62;
                     startPointY = height - humidity;
+
                 }
             }
         }
@@ -162,7 +132,7 @@ namespace CamadoWin8.App.Views
             YAxisMaxValue_Right = yAxisPlotter.renderLeftYAxis(sender, args);
 
         }
-        
+
         public IViewModel ViewModel
         {
             get { return this.DataContext as IViewModel; }
@@ -180,5 +150,9 @@ namespace CamadoWin8.App.Views
 
         }
 
+        private void Rectangle_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+        }
     }
 }
