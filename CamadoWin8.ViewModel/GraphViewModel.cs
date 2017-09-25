@@ -287,6 +287,7 @@ namespace CamadoWin8.ViewModel
         }
         public void LoadDetailView()
         {
+       
             navigationService.Navigate(PageNames.DetailGraphView,null);
 
         }
