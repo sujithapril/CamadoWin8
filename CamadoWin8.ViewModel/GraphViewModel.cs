@@ -34,6 +34,7 @@ namespace CamadoWin8.ViewModel
             public string key;
             public float value;
         }
+        public enum BarType { Frequency, Humidity, Spl, Vibration, Temprature };
 
 
         public barDataModel[] frequencyData { get; set; } = new barDataModel[]
@@ -290,7 +291,7 @@ namespace CamadoWin8.ViewModel
             navigationService.Navigate(PageNames.DetailGraphView,null);
 
         }
-
+        
         public async void Initialize(object parameter)
         {
             IDeviceInfo deviceObj=parameter as IDeviceInfo;
