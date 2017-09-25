@@ -54,7 +54,8 @@ namespace CamadoWin8.Services.Data
             string timeZone = string.Empty; ;
             TimeSpan t = (new DateTime(DateTime.Now.Year,DateTime.Now.Month,DateTime.Now.Day,0,0,0)).ToUniversalTime() - new DateTime(1970, 1, 1);
             int secondsSinceEpoch = (int)t.TotalSeconds;
-            startDate = secondsSinceEpoch.ToString();
+            // startDate = secondsSinceEpoch.ToString();
+            startDate = "1506317400";
             timeZone = "19800";
             //RequestBodyField=
             string resourceAddress = "http://iot.cabotprojects.com:3001/tokenValidate";

@@ -294,11 +294,15 @@ namespace CamadoWin8.ViewModel
         
         public async void Initialize(object parameter)
         {
-            IDeviceInfo deviceObj=parameter as IDeviceInfo;
-
-            RootObject barGraphdata = (RootObject)await graphService.GetBarGraph2(deviceObj.DeviceId.ToString(), deviceObj.DeviceMacId);
-            System.Diagnostics.Debug.WriteLine("GraphData => ", barGraphdata);
-          //  RootObject obj2 = (RootObject)obj;
+            IDeviceInfo deviceObj = parameter as IDeviceInfo;
+            RootObject barGraphdata = null;
+            if (deviceObj != null)
+            {
+               // toastService.SendSimpleTextToast(deviceObj.DeviceId.ToString() + "   " + deviceObj.DeviceMacId);
+                barGraphdata = (RootObject)await graphService.GetBarGraph2(deviceObj.DeviceId.ToString(), deviceObj.DeviceMacId);
+            }
+            //System.Diagnostics.Debug.WriteLine("GraphData => ", barGraphdata);
+            //  RootObject obj2 = (RootObject)obj;
 
 
         }

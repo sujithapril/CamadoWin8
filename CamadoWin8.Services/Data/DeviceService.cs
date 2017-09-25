@@ -65,6 +65,7 @@ namespace CamadoWin8.Services.Data
 
           foreach (ResponseRow row in deviceResponse.responseRows)
             {
+                if(!string.IsNullOrEmpty(row.imageName))
                 deviceinfoList.Add(new DeviceInfo { DeviceId = row.deviceId, DeviceMacId = row.deviceMacId, NickName = row.nickName, Description = "",FileName=row.imageName });
             }
             //  List<DeviceInfo> deviceinfoList = JsonConvert.DeserializeObject<List<DeviceInfo>>(deviceliststring);
