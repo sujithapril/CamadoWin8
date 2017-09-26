@@ -15,6 +15,7 @@ namespace CamadoWin8.Contracts.Model
 
     public class GraphResult
     {
+        public int statement_id { get; set; }
         public List<GraphSery> graphSeries { get; set; }
     }
 
@@ -27,21 +28,21 @@ namespace CamadoWin8.Contracts.Model
     {
         public int hourlyAverageId { get; set; }
         public int orgId { get; set; }
-        public int userId { get; set; }
+        public object userId { get; set; }
         public int deviceId { get; set; }
         public int timeFrame { get; set; }
         public DateTime dateCreated { get; set; }
         public DateTime dateUpdated { get; set; }
-        public double FA { get; set; }
+        public int FA { get; set; }
         public double SA { get; set; }
         public int CA { get; set; }
         public int HA { get; set; }
-        public int XA { get; set; }
+        public double XA { get; set; }
         public int YA { get; set; }
         public int ZA { get; set; }
         public int count { get; set; }
         public int status { get; set; }
-        public string log { get; set; }
+        public object log { get; set; }
     }
 
     public class AllGraphData

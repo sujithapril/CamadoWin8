@@ -120,3 +120,6 @@ NotificationsExtensions/obj/Win32/Debug/NotificationsExtensions.csproj.FileListA
 CamadoWin8.Services/obj/x86/Debug/CamadoWin8.Services.csproj.FileListAbsolute.txt
 CamadoWin8.Model/obj/x86/Debug/CamadoWin8.Model.csproj.FileListAbsolute.txt
 *.txt
+TodoWindows/
+CamadoWin8.App/obj/x86/Debug/XamlTypeInfo.g.cs
+CamadoWin8.App/obj/x86/Debug/Views/LocationView.g.i.cs
