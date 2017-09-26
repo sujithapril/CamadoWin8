@@ -51,7 +51,7 @@ namespace CamadoWin8.Services.Infrastructure
         }
 
 
-        public void SetItem(string name,string value)
+        public void SetItem(string name,object value)
         {
             localSettings.Values[name] = value;
           

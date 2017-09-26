@@ -71,12 +71,12 @@ DataContext="{Binding LogInViewModel, Source={StaticResource MainViewModelLocato
         <Border Background="#007700 "  Opacity=".6" VerticalAlignment="Center"  Grid.Row="0" Grid.Column="1"   Height="774"  >
             <StackPanel Margin="20" VerticalAlignment="Center">
                 <Image Source="/Assets/users.png" Stretch="Uniform" Height="150"  ></Image>
-                <!--<TextBlock Text="Login" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Left" FontFamily="Times New Roman"/>
-                <TextBlock Margin="0,10,0,0" Text="Please login to use Camado" Foreground="White" FontSize="25" HorizontalAlignment="Left"  FontFamily="Times New Roman"/>-->
+                <TextBlock Text=" Camado Login" Foreground="White" FontWeight="Bold" FontSize="25" HorizontalAlignment="Center" />
+                <!--<TextBlock Margin="0,10,0,0" Text="Please login to use Camado" Foreground="White" FontSize="25" HorizontalAlignment="Left"  />-->
                 <TextBlock Text="Username" Foreground="White"/>
-                <TextBox  Margin="0,5,0,10" Name="txtUsername" Background="Transparent" Foreground="White" FontSize="25" FontFamily="Times New Roman" Text="{Binding UserName, Mode=TwoWay}"  />
+                <TextBox  Margin="0,5,0,10" Name="txtUsername" Background="Transparent" Foreground="White" FontSize="25"  Text="{Binding UserName, Mode=TwoWay}"  />
                 <TextBlock Text="Password" Foreground="White"/>
-                <PasswordBox  Margin="0,5,0,10" Name="txtPassword" Background="Transparent" Foreground="White" FontSize="25"  FontFamily="Times New Roman" Password="{Binding Password, Mode=TwoWay}" />
+                <PasswordBox  Margin="0,5,0,10" Name="txtPassword" Background="Transparent" Foreground="White" FontSize="25"  Password="{Binding Password, Mode=TwoWay}" />
                 <Button Name="btnSubmit"  Content="Submit" Margin="0 10" HorizontalAlignment="Center" Background="Transparent"  Foreground="White"  FontFamily="Times New Roman" FontSize="18" Command="{Binding SignInCommand}"/>
             </StackPanel>
         </Border>

@@ -93,6 +93,7 @@
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Primitives.ButtonBase" />
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">
@@ -392,7 +393,6 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="FontFamily" />
       <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
@@ -401,7 +401,6 @@
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
       <RootProperty Name="FontSize" />
-      <RootProperty Name="FontFamily" />
       <RootProperty Name="Password" />
     </RootType>
     <RootType FullName="CamadoWin8.App.Views.LogInView" />

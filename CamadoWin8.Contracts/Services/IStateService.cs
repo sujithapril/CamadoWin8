@@ -10,7 +10,7 @@ namespace CamadoWin8.Contracts.Services
     public interface IStateService
     {
         //ApplicationDataContainer LocalSettings { get; set; }
-        void SetItem(string name, string value);
+        void SetItem(string name, object value);
 
 
         object GetItem(string name)  ;

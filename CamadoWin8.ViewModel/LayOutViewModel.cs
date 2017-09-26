@@ -43,7 +43,7 @@ namespace CamadoWin8.ViewModel
             set
             {
                 selectedMenu = value;
-                RaisePropertyChanged("SelectedMenu");
+                RaisePropertyChanged("SelectedMenu");            
                 navigationService.Navigate(SelectedMenu.PageName, null);
             }
         }
@@ -75,20 +75,7 @@ namespace CamadoWin8.ViewModel
             }
         }
 
-        //private List<IDeviceInfo> deviceTileInfos;
-
-        //public List<IDeviceInfo> DeviceTileInfos
-        //{
-        //    get
-        //    {
-        //        return deviceTileInfos;
-        //    }
-        //    set
-        //    {
-        //        deviceTileInfos = value;
-        //        RaisePropertyChanged("DeviceTileInfos");
-        //    }
-        //}
+      
           public RelayCommand<IDeviceInfo> SelectedCommand { get; set; }
        // public RelayCommand SelectedCommand { get; set; }
         public LayOutViewModel( INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
@@ -110,37 +97,17 @@ namespace CamadoWin8.ViewModel
         {
             SelectedCommand = new RelayCommand<IDeviceInfo>((deviceObj) =>
              {
-                // toastService.SendSimpleTextToast("Hello YOU  clicked me!");
+              
                  navigationService.Navigate(PageNames.GraphView,
                      deviceObj.DeviceId);
              });
 
-            //SelectedCommand = new RelayCommand(() =>
-            //{
-            //    toastService.SendSimpleTextToast("Hello clicked me!");
-            //});
-            //GoBack = new RelayCommand(() =>
-            //{
-            //    navigationService.GoBack();
-            //});
-            //GoHome = new RelayCommand(() =>
-            //{
-            //    navigationService.Navigate(PageNames.PopularTravelView);
-            //});
-            //AddToFavorites = new RelayCommand(() => 
-            //{
-            //    dialogService.ShowAddToFavoriteConfirmation();
-            //});
+       
         }
 
         public  void Initialize(object parameter)
         {
-            // SelectedTravelDetail = await travelDataService.GetTravelDetails(parameter.ToString());
-
-            // shareContractService.Initialize();
-            //  IEnumerable<IDeviceInfo> ideviceenumerableList =  await deviceService.GetDeviceList();
-            //   DeviceTileInfos = ideviceenumerableList.ToList();
-            //   DeviceTileInfos = ideviceenumerableList.ToObservableCollection();
+           
             List<Menu> menus = new List<Menu>();
             menus.Add(new Menu { Id = 1, Name = "Devices",Type= typeof(IHomeView),PageName=PageNames.HomeView,ImagePath=@"/Assets/ic_home.png" });
             menus.Add(new Menu { Id = 2, Name = "Locations", Type = typeof(ILocationView),PageName=PageNames.LocationView,ImagePath = @"/Assets/ic_location.png" });

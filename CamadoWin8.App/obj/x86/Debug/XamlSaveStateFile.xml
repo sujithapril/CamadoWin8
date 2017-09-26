@@ -1,6 +1,12 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
+    <LocalAssembly PathName="d:\projects\camadowin8\camadowin8.app\obj\x86\debug\intermediatexaml\camadowin8.app.exe" HashGuid="c76eb4af-a487-9863-12be-07a9c84443fc" />
     <ReferenceAssembly PathName="c:\program files (x86)\microsoft sdks\windows\v8.1\extensionsdks\microsoft.vclibs\12.0\references\commonconfiguration\neutral\platform.winmd" HashGuid="58b6b6d1-928e-9908-9804-eb460e5e101b" />
+    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.contracts\bin\x86\debug\camadowin8.contracts.dll" HashGuid="96e860b0-62db-59ff-70bf-87bbb21f5ab4" />
+    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.model\bin\x86\debug\camadowin8.model.dll" HashGuid="55652840-f06c-acc1-2700-5c7d61e1d1cd" />
+    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.services\bin\x86\debug\camadowin8.services.dll" HashGuid="7a370bdf-4a93-644b-7669-5c640a7a3644" />
+    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.shared\bin\x86\debug\camadowin8.shared.dll" HashGuid="8915f47d-3824-e6c1-d7e9-9be077540e12" />
+    <ReferenceAssembly PathName="d:\projects\camadowin8\camadowin8.viewmodel\bin\x86\debug\camadowin8.viewmodel.dll" HashGuid="45650ef3-d001-e97b-6ae7-7c0964228f98" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\win8nl.1.0.8\lib\netcore45\galasoft.mvvmlight.extras.win8.dll" HashGuid="8635689a-0317-90e3-1f19-9daa8dd22a46" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\win8nl.1.0.8\lib\netcore45\galasoft.mvvmlight.win8.dll" HashGuid="074e0c73-ccad-7578-2ca5-abb10a561d4b" />
     <ReferenceAssembly PathName="d:\projects\camadowin8\packages\win2d.win81.1.21.0\bin\windows\x86\microsoft.graphics.canvas.numerics.dll" HashGuid="9e33c7bf-a13a-b2eb-87d4-90aef13b50a4" />
