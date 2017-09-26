@@ -26,6 +26,8 @@ using Windows.UI;
 using SM = System.Math;
 using System.Globalization;
 using CamadoWin8.Contracts.Services;
+using CamadoWin8.Shared;
+using Windows.UI.Xaml.Shapes;
 
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
@@ -37,13 +39,27 @@ namespace CamadoWin8.App.Views
     /// </summary>
     public sealed partial class DetailGraphView : Page, IDetailGraphView
     {
-       
+
 
         static int numberOfIntervals = 10;
         static int heightOffset = 60;
         DetailGraphViewModel graphModel;
-        public enum BarType { Frequency, Humidity, Spl, Vibration, Temprature };
-
+        public struct SelectedBars
+        {
+            public Boolean IsFrequencySelected;
+            public Boolean IsVibrationSelected;
+            public Boolean IsTempratureSelected;
+            public Boolean IsSoundSelected;
+            public Boolean IsHumiditySelected;
+        }
+        SelectedBars selectedBar = new SelectedBars()
+        {
+            IsFrequencySelected = false,
+            IsHumiditySelected = false,
+            IsTempratureSelected = false,
+            IsVibrationSelected = false,
+            IsSoundSelected = false
+        };
         float YAxisMaxValue_Left;
         float YAxisMaxValue_Right;
         CanvasTextFormat format = new CanvasTextFormat()
@@ -55,8 +71,10 @@ namespace CamadoWin8.App.Views
         public DetailGraphView()
         {
             this.InitializeComponent();
+
             graphModel = (DetailGraphViewModel)this.ViewModel;
-           
+
+
         }
 
 
@@ -85,15 +103,24 @@ namespace CamadoWin8.App.Views
         }
         private void drawingcanvas_Draw(CanvasControl sender, CanvasDrawEventArgs args)
         {
-            var width = (float)canvas.ActualWidth;
+            var width = (float)sender.ActualWidth;
             var height = (float)(canvas.ActualHeight) - heightOffset;
             var startPointX = -62;
-            var startPointY = height;
+            var Humidity_startPointY = height;
+            var Temprature_startPointY = height;
+            var Vibration_startPointY = height;
+            var Sound_startPointY = height;
+            var Frequency_startPointY = height;
+
             float offset = height / numberOfIntervals;
 
             using (var cpb = new CanvasPathBuilder(args.DrawingSession))
             {
-                System.Diagnostics.Debug.WriteLine("startingPoint => " + startPointX + " " + startPointY);
+                cpb.BeginFigure(new Vector2() { X = 0, Y = height });
+                cpb.AddLine(new Vector2() { X = width, Y = height });
+                cpb.EndFigure(CanvasFigureLoop.Open);
+                args.DrawingSession.DrawGeometry(CanvasGeometry.CreatePath(cpb), Colors.Black, 1);
+
                 for (int i = 0; i < graphModel.graphData.Length; i++)
                 {
                     string key = graphModel.graphData[i].key;
@@ -105,17 +132,61 @@ namespace CamadoWin8.App.Views
                     float temprature = yReference_Left * graphModel.getTemperatureForValue(key);
                     float vib = yReference_Left * graphModel.getVibForValue(key);
                     float frequency = yReference_Right * graphModel.getFrequncyForValue(key);
+                    DateTime DT = Convert.ToDateTime(key);
+                    String timeString = DT.ToString("hh: mm");
+
                     if (i == 0)
                     {
-                        // args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = startPointY }, new Vector2() { X = startPointX, Y = height - humidity }, Colors.GreenYellow);
+                        args.DrawingSession.DrawText(timeString, new Vector2() { X = startPointX + 80, Y = height + 20 }, Colors.Black, format);
+                        // args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = height }, new Vector2() { X = startPointX, Y = height + 15 }, Colors.Black);
                     }
                     else
                     {
-                        args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = startPointY }, new Vector2() { X = startPointX + 58, Y = height - humidity }, Colors.GreenYellow);
-                        args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - humidity }, 4, Colors.Red);
+                        if (i == graphModel.graphData.Length - 1)
+                        {
+                            args.DrawingSession.DrawText(timeString, new Vector2() { X = startPointX + 57, Y = height + 20 }, Colors.Black, format);
+
+                        }
+                        else
+                        {
+                            args.DrawingSession.DrawText(timeString, new Vector2() { X = startPointX + 60, Y = height + 20 }, Colors.Black, format);
+
+                        }
+                        args.DrawingSession.DrawLine(new Vector2() { X = startPointX + 58, Y = height }, new Vector2() { X = startPointX + 58, Y = height + 15 }, Colors.Black);
+
+                        if (selectedBar.IsHumiditySelected)
+                        {
+                            args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Humidity_startPointY }, new Vector2() { X = startPointX + 58, Y = height - humidity }, new PageNames().HumidityColor);
+                            args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - humidity }, 4, new PageNames().HumidityColor);
+                        }
+                        if (selectedBar.IsFrequencySelected)
+                        {
+                            args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Frequency_startPointY }, new Vector2() { X = startPointX + 58, Y = height - frequency }, new PageNames().FrequencyColor);
+                            args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - frequency }, 4, new PageNames().FrequencyColor);
+                        }
+                        if (selectedBar.IsSoundSelected)
+                        {
+                            args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Sound_startPointY }, new Vector2() { X = startPointX + 58, Y = height - spl }, new PageNames().SoundColor);
+                            args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - spl }, 4, new PageNames().SoundColor);
+                        }
+                        if (selectedBar.IsTempratureSelected)
+                        {
+                            args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Temprature_startPointY }, new Vector2() { X = startPointX + 58, Y = height - temprature }, new PageNames().TempratureColor);
+                            args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - temprature }, 4, new PageNames().TempratureColor);
+                        }
+                        if (selectedBar.IsVibrationSelected)
+                        {
+                            args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Vibration_startPointY }, new Vector2() { X = startPointX + 58, Y = height - vib }, new PageNames().VibrationColor);
+                            args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - vib }, 4, new PageNames().VibrationColor);
+                        }
                     }
+
                     startPointX = startPointX + 62;
-                    startPointY = height - humidity;
+                    Humidity_startPointY = height - humidity;
+                    Frequency_startPointY = height - frequency;
+                    Sound_startPointY = height - spl;
+                    Temprature_startPointY = height - temprature;
+                    Vibration_startPointY = height - vib;
 
                 }
             }
@@ -147,12 +218,96 @@ namespace CamadoWin8.App.Views
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            switch (graphModel.selectedType)
+            {
+                case PageNames.BarType.Humidity:
+                    {
+                        this.HumidityCheckBox.Fill = new SolidColorBrush(new PageNames().HumidityColor);
+                        selectedBar.IsHumiditySelected = true;
+                    }
+                    break;
+                case PageNames.BarType.Spl:
+                    this.SoundCheckBox.Fill = new SolidColorBrush(new PageNames().SoundColor);
+                    selectedBar.IsSoundSelected = true;
+                    break;
+                case PageNames.BarType.Temprature:
+                    this.TempratureCheckBox.Fill = new SolidColorBrush(new PageNames().TempratureColor);
+                    selectedBar.IsTempratureSelected = true;
+                    break;
+                case PageNames.BarType.Vibration:
+                    this.VibrationCheckBox.Fill = new SolidColorBrush(new PageNames().VibrationColor);
+                    selectedBar.IsVibrationSelected = true;
+                    break;
+                case PageNames.BarType.Frequency:
+                    this.FrequencyCheckBox.Fill = new SolidColorBrush(new PageNames().FrequencyColor);
+                    selectedBar.IsFrequencySelected = true;
+                    break;
+            }
 
         }
 
         private void Rectangle_Tapped(object sender, TappedRoutedEventArgs e)
         {
-
+            Rectangle rect = (Rectangle)sender;
+            switch ((String)rect.Tag)
+            {
+                case "100":
+                    if (!selectedBar.IsHumiditySelected)
+                    {
+                        this.HumidityCheckBox.Fill = new SolidColorBrush(new PageNames().HumidityColor);
+                    }
+                    else
+                    {
+                        this.HumidityCheckBox.Fill = new SolidColorBrush(Colors.DarkGray);
+                    }
+                    selectedBar.IsHumiditySelected = !selectedBar.IsHumiditySelected;
+                    break;
+                case "101":
+                    if (!selectedBar.IsSoundSelected)
+                    {
+                        this.SoundCheckBox.Fill = new SolidColorBrush(new PageNames().SoundColor);
+                    }
+                    else
+                    {
+                        this.SoundCheckBox.Fill = new SolidColorBrush(Colors.DarkGray);
+                    }
+                    selectedBar.IsSoundSelected = !selectedBar.IsSoundSelected;
+                    break;
+                case "102":
+                    if (!selectedBar.IsTempratureSelected)
+                    {
+                        this.TempratureCheckBox.Fill = new SolidColorBrush(new PageNames().TempratureColor);
+                    }
+                    else
+                    {
+                        this.TempratureCheckBox.Fill = new SolidColorBrush(Colors.DarkGray);
+                    }
+                    selectedBar.IsTempratureSelected = !selectedBar.IsTempratureSelected;
+                    break;
+                case "103":
+                    if (!selectedBar.IsVibrationSelected)
+                    {
+                        this.VibrationCheckBox.Fill = new SolidColorBrush(new PageNames().VibrationColor);
+                    }
+                    else
+                    {
+                        this.VibrationCheckBox.Fill = new SolidColorBrush(Colors.DarkGray);
+                    }
+                    selectedBar.IsVibrationSelected = !selectedBar.IsVibrationSelected;
+                    break;
+                case "104":
+                    if (!selectedBar.IsFrequencySelected)
+                    {
+                        this.FrequencyCheckBox.Fill = new SolidColorBrush(new PageNames().FrequencyColor);
+                    }
+                    else
+                    {
+                        this.FrequencyCheckBox.Fill = new SolidColorBrush(Colors.DarkGray);
+                    }
+                    selectedBar.IsFrequencySelected = !selectedBar.IsFrequencySelected;
+                    break;
+            }
+            this.barcanvas.Invalidate();
         }
     }
 }

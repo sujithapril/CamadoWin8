@@ -26,6 +26,8 @@ using Windows.UI;
 using SM = System.Math;
 using System.Globalization;
 using CamadoWin8.Contracts.Services;
+using CamadoWin8.Shared;
+
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
 namespace CamadoWin8.App.Views
@@ -48,12 +50,11 @@ namespace CamadoWin8.App.Views
         AxisData[] xAxisData;
         float YAxisMaxValue_Left;
         float YAxisMaxValue_Right;
-        public enum BarType { Frequency, Humidity, Spl, Vibration, Temprature };
 
         public struct BarData
         {
             public Rect bar;
-            public BarType type;
+            public PageNames.BarType type;
         }
 
         public List<BarData> barList = new List<BarData>();
@@ -61,7 +62,6 @@ namespace CamadoWin8.App.Views
         CanvasTextFormat format = new CanvasTextFormat()
         {
             FontSize = 14,
-            FontFamily = "Times New Roman",
             WordWrapping = CanvasWordWrapping.Wrap,
             HorizontalAlignment = CanvasHorizontalAlignment.Center,
         };
@@ -69,7 +69,11 @@ namespace CamadoWin8.App.Views
         {
             this.InitializeComponent();
             graphModel = (GraphViewModel)this.ViewModel;
-
+            this.HumidityCheckBox.Fill = new SolidColorBrush(new PageNames().HumidityColor);
+            this.TempratureCheckBox.Fill = new SolidColorBrush(new PageNames().TempratureColor);
+            this.SoundCheckBox.Fill = new SolidColorBrush(new PageNames().SoundColor);
+            this.FrequencyCheckBox.Fill = new SolidColorBrush(new PageNames().FrequencyColor);
+            this.VibrationCheckBox.Fill = new SolidColorBrush(new PageNames().VibrationColor);
             xAxisData = new AxisData[] {
             new AxisData() {key = "2017-06-20T11:30:00Z", value = "11:30" },
             new AxisData() {key = "2017-06-20T12:30:00Z", value = "12.30" },
@@ -155,20 +159,20 @@ namespace CamadoWin8.App.Views
 
                     args.DrawingSession.DrawText(xAxisData[i].value, new Vector2() { X = startPoint + 60, Y = height + 20 }, Colors.Black, format);
                     args.DrawingSession.DrawLine(new Vector2() { X = startPoint + 60, Y = height }, new Vector2() { X = startPoint + 60, Y = height + 15 }, Colors.Black);
-                    args.DrawingSession.FillRectangle(startPoint, height - humidity, 25, humidity, Colors.Blue);
-                    barList.Add(new BarData() { bar = new Rect(startPoint, height - humidity, 25, humidity), type = BarType.Humidity });
+                    args.DrawingSession.FillRectangle(startPoint, height - humidity, 25, humidity, new PageNames().HumidityColor);
+                    barList.Add(new BarData() { bar = new Rect(startPoint, height - humidity, 25, humidity), type = PageNames.BarType.Humidity });
                     startPoint = startPoint + 25;
-                    args.DrawingSession.FillRectangle(startPoint, height - spl, 25, spl, Colors.Green);
-                    barList.Add(new BarData() { bar = new Rect(startPoint, height - spl, 25, spl), type = BarType.Spl });
+                    args.DrawingSession.FillRectangle(startPoint, height - spl, 25, spl, new PageNames().SoundColor);
+                    barList.Add(new BarData() { bar = new Rect(startPoint, height - spl, 25, spl), type = PageNames.BarType.Spl });
                     startPoint = startPoint + 25;
-                    args.DrawingSession.FillRectangle(startPoint, height - temprature, 25, temprature, Colors.Yellow);
-                    barList.Add(new BarData() { bar = new Rect(startPoint, height - temprature, 25, temprature), type = BarType.Temprature });
+                    args.DrawingSession.FillRectangle(startPoint, height - temprature, 25, temprature, new PageNames().TempratureColor);
+                    barList.Add(new BarData() { bar = new Rect(startPoint, height - temprature, 25, temprature), type = PageNames.BarType.Temprature });
                     startPoint = startPoint + 25;
-                    args.DrawingSession.FillRectangle(startPoint, height - vib, 25, vib, Colors.Black);
-                    barList.Add(new BarData() { bar = new Rect(startPoint, height - vib, 25, vib), type = BarType.Vibration });
+                    args.DrawingSession.FillRectangle(startPoint, height - vib, 25, vib, new PageNames().VibrationColor);
+                    barList.Add(new BarData() { bar = new Rect(startPoint, height - vib, 25, vib), type = PageNames.BarType.Vibration });
                     startPoint = startPoint + 25;
-                    args.DrawingSession.FillRectangle(startPoint, height - frequency, 25, frequency, Colors.Red);
-                    barList.Add(new BarData() { bar = new Rect(startPoint, height - frequency, 25, frequency), type = BarType.Frequency });
+                    args.DrawingSession.FillRectangle(startPoint, height - frequency, 25, frequency, new PageNames().FrequencyColor);
+                    barList.Add(new BarData() { bar = new Rect(startPoint, height - frequency, 25, frequency), type = PageNames.BarType.Frequency });
                     startPoint = startPoint + 40;
                 }
             }
@@ -208,7 +212,8 @@ namespace CamadoWin8.App.Views
                 Rect rectangle = data.bar;
                 if (rectangle.Contains(point))
                 {
-                    graphModel.LoadDetailView();
+                    System.Diagnostics.Debug.WriteLine("TYpe => " + data.type);
+                    graphModel.LoadDetailView(data.type);
                     return;
                 }
             }
