@@ -3,14 +3,14 @@ using GalaSoft.MvvmLight.Command;
 using CamadoWin8.Contracts.Model;
 using CamadoWin8.Contracts.Services;
 using CamadoWin8.Contracts.ViewModels;
-using CamadoWin8.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CamadoWin8.Shared;
 using System.Collections.ObjectModel;
-using System.Threading;
+
 
 namespace CamadoWin8.ViewModel
 {
@@ -34,7 +34,6 @@ namespace CamadoWin8.ViewModel
             public string key;
             public float value;
         }
-        public enum BarType { Frequency, Humidity, Spl, Vibration, Temprature };
 
 
         public barDataModel[] frequencyData { get; set; } = new barDataModel[]
@@ -255,8 +254,6 @@ namespace CamadoWin8.ViewModel
         //    }
         //}
         public RelayCommand<IDeviceInfo> SelectedCommand { get; set; }
-
-        public bool IsEntered = false;
         public GraphViewModel(INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
             ITileService tileService, IToastService toastService, IStateService stateService, IGraphService graphService)
         {
@@ -288,33 +285,20 @@ namespace CamadoWin8.ViewModel
             //    dialogService.ShowAddToFavoriteConfirmation();
             //});
         }
-        public void LoadDetailView()
+        public void LoadDetailView(PageNames.BarType parameter)
         {
-            navigationService.Navigate(PageNames.DetailGraphView,null);
+            navigationService.Navigate(PageNames.DetailGraphView, parameter);
 
         }
-        
+
         public async void Initialize(object parameter)
         {
+            IDeviceInfo deviceObj = parameter as IDeviceInfo;
 
+            RootObject barGraphdata = (RootObject)await graphService.GetBarGraph2(deviceObj.DeviceId.ToString(), deviceObj.DeviceMacId);
+            System.Diagnostics.Debug.WriteLine("GraphData => ", barGraphdata);
+            //  RootObject obj2 = (RootObject)obj;
 
-            //if (!IsEntered)
-            //{
-            //    IsEntered = true;
-                if (parameter != null)
-
-                {
-                    IDeviceInfo deviceObj = parameter as IDeviceInfo;
-                    RootObject barGraphdata = null;
-                    if (deviceObj != null)
-                    {
-
-                        //toastService.SendSimpleTextToast(deviceObj.DeviceId.ToString() + "   " + deviceObj.DeviceMacId);
-                        barGraphdata = (RootObject)await graphService.GetBarGraph2(deviceObj.DeviceId.ToString(), deviceObj.DeviceMacId);
-                    }
-
-                }
-            //}
 
         }
     }
