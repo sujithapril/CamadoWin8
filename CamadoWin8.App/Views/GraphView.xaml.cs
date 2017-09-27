@@ -23,6 +23,8 @@ using Microsoft.Graphics.Canvas.Numerics;
 using Microsoft.Graphics.Canvas.Text;
 using CamadoWin8.ViewModel;
 using Windows.UI;
+using GalaSoft.MvvmLight.Messaging;
+
 using SM = System.Math;
 using System.Globalization;
 using CamadoWin8.Contracts.Services;
@@ -68,41 +70,27 @@ namespace CamadoWin8.App.Views
         public GraphView()
         {
             this.InitializeComponent();
+            Messenger.Default.Register<LoadGroupedBarGraph>(
+                this,(action) => LoadGraph(action)
+                );
+
             graphModel = (GraphViewModel)this.ViewModel;
             this.HumidityCheckBox.Fill = new SolidColorBrush(new PageNames().HumidityColor);
             this.TempratureCheckBox.Fill = new SolidColorBrush(new PageNames().TempratureColor);
             this.SoundCheckBox.Fill = new SolidColorBrush(new PageNames().SoundColor);
             this.FrequencyCheckBox.Fill = new SolidColorBrush(new PageNames().FrequencyColor);
             this.VibrationCheckBox.Fill = new SolidColorBrush(new PageNames().VibrationColor);
-            xAxisData = new AxisData[] {
-            new AxisData() {key = "2017-06-20T11:30:00Z", value = "11:30" },
-            new AxisData() {key = "2017-06-20T12:30:00Z", value = "12.30" },
-            new AxisData() {key = "2017-06-20T13:30:00Z", value = "13:30" },
-            new AxisData() {key = "2017-06-20T14:30:00Z", value = "14:30" },
-            new AxisData() {key = "2017-06-20T15:30:00Z", value = "15:30" },
-            new AxisData() {key = "2017-06-20T16:30:00Z", value = "16:30" },
-            new AxisData() {key = "2017-06-20T17:30:00Z", value = "17:30" },
-            new AxisData() {key = "2017-06-20T18:30:00Z", value = "18:30" },
-            new AxisData() {key = "2017-06-20T19:30:00Z", value = "19:30" },
-            new AxisData() {key = "2017-06-20T20:30:00Z", value = "20:30" },
-            new AxisData() {key = "2017-06-20T21:30:00Z", value = "21:30" },
-            new AxisData() {key = "2017-06-20T22:30:00Z", value = "22:30" },
-            new AxisData() {key = "2017-06-20T23:30:00Z", value = "23:30" },
-            new AxisData() {key = "2017-06-20T00:30:00Z", value = "00:30" },
-            new AxisData() {key = "2017-06-20T01:30:00Z", value = "01:30" },
-            new AxisData() {key = "2017-06-20T02:30:00Z", value = "02:30" },
-            new AxisData() {key = "2017-06-20T03:30:00Z", value = "03:30" },
-            new AxisData() {key = "2017-06-20T04:30:00Z", value = "04:30" },
-            new AxisData() {key = "2017-06-20T05:30:00Z", value = "05:30" },
-            new AxisData() {key = "2017-06-20T06:30:00Z", value = "06:30" },
-            new AxisData() {key = "2017-06-20T07:30:00Z", value = "07:30" },
-            new AxisData() {key = "2017-06-20T08:30:00Z", value = "08:30" },
-            new AxisData() {key = "2017-06-20T09:30:00Z", value = "09:30" },
-            new AxisData() {key = "2017-06-20T10:30:00Z", value = "10:30" }
-            };
+         
 
             //            yAxisData_Right = this.plotPoints(graphModel.getMaxFrequency());
 
+        }
+        private async void LoadGraph(LoadGroupedBarGraph action)
+        {
+            System.Diagnostics.Debug.WriteLine("CAlled load graph");
+            this.canvas.Invalidate();
+            this.canvasright.Invalidate();
+            this.barcanvas.Invalidate();
         }
 
 
@@ -110,11 +98,14 @@ namespace CamadoWin8.App.Views
         private void canvas_Draw(Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl sender,
  Microsoft.Graphics.Canvas.UI.Xaml.CanvasDrawEventArgs args)
         {
-            GraphYAxisPlotter yAxisPlotter = new GraphYAxisPlotter();
-            yAxisPlotter.AxisLabel = "(Humidity, Sound, Temperature, Vibration)";
-            float[] maxDataValues = new float[4] { graphModel.getMaxHumidity(), graphModel.getMaxspl(), graphModel.getMaxTemprature(), graphModel.getMaxVib() };
-            yAxisPlotter.MaximumOffset = maxDataValues.Max();
-            YAxisMaxValue_Left = yAxisPlotter.renderLeftYAxis(sender, args);
+            if (graphModel.BarData.Count > 0)
+            {
+                GraphYAxisPlotter yAxisPlotter = new GraphYAxisPlotter();
+                yAxisPlotter.AxisLabel = "(Humidity, Sound, Temperature, Vibration)";
+                float[] maxDataValues = new float[4] { graphModel.getMaxHumidity(), graphModel.getMaxspl(), graphModel.getMaxTemprature(), graphModel.getMaxVib() };
+                yAxisPlotter.MaximumOffset = maxDataValues.Max();
+                YAxisMaxValue_Left = yAxisPlotter.renderLeftYAxis(sender, args);
+            }
 
         }
 
@@ -132,48 +123,53 @@ namespace CamadoWin8.App.Views
 
         private void drawingcanvas_Draw(CanvasControl sender, CanvasDrawEventArgs args)
         {
-            var width = (float)sender.ActualWidth;
-            var height = (float)(sender.ActualHeight) - heightOffset;
-            var startPoint = 5;
-            float offset = height / numberOfIntervals;
-
-            using (var cpb = new CanvasPathBuilder(args.DrawingSession))
+            if (graphModel.BarData.Count > 0)
             {
-                // Verical line
-                cpb.BeginFigure(new Vector2() { X = 0, Y = height });
-                cpb.AddLine(new Vector2() { X = width, Y = height });
-                cpb.EndFigure(CanvasFigureLoop.Open);
-                args.DrawingSession.DrawGeometry(CanvasGeometry.CreatePath(cpb), Colors.Black, 1);
 
-                for (int i = 0; i < xAxisData.Length; i++)
+                var width = (float)sender.ActualWidth;
+                var height = (float)(sender.ActualHeight) - heightOffset;
+                var startPoint = 5;
+                float offset = height / numberOfIntervals;
+
+                using (var cpb = new CanvasPathBuilder(args.DrawingSession))
                 {
-                    string key = xAxisData[i].key;
-                    float yReference_Left = height / YAxisMaxValue_Left;
-                    float yReference_Right = height / YAxisMaxValue_Right;
+                    // Verical line
+                    cpb.BeginFigure(new Vector2() { X = 0, Y = height });
+                    cpb.AddLine(new Vector2() { X = width, Y = height });
+                    cpb.EndFigure(CanvasFigureLoop.Open);
+                    args.DrawingSession.DrawGeometry(CanvasGeometry.CreatePath(cpb), Colors.Black, 1);
 
-                    float humidity = yReference_Left * graphModel.getHumidityForValue(key);
-                    float spl = yReference_Left * graphModel.getSplForValue(key);
-                    float temprature = yReference_Left * graphModel.getTemperatureForValue(key);
-                    float vib = yReference_Left * graphModel.getVibForValue(key);
-                    float frequency = yReference_Right * graphModel.getFrequncyForValue(key);
+                    for (int i = 0; i < graphModel.BarData.Count; i++)
+                    {
+                        DateTime key = graphModel.BarData[i].Key;
+                        float yReference_Left = height / YAxisMaxValue_Left;
+                        float yReference_Right = height / YAxisMaxValue_Right;
 
-                    args.DrawingSession.DrawText(xAxisData[i].value, new Vector2() { X = startPoint + 60, Y = height + 20 }, Colors.Black, format);
-                    args.DrawingSession.DrawLine(new Vector2() { X = startPoint + 60, Y = height }, new Vector2() { X = startPoint + 60, Y = height + 15 }, Colors.Black);
-                    args.DrawingSession.FillRectangle(startPoint, height - humidity, 25, humidity, new PageNames().HumidityColor);
-                    barList.Add(new BarData() { bar = new Rect(startPoint, height - humidity, 25, humidity), type = PageNames.BarType.Humidity });
-                    startPoint = startPoint + 25;
-                    args.DrawingSession.FillRectangle(startPoint, height - spl, 25, spl, new PageNames().SoundColor);
-                    barList.Add(new BarData() { bar = new Rect(startPoint, height - spl, 25, spl), type = PageNames.BarType.Spl });
-                    startPoint = startPoint + 25;
-                    args.DrawingSession.FillRectangle(startPoint, height - temprature, 25, temprature, new PageNames().TempratureColor);
-                    barList.Add(new BarData() { bar = new Rect(startPoint, height - temprature, 25, temprature), type = PageNames.BarType.Temprature });
-                    startPoint = startPoint + 25;
-                    args.DrawingSession.FillRectangle(startPoint, height - vib, 25, vib, new PageNames().VibrationColor);
-                    barList.Add(new BarData() { bar = new Rect(startPoint, height - vib, 25, vib), type = PageNames.BarType.Vibration });
-                    startPoint = startPoint + 25;
-                    args.DrawingSession.FillRectangle(startPoint, height - frequency, 25, frequency, new PageNames().FrequencyColor);
-                    barList.Add(new BarData() { bar = new Rect(startPoint, height - frequency, 25, frequency), type = PageNames.BarType.Frequency });
-                    startPoint = startPoint + 40;
+                        float humidity = yReference_Left * graphModel.BarData[i].Humidity;
+                        float spl = yReference_Left * graphModel.BarData[i].Spl;
+                        float temprature = yReference_Left * graphModel.BarData[i].Temprature;
+                        float vib = yReference_Left * graphModel.BarData[i].Vib;
+                        float frequency = yReference_Right * graphModel.BarData[i].Frequency;
+                        String timeString = key.ToString("hh: mm");
+
+                        args.DrawingSession.DrawText(timeString, new Vector2() { X = startPoint + 60, Y = height + 20 }, Colors.Black, format);
+                        args.DrawingSession.DrawLine(new Vector2() { X = startPoint + 60, Y = height }, new Vector2() { X = startPoint + 60, Y = height + 15 }, Colors.Black);
+                        args.DrawingSession.FillRectangle(startPoint, height - humidity, 25, humidity, new PageNames().HumidityColor);
+                        barList.Add(new BarData() { bar = new Rect(startPoint, height - humidity, 25, humidity), type = PageNames.BarType.Humidity });
+                        startPoint = startPoint + 25;
+                        args.DrawingSession.FillRectangle(startPoint, height - spl, 25, spl, new PageNames().SoundColor);
+                        barList.Add(new BarData() { bar = new Rect(startPoint, height - spl, 25, spl), type = PageNames.BarType.Spl });
+                        startPoint = startPoint + 25;
+                        args.DrawingSession.FillRectangle(startPoint, height - temprature, 25, temprature, new PageNames().TempratureColor);
+                        barList.Add(new BarData() { bar = new Rect(startPoint, height - temprature, 25, temprature), type = PageNames.BarType.Temprature });
+                        startPoint = startPoint + 25;
+                        args.DrawingSession.FillRectangle(startPoint, height - vib, 25, vib, new PageNames().VibrationColor);
+                        barList.Add(new BarData() { bar = new Rect(startPoint, height - vib, 25, vib), type = PageNames.BarType.Vibration });
+                        startPoint = startPoint + 25;
+                        args.DrawingSession.FillRectangle(startPoint, height - frequency, 25, frequency, new PageNames().FrequencyColor);
+                        barList.Add(new BarData() { bar = new Rect(startPoint, height - frequency, 25, frequency), type = PageNames.BarType.Frequency });
+                        startPoint = startPoint + 40;
+                    }
                 }
             }
         }
@@ -181,12 +177,15 @@ namespace CamadoWin8.App.Views
         private void canvasright_Draw(CanvasControl sender, CanvasDrawEventArgs args)
         {
             // this.renderRightYAxis(sender, args);
-            GraphYAxisPlotter yAxisPlotter = new GraphYAxisPlotter();
-            yAxisPlotter.AxisLabel = "(Frequency)";
-            yAxisPlotter.MaximumOffset = graphModel.getMaxFrequency();
-            yAxisPlotter.IsLeftAxis = false;
-            yAxisPlotter.AxisColor = Colors.Red;
-            YAxisMaxValue_Right = yAxisPlotter.renderLeftYAxis(sender, args);
+            if (graphModel.BarData.Count > 0)
+            {
+                GraphYAxisPlotter yAxisPlotter = new GraphYAxisPlotter();
+                yAxisPlotter.AxisLabel = "(Frequency)";
+                yAxisPlotter.MaximumOffset = graphModel.getMaxFrequency();
+                yAxisPlotter.IsLeftAxis = false;
+                yAxisPlotter.AxisColor = Colors.Red;
+                YAxisMaxValue_Right = yAxisPlotter.renderLeftYAxis(sender, args);
+            }
 
         }
         /// <summary>
@@ -218,6 +217,11 @@ namespace CamadoWin8.App.Views
                 }
             }
 
+        }
+
+        private void barcanvas_DragEnter(object sender, DragEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("DRAGENTER");
         }
     }
 }
