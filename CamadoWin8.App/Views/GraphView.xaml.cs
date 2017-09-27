@@ -73,7 +73,7 @@ namespace CamadoWin8.App.Views
             Messenger.Default.Register<LoadGroupedBarGraph>(
                 this,(action) => LoadGraph(action)
                 );
-
+            
             graphModel = (GraphViewModel)this.ViewModel;
             this.HumidityCheckBox.Fill = new SolidColorBrush(new PageNames().HumidityColor);
             this.TempratureCheckBox.Fill = new SolidColorBrush(new PageNames().TempratureColor);
@@ -222,6 +222,27 @@ namespace CamadoWin8.App.Views
         private void barcanvas_DragEnter(object sender, DragEventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("DRAGENTER");
+        }
+       
+        private void ScrollViewer_DragEnter(object sender, DragEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("ScrollViewer_DragEnter");
+        }
+
+        private void ScrollViewer_DragOver(object sender, DragEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("ScrollViewer_DragOver");
+        }
+
+        private void ScrollViewer_PointerMoved(object sender, PointerRoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("ScrollViewer_PointerMoved");
+
+        }
+
+        private void ScrollViewer_PointerWheelChanged(object sender, PointerRoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("ScrollViewer_PointerWheelChanged");
         }
     }
 }

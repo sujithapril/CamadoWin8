@@ -49,9 +49,9 @@
             <Rectangle Name="FrequencyCheckBox" Fill="Red" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
             <TextBlock Text="Frequency" Foreground="Black" VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0"></TextBlock>
         </StackPanel>
-        <canvas:CanvasControl Grid.Column="0" Grid.Row="1" ClearColor="White"   x:Name="canvas" Draw="canvas_Draw"   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="2,40,0,5"/>
-        <ScrollViewer Background="White"  Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible"  VerticalScrollBarVisibility="Hidden" Margin="0,40,0,5">
-            <canvas:CanvasControl DragEnter="barcanvas_DragEnter"  Tapped="barcanvas_Tapped"   Width="3360" ClearColor="White"  x:Name="barcanvas" Draw="drawingcanvas_Draw" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+        <canvas:CanvasControl  Grid.Column="0" Grid.Row="1" ClearColor="White"   x:Name="canvas" Draw="canvas_Draw"   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="2,40,0,5"/>
+        <ScrollViewer Background="White"  Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible"  VerticalScrollBarVisibility="Hidden" Margin="0,40,0,5" ManipulationMode="TranslateRailsX" IsVerticalRailEnabled="False" IsVerticalScrollChainingEnabled="False" VerticalScrollMode="Disabled">
+            <canvas:CanvasControl  Tapped="barcanvas_Tapped"   Width="3360" ClearColor="White"  x:Name="barcanvas" Draw="drawingcanvas_Draw" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
         </ScrollViewer>
         <canvas:CanvasControl Grid.Column="2" Grid.Row="1" ClearColor="White"  x:Name="canvasright" Draw="canvasright_Draw"   VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,40,2,5" ManipulationMode="All"/>
 
