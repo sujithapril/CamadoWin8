@@ -75,9 +75,19 @@ namespace CamadoWin8.ViewModel
         {
             SignInCommand= new RelayCommand(async() =>
             {
-                if (UserName != null && Password != null && UserName.Length > 0 && Password.Length > 0) { 
-                //navigationService.Navigate(PageNames.HomeView, UserName);
-                LogInResponse logInResponse = (LogInResponse)await authenticateService.Authenticate(UserName, Password);
+                if (UserName != null && Password != null && UserName.Length > 0 && Password.Length > 0) {
+                    //navigationService.Navigate(PageNames.HomeView, UserName);
+                    LogInResponse logInResponse = null;
+                    if(ApplicationVariables.IsOffLine==true)
+                    {
+                        logInResponse = (LogInResponse)await authenticateService.Authenticate2(UserName, Password);
+                    }
+                    else
+                    {
+                        logInResponse = (LogInResponse)await authenticateService.Authenticate(UserName, Password);
+
+                    }
+                 
                 if (logInResponse.status == "1")
                 {
                     stateService.SetItem("currentUserToken", logInResponse.authToken);

@@ -1213,3 +1213,4 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
 }
 
 
+

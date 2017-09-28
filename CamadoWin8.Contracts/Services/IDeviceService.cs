@@ -11,6 +11,7 @@ namespace CamadoWin8.Contracts.Services
     public interface IDeviceService
     {
         Task<IEnumerable<IDeviceInfo>> GetDeviceList();
+        Task<IEnumerable<IDeviceInfo>> GetDeviceList2();
         Task<IEnumerable<IDeviceInfo>> GetDeviceList(string userId,string orgId,string Token);
     }
 }

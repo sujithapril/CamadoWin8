@@ -25,10 +25,18 @@ namespace CamadoWin8.Services.Data
 
             var c = new HttpClient();
             var resp = await c.GetAsync(new Uri("http://localhost/CamadoService/CamadoService.svc/Locations"));
-            var prod = await resp.Content.ReadAsStringAsync();
-            // dynamic cc= JsonConvert.DeserializeObject<def>(prod);
-            //Console.WriteLine(cc[0].DeviceId);
-            List<LocationInfo> locationinfoList = JsonConvert.DeserializeObject<List<LocationInfo>>(prod);
+            var loc = await resp.Content.ReadAsStringAsync();
+            System.Xml.XmlReader reader = System.Xml.XmlReader.Create(new System.IO.StringReader(loc));
+            reader.Read();
+            string locationstring = reader.ReadInnerXml();
+            LocationResponse locationResponse = JsonConvert.DeserializeObject<LocationResponse>(locationstring);
+            List<LocationInfo> locationinfoList = new List<LocationInfo>();
+
+            foreach (ResponseRowsLocation row in locationResponse.responseRowsLocations)
+            {
+                locationinfoList.Add(new LocationInfo { LocationId = row.locationId, LocationName = row.locationName, FileName = row.fileName });
+            }
+            //  List<DeviceInfo> deviceinfoList = JsonConvert.DeserializeObject<List<DeviceInfo>>(deviceliststring);
 
 
             return locationinfoList.AsEnumerable();

@@ -85,7 +85,7 @@ namespace CamadoWin8.App
                 // configuring the new page by passing required information as a navigation
                 // parameter
                 // navigationService.Navigate(PageNames.PopularTravelView, null);
-                ApplicationVariables.RootFrame = rootFrame;
+                ApplicationVariables.RootFrame = rootFrame;                
                 navigationService.Navigate(PageNames.LogInView, null);
             }
             // Ensure the current window is active

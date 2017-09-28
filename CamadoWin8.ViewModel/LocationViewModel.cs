@@ -79,8 +79,17 @@ namespace CamadoWin8.ViewModel
 
         public async void Initialize(object parameter)
         {
+            IEnumerable<ILocationInfo> ilocationenumerableList = null;
+            if (ApplicationVariables.IsOffLine == true)
+            {
+                ilocationenumerableList = await locationService.GetLocationList2();
+            }
+            else
+            {
+                ilocationenumerableList = await locationService.GetLocationList();
+
+            }
            
-            IEnumerable<ILocationInfo> ilocationenumerableList =  await locationService.GetLocationList();
 
             LocationTileInfos = ilocationenumerableList.ToObservableCollection();
         }

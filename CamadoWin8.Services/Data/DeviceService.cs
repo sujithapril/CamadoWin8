@@ -26,12 +26,22 @@ namespace CamadoWin8.Services.Data
             var c = new HttpClient();
             var resp = await c.GetAsync(new Uri("http://localhost/CamadoService/CamadoService.svc/Devices"));
             var prod = await resp.Content.ReadAsStringAsync();
-            // dynamic cc= JsonConvert.DeserializeObject<def>(prod);
-            //Console.WriteLine(cc[0].DeviceId);
-            List<DeviceInfo> deviceinfoList = JsonConvert.DeserializeObject<List<DeviceInfo>>(prod);
+            System.Xml.XmlReader reader = System.Xml.XmlReader.Create(new System.IO.StringReader(prod));
+            reader.Read();
+            string devicestring = reader.ReadInnerXml();
+            DeviceResponse deviceResponse = JsonConvert.DeserializeObject<DeviceResponse>(devicestring);
+            List<DeviceInfo> deviceinfoList = new List<DeviceInfo>();
 
+            foreach (ResponseRow row in deviceResponse.responseRows)
+            {
+                if (!string.IsNullOrEmpty(row.imageName))
+                    deviceinfoList.Add(new DeviceInfo { DeviceId = row.deviceId, DeviceMacId = row.deviceMacId, NickName = row.nickName, Description = "", FileName = row.imageName });
+            }
+           
 
             return deviceinfoList.AsEnumerable();
+
+          
         }
         public async Task<IEnumerable<IDeviceInfo>> GetDeviceList(string a,string b,string c)
         {

@@ -22,15 +22,23 @@ namespace CamadoWin8.Services.Data
             this.stateService = stateService;
         }
 
-        public async Task<string> GetBarGraph(string deviceId)
+        public async Task<IRootObject> GetBarGraph(string deviceId, string devicemacId)
         {
 
             var c = new HttpClient();
             var resp = await c.GetAsync(new Uri("http://localhost/CamadoService/CamadoService.svc/BarGraph/"+ deviceId));
-            var prod = await resp.Content.ReadAsStringAsync();
-            // dynamic cc= JsonConvert.DeserializeObject<def>(prod);
-            //Console.WriteLine(cc[0].DeviceId);
-            return prod;
+            var bargraphstring = await resp.Content.ReadAsStringAsync();
+            System.Xml.XmlReader reader = System.Xml.XmlReader.Create(new System.IO.StringReader(bargraphstring));
+            reader.Read();
+            string bargraph = reader.ReadInnerXml();
+            RootObject rootObj = new RootObject();
+            try
+            {
+                rootObj = JsonConvert.DeserializeObject<RootObject>(bargraph);
+            }
+            catch { }
+
+            return rootObj;
         }
         public async Task<IRootObject> GetBarGraph2(string deviceId,string devicemacId)
         {

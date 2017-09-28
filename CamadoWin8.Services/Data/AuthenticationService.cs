@@ -53,7 +53,10 @@ namespace CamadoWin8.Services.Data
             var httpClient = new HttpClient();
             var response = await httpClient.GetAsync(new Uri("http://localhost/CamadoService/CamadoService.svc/Authenticate/"+userName+"/"+password));           
             var login = await response.Content.ReadAsStringAsync();
-            var loginResponse = JsonConvert.DeserializeObject<LogInResponse>(login);
+            System.Xml.XmlReader reader = System.Xml.XmlReader.Create(new System.IO.StringReader(login));
+            reader.Read();
+            string loginstring= reader.ReadInnerXml();
+            var loginResponse = JsonConvert.DeserializeObject<LogInResponse>(loginstring);
             return loginResponse;
         }
     }
