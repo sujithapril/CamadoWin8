@@ -271,13 +271,13 @@ namespace CamadoWin8.ViewModel
         }
         public void LoadDetailView(PageNames.BarType parameter)
         {
-            navigationService.Navigate(PageNames.DetailGraphView, parameter);
+            navigationService.Navigate(PageNames.DetailGraphView, deviceObj);
 
         }
-
+        IDeviceInfo deviceObj;
         public async void Initialize(object parameter)
         {
-            IDeviceInfo deviceObj = parameter as IDeviceInfo;
+             deviceObj = parameter as IDeviceInfo;
             RootObject barGraphdata = null;
             if (ApplicationVariables.IsOffLine == true)
             {

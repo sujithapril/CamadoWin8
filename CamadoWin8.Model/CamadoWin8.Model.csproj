@@ -108,6 +108,7 @@
     <Compile Include="DeviceResponse.cs" />
     <Compile Include="LogInResponse.cs" />
     <Compile Include="Menu.cs" />
+    <Compile Include="RootObjectLIne.cs" />
     <Compile Include="RootObject.cs" />
     <Compile Include="DeviceInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

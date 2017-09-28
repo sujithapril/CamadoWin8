@@ -102,6 +102,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Model\IRootObjectLine.cs" />
     <Compile Include="Model\LocationInfo.cs" />
     <Compile Include="Model\IDeviceResponse.cs" />
     <Compile Include="Model\ILogInResponse.cs" />

@@ -29,16 +29,48 @@ namespace CamadoWin8.ViewModel
         private IToastService toastService;
         private IStateService stateService;
         private IDeviceService deviceService;
-
+        private IGraphService graphService;
 
         public PageNames.BarType selectedType;
+
+        public DetailGraphViewModel(INavigationService navigationService, IDialogService dialogService, IShareContractService shareContractService,
+          ITileService tileService, IToastService toastService, IStateService stateService, IGraphService graphService)
+        {
+
+            this.navigationService = navigationService;
+            this.dialogService = dialogService;
+            this.shareContractService = shareContractService;
+            this.tileService = tileService;
+            this.toastService = toastService;
+            this.stateService = stateService;
+            this.graphService = graphService;           
+
+        }
         public async void Initialize(object parameter)
         {
-            System.Diagnostics.Debug.WriteLine("DetailGraphView => " + parameter);
-            if (parameter != null)
+            IDeviceInfo  deviceObj = parameter as IDeviceInfo;
+            RootObjectLine lineGraphdata = null;
+            string stDate= (DateTime.UtcNow.AddHours(-8)).ToString("O");
+            string endDate = DateTime.UtcNow.ToString("O");
+            if (ApplicationVariables.IsOffLine == true)
             {
-                selectedType = (PageNames.BarType)parameter;
+                lineGraphdata = (RootObjectLine)await graphService.GetLineGraph2(stDate,endDate, deviceObj.DeviceMacId,"MAX");
             }
+            else
+            {
+                lineGraphdata = (RootObjectLine)await graphService.GetLineGraph(stDate, endDate, deviceObj.DeviceMacId, "MAX");
+
+            }
+            try
+            {
+                System.Diagnostics.Debug.WriteLine("lineGraphdata => " + lineGraphdata.results[0].series[0].values[0]);
+            }
+            catch { }
+            System.Diagnostics.Debug.WriteLine("DetailGraphView => " + parameter);
+            //if (parameter != null)
+            //{
+            //    selectedType = (PageNames.BarType)parameter;
+            //}
         }
         public struct barDataModel
         {
