@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.UI;
+using Windows.UI.Xaml.Controls;
 
 namespace CamadoWin8.Shared
 {
     public class PageNames
     {
+
         public const string LogInView = "CamadoWin8.App.Views.LogInView";
         public const string LayOutView = "CamadoWin8.App.Views.LayOutView";
         public const string HomeView = "CamadoWin8.App.Views.HomeView";
@@ -24,5 +26,10 @@ namespace CamadoWin8.Shared
         public Color HumidityColor = Color.FromArgb(255, 42, 96, 169);
 
 
+    }
+    public class ApplicationVariables
+    {
+
+        public static Frame RootFrame { get; set; }
     }
 }

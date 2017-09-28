@@ -82,5 +82,51 @@ namespace CamadoWin8.Services.Data
             return rootObj;
         }
 
+        public async Task<IRootObject> GetLineGraph2(string startDate, string endDate,string devicemacId,string aggregateFunction)
+        {
+
+
+
+            string requestBodyField = string.Empty; ;
+            
+            string timeZone = string.Empty; ;
+            TimeSpan t = (new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 0, 0, 0)).ToUniversalTime() - new DateTime(1970, 1, 1);
+            int secondsSinceEpoch = (int)t.TotalSeconds;
+            startDate = secondsSinceEpoch.ToString();
+                startDate = "2017-09-26T03:04:00Z";
+                endDate   = "2017-09-26T05:07:00Z";
+            devicemacId = "5CCF7FA391AB";
+            aggregateFunction = "MAX";
+            //RequestBodyField=
+            string resourceAddress = "http://iot.cabotprojects.com:3001/tokenValidate";
+            var httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Add("authtoken", stateService.GetItem("currentUserToken").ToString());
+            httpClient.DefaultRequestHeaders.Add("orgId", stateService.GetItem("currentUserOrgId").ToString());
+            httpClient.DefaultRequestHeaders.Add("userId", stateService.GetItem("currentUserId").ToString());
+            httpClient.DefaultRequestHeaders.Add("deviceToken", "123");
+            httpClient.DefaultRequestHeaders.Add("clientDeviceId", "12");
+            CommonRequest r = new CommonRequest();
+            // r.data = "{\"deviceId\":" + deviceId + ",\"deviceMacId\": " + devicemacId + ",\"startDate\":"+ startDate + ",\"timeZone\":"+timeZone+" } ";
+            r.data = "{\"startDate\":" + startDate + ",\"endDate\": \"" + endDate + "\",\"deviceMacId\":\"" + devicemacId + "\",\"aggregateFunction\":\"" + aggregateFunction + "\" } ";
+           
+            //"{"deviceId":"118","deviceMacId":"101","startDate":"1505889000","timeZone":19800}"
+            r.method = "post";
+            r.endpoint = "history";
+            requestBodyField = JsonConvert.SerializeObject(r);
+
+            HttpResponseMessage response = await httpClient.PostAsync(new Uri(resourceAddress),
+                     new HttpStringContent(requestBodyField, Windows.Storage.Streams.UnicodeEncoding.Utf8, "application/json"));
+            //HttpResponseMessage response = await httpClient.PostAsync(new Uri(resourceAddress),
+            //    new HttpStringContent(requestBodyField));
+            var bargraphstring = await response.Content.ReadAsStringAsync();
+            RootObject rootObj = new RootObject();
+            try
+            {
+                rootObj = JsonConvert.DeserializeObject<RootObject>(bargraphstring);
+            }
+            catch { }
+
+            return rootObj;
+        }
     }
 }

@@ -20,19 +20,19 @@ namespace CamadoWin8.Services.Data
         {
             this.stateService = stateService;
         }
-        //public async Task<IEnumerable<IDeviceInfo>> GetDeviceList()
-        //{
+        public async Task<IEnumerable<ILocationInfo>> GetLocationList2()
+        {
 
-        //    var c = new HttpClient();
-        //    var resp = await c.GetAsync(new Uri("http://localhost/CamadoService/CamadoService.svc/Devices"));
-        //    var prod = await resp.Content.ReadAsStringAsync();
-        //    // dynamic cc= JsonConvert.DeserializeObject<def>(prod);
-        //    //Console.WriteLine(cc[0].DeviceId);
-        //    List<DeviceInfo> deviceinfoList = JsonConvert.DeserializeObject<List<DeviceInfo>>(prod);
+            var c = new HttpClient();
+            var resp = await c.GetAsync(new Uri("http://localhost/CamadoService/CamadoService.svc/Locations"));
+            var prod = await resp.Content.ReadAsStringAsync();
+            // dynamic cc= JsonConvert.DeserializeObject<def>(prod);
+            //Console.WriteLine(cc[0].DeviceId);
+            List<LocationInfo> locationinfoList = JsonConvert.DeserializeObject<List<LocationInfo>>(prod);
 
 
-        //    return deviceinfoList.AsEnumerable();
-        //}
+            return locationinfoList.AsEnumerable();
+        }
         public async Task<IEnumerable<ILocationInfo>> GetLocationList(string a,string b,string c)
         {
             return null;

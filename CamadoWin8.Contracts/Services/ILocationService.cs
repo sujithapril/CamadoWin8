@@ -12,5 +12,6 @@ namespace CamadoWin8.Contracts.Services
     {
         Task<IEnumerable<ILocationInfo>> GetLocationList();
         Task<IEnumerable<ILocationInfo>> GetLocationList(string userId,string orgId,string Token);
+        Task<IEnumerable<ILocationInfo>> GetLocationList2();
     }
 }

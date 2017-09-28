@@ -11,5 +11,6 @@ namespace CamadoWin8.Contracts.Services
     public interface IAuthenticateService
     {
         Task<ILogInResponse> Authenticate(string UserName,string Password);
+        Task<ILogInResponse> Authenticate2(string UserName, string Password);
     }
 }

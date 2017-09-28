@@ -25,9 +25,10 @@ namespace CamadoWin8.Services.Infrastructure
                 frame.Navigated += OnFrameNavigated;
             }
         }
-
-        public NavigationService()
+        private IStateService stateService;
+        public NavigationService(IStateService stateService)
         {
+            this.stateService = stateService;
 
         }
 
@@ -47,7 +48,12 @@ namespace CamadoWin8.Services.Infrastructure
             {
                 
                 case PageNames.LogInView:
-                    Navigate<ILogInView>(parameter); break;
+                    {
+                        Frame rootFrame=ApplicationVariables.RootFrame as Frame;
+                        if (rootFrame != null)
+                            Frame = rootFrame;
+                        Navigate<ILogInView>(parameter); break;
+                    }
                 case PageNames.HomeView:
                     Navigate<IHomeView>(parameter); break;
                 case PageNames.GraphView:

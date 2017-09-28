@@ -111,7 +111,7 @@ namespace CamadoWin8.ViewModel
             List<Menu> menus = new List<Menu>();
             menus.Add(new Menu { Id = 1, Name = "Devices",Type= typeof(IHomeView),PageName=PageNames.HomeView,ImagePath=@"/Assets/ic_home.png" });
             menus.Add(new Menu { Id = 2, Name = "Locations", Type = typeof(ILocationView),PageName=PageNames.LocationView,ImagePath = @"/Assets/ic_location.png" });
-            menus.Add(new Menu { Id = 3, Name = "User", Type = typeof(ILocationView), PageName = PageNames.LocationView, ImagePath = @"/Assets/ic_profile.png" });
+            menus.Add(new Menu { Id = 3, Name = "Logout", Type = typeof(ILocationView), PageName = PageNames.LogInView, ImagePath = @"/Assets/ic_profile.png" });
             Menus = menus.ToObservableCollection();
             SelectedMenu = menus[0];
         }

@@ -12,6 +12,6 @@ namespace CamadoWin8.Contracts.Services
     {
         Task<string> GetBarGraph(string deviceId);
         Task<IRootObject> GetBarGraph2(string deviceId, string devicemacId);
-        
-     }
+        Task<IRootObject> GetLineGraph2(string startDate, string endDate, string devicemacId, string aggregateFunction);
+    }
 }

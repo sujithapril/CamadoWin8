@@ -17,12 +17,26 @@ namespace OnTheRoad.Server
 
         [OperationContract]
         // [WebGet(UriTemplate = "/Devices", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
-        [WebGet(UriTemplate = "/Devices", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
-        List<OnTheRoad.ServerDto.Device> GetDevices();
+        [WebGet(UriTemplate = "/Devices", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Xml)]
+        string GetDevices();
+
+        [OperationContract]
+        // [WebGet(UriTemplate = "/Devices", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
+        [WebGet(UriTemplate = "/Locations", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Xml)]
+        string GetLocations();
 
         [OperationContract]
         // [WebGet(UriTemplate = "/Devices", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
         [WebGet(UriTemplate = "/BarGraph/{deviceId}", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Xml)]
         string GetBarGraph(string deviceId);
+
+        [OperationContract]
+        // [WebGet(UriTemplate = "/Devices", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Json)]
+        [WebGet(UriTemplate = "/LineGraph/{deviceId}", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Xml)]
+        string GetLineGraph(string deviceId);
+
+        [OperationContract]      
+        [WebGet(UriTemplate = "/Authenticate/{userName}/{password}", BodyStyle = WebMessageBodyStyle.Bare, ResponseFormat = WebMessageFormat.Xml)]
+        string Authenticate(string userName,string password);
     }
 }

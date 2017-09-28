@@ -25,6 +25,8 @@ namespace CamadoWin8.App
     /// </summary>
     sealed partial class App : Application
     {
+
+        
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -83,6 +85,7 @@ namespace CamadoWin8.App
                 // configuring the new page by passing required information as a navigation
                 // parameter
                 // navigationService.Navigate(PageNames.PopularTravelView, null);
+                ApplicationVariables.RootFrame = rootFrame;
                 navigationService.Navigate(PageNames.LogInView, null);
             }
             // Ensure the current window is active

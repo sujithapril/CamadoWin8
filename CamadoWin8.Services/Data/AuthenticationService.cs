@@ -19,7 +19,8 @@ namespace CamadoWin8.Services.Data
 
         public async Task<ILogInResponse> Authenticate(string userName, string password)
         {
-            string requestBodyField = string.Empty; ;           
+            string requestBodyField = string.Empty; ;        
+            
             string resourceAddress = "http://iot.cabotprojects.com:3001/tokenValidate";
             var httpClient = new HttpClient();
             //httpClient.DefaultRequestHeaders.UserAgent.TryParseAdd("Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/60.0.3112.113 Safari/537.36");
@@ -44,7 +45,16 @@ namespace CamadoWin8.Services.Data
 
             return loginResponse;
         }
-        
 
+        public async Task<ILogInResponse> Authenticate2(string userName, string password)
+        {
+            string requestBodyField = string.Empty; ;
+
+            var httpClient = new HttpClient();
+            var response = await httpClient.GetAsync(new Uri("http://localhost/CamadoService/CamadoService.svc/Authenticate/"+userName+"/"+password));           
+            var login = await response.Content.ReadAsStringAsync();
+            var loginResponse = JsonConvert.DeserializeObject<LogInResponse>(login);
+            return loginResponse;
+        }
     }
 }

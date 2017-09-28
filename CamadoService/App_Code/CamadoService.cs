@@ -19,29 +19,26 @@ namespace OnTheRoad.Server
 
         }
 
-
-
-        public List<Device> GetDevices()
+        public string Authenticate(string userName, string password)
         {
-            List<Device> devices = new List<Device>();
+            throw new NotImplementedException();
+        }
 
-            Device r1 = new Device() { DeviceId = 1, DeviceMacId = "BJFPHH", Description = "Lorem Ipsum", NickName = "Test Device1" };
-            devices.Add(r1);
+        public string GetDevices()
+        {
+            
 
-            Device r2 = new Device() { DeviceId = 2, DeviceMacId = "JKHLOM", Description = "Lorem Ipsum", NickName = "Test Device2" };
-            devices.Add(r2);
+            return string.Empty;
+        }
 
-            Device r3 = new Device() { DeviceId = 3, DeviceMacId = "CDFGHYY", Description = "Lorem Ipsum", NickName = "Test Device3" };
-            devices.Add(r3);
+        public string GetLineGraph(string deviceId)
+        {
+            throw new NotImplementedException();
+        }
 
-            Device r4 = new Device() { DeviceId = 4, DeviceMacId = "UIOP98", Description = "Lorem Ipsum", NickName = "Test Device4" };
-            devices.Add(r4);
-
-            Device r5 = new Device() { DeviceId = 5, DeviceMacId = "CMNRET", Description = "Lorem Ipsum", NickName = "Test Device5" };
-            devices.Add(r5);
-
-
-            return devices;
+        public string GetLocations()
+        {
+            throw new NotImplementedException();
         }
 
         string ICamadoService.GetBarGraph(string deviceId)
