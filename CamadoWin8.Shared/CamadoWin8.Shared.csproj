@@ -105,6 +105,7 @@
     <Compile Include="EnumerableExtensions.cs" />
     <Compile Include="InstanceFactory.cs" />
     <Compile Include="LoadGroupedBarGraph.cs" />
+    <Compile Include="LoadLineGraph.cs" />
     <Compile Include="ObservableCollectionExtension.cs" />
     <Compile Include="PageNames.cs" />
     <Compile Include="PagintedCollection.cs" />
