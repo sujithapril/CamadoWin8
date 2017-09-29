@@ -49,20 +49,37 @@ namespace CamadoWin8.Services.Infrastructure
                 
                 case PageNames.LogInView:
                     {
-                        Frame rootFrame=ApplicationVariables.RootFrame as Frame;
+                        Frame rootFrame = ApplicationVariables.RootFrame as Frame;
                         if (rootFrame != null)
                             Frame = rootFrame;
-                        Navigate<ILogInView>(parameter); break;
+                        Navigate<ILogInView>(parameter);
                     }
+                    break;
+                    
                 case PageNames.HomeView:
-                    Navigate<IHomeView>(parameter); break;
+                    {
+                        Navigate<IHomeView>(parameter);
+                    }
+                    break;
                 case PageNames.GraphView:
-                    Navigate<IGraphView>(parameter); break;
+                    {
+                        this.Frame = ApplicationVariables.DashboardFrame;
+                        Navigate<IGraphView>(parameter);
+                    }
+                    break;
                 case PageNames.LayOutView:
-                    Navigate<ILayOutView>(parameter); break;
+                    {
+                        this.Frame = ApplicationVariables.RootFrame;
+                        Navigate<ILayOutView>(parameter);
+                    } break;
                 case PageNames.LocationView:
-                   Navigate<ILocationView>(parameter); break;
+                    {
+                        this.Frame = ApplicationVariables.DashboardFrame;
+                        Navigate<ILocationView>(parameter);
+                    }
+                    break;
                 case PageNames.DetailGraphView:
+                    this.Frame = ApplicationVariables.DetailGraphFrame;
                     Navigate<IDetailGraphView>(parameter);break;
             }
         }
