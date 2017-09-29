@@ -78,7 +78,7 @@ namespace CamadoWin8.ViewModel
                 if (UserName != null && Password != null && UserName.Length > 0 && Password.Length > 0) {
                     //navigationService.Navigate(PageNames.HomeView, UserName);
                     LogInResponse logInResponse = null;
-                    if(ApplicationVariables.IsOffLine==true)
+                    if (!await ApplicationVariables.IOnLine())
                     {
                         logInResponse = (LogInResponse)await authenticateService.Authenticate2(UserName, Password);
                     }

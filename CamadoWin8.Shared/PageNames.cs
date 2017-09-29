@@ -29,7 +29,7 @@ namespace CamadoWin8.Shared
     }
     public class ApplicationVariables
     {
-        public  static bool IsOffLine = false;
+        public static async Task<bool> IOnLine() { return await Network.IsConnected(); }
 
         public static Frame RootFrame { get; set; }
 

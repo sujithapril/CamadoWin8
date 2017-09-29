@@ -132,27 +132,27 @@ namespace CamadoWin8.ViewModel
 
         public async void Initialize(object parameter)
         {
-            if (DeviceTileInfos.Count == 0)
+            //if (DeviceTileInfos.Count == 0)
+            //{
+            // SelectedTravelDetail = await travelDataService.GetTravelDetails(parameter.ToString());
+
+            // shareContractService.Initialize();
+
+            IEnumerable<IDeviceInfo> ideviceenumerableList = null;
+            if (!await ApplicationVariables.IOnLine())
             {
-                // SelectedTravelDetail = await travelDataService.GetTravelDetails(parameter.ToString());
-
-                // shareContractService.Initialize();
-
-                IEnumerable<IDeviceInfo> ideviceenumerableList = null;
-                if (ApplicationVariables.IsOffLine == true)
-                {
-                    ideviceenumerableList = await deviceService.GetDeviceList2();
-                }
-                else
-                {
-                    ideviceenumerableList = await deviceService.GetDeviceList();
-
-                }
-
-             
-                //   DeviceTileInfos = ideviceenumerableList.ToList();
-                DeviceTileInfos = ideviceenumerableList.ToObservableCollection();
+                ideviceenumerableList = await deviceService.GetDeviceList2();
             }
+            else
+            {
+                ideviceenumerableList = await deviceService.GetDeviceList();
+
+            }
+
+
+            //   DeviceTileInfos = ideviceenumerableList.ToList();
+            DeviceTileInfos = ideviceenumerableList.ToObservableCollection();
+           // }
         }
     }
 }

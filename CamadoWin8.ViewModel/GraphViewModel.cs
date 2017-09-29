@@ -142,8 +142,18 @@ namespace CamadoWin8.ViewModel
         {
 
             deviceObj = parameter as IDeviceInfo;
+            
+            RootObject barGraphdata = null;
+            if (!await ApplicationVariables.IOnLine())
+            {
+                barGraphdata = (RootObject)await graphService.GetBarGraph(deviceObj.DeviceId.ToString(), deviceObj.DeviceMacId);
+            }
+            else
+            {
+                barGraphdata = (RootObject)await graphService.GetBarGraph2(deviceObj.DeviceId.ToString(), deviceObj.DeviceMacId);
+            }
 
-            RootObject barGraphdata = (RootObject)await graphService.GetBarGraph2(deviceObj.DeviceId.ToString(), deviceObj.DeviceMacId);
+           
             this.BarData.Clear();
             if (barGraphdata.allGraphData != null)
             {
