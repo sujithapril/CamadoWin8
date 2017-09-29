@@ -15,8 +15,9 @@ namespace CamadoWin8.Contracts.Model
         public string FileName {
             get
             {
-                if(!(string.IsNullOrEmpty(fileName)))                   
-                    return BasePath + fileName;
+                if(!(string.IsNullOrEmpty(fileName)))
+                    //return BasePath + fileName;
+                    return  fileName;
                 return "/Assets/noimage.png";
                 
             }

@@ -144,7 +144,7 @@ namespace CamadoWin8.ViewModel
             deviceObj = parameter as IDeviceInfo;
             
             RootObject barGraphdata = null;
-            if (!await ApplicationVariables.IOnLine())
+            if (!await ApplicationVariables.IsOnLine())
             {
                 barGraphdata = (RootObject)await graphService.GetBarGraph(deviceObj.DeviceId.ToString(), deviceObj.DeviceMacId);
             }

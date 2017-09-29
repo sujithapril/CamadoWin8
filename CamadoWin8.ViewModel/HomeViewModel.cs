@@ -139,14 +139,23 @@ namespace CamadoWin8.ViewModel
             // shareContractService.Initialize();
 
             IEnumerable<IDeviceInfo> ideviceenumerableList = null;
-            if (!await ApplicationVariables.IOnLine())
+            if (!await ApplicationVariables.IsOnLine())
             {
                 ideviceenumerableList = await deviceService.GetDeviceList2();
+               foreach ( IDeviceInfo dev in  ideviceenumerableList)
+                {
+                    dev.FileName = ApplicationVariables.OffLineBasePath + dev.FileName;
+
+                }
             }
             else
             {
                 ideviceenumerableList = await deviceService.GetDeviceList();
+                foreach (IDeviceInfo dev in ideviceenumerableList)
+                {
+                    dev.FileName = ApplicationVariables.OnLineBasePath + dev.FileName;
 
+                }
             }
 
 
