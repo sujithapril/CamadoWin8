@@ -32,5 +32,9 @@ namespace CamadoWin8.Shared
         public  static bool IsOffLine = false;
 
         public static Frame RootFrame { get; set; }
+
+        public static Frame DashboardFrame { get; set; }
+
+        public static Frame DetailGraphFrame { get; set; }
     }
 }
