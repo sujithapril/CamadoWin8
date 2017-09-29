@@ -29,7 +29,7 @@ namespace CamadoWin8.Shared
     }
     public class ApplicationVariables
     {
-        public  static bool IsOffLine = false;
+        public  static bool IsOffLine = true;
 
         public static Frame RootFrame { get; set; }
     }

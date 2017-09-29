@@ -141,11 +141,11 @@ namespace CamadoWin8.ViewModel
                 IEnumerable<IDeviceInfo> ideviceenumerableList = null;
                 if (ApplicationVariables.IsOffLine == true)
                 {
-                    ideviceenumerableList = await deviceService.GetDeviceList();
+                    ideviceenumerableList = await deviceService.GetDeviceList2();
                 }
                 else
                 {
-                    ideviceenumerableList = await deviceService.GetDeviceList2();
+                    ideviceenumerableList = await deviceService.GetDeviceList();
 
                 }
 
