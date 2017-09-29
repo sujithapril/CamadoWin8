@@ -80,16 +80,25 @@ namespace CamadoWin8.ViewModel
         public async void Initialize(object parameter)
         {
             IEnumerable<ILocationInfo> ilocationenumerableList = null;
-            if (ApplicationVariables.IsOffLine == true)
+            if (!await ApplicationVariables.IsOnLine())
             {
                 ilocationenumerableList = await locationService.GetLocationList2();
+                foreach (ILocationInfo loc in ilocationenumerableList)
+                {
+                    loc.FileName = ApplicationVariables.OffLineBasePath + loc.FileName;
+
+                }
             }
             else
             {
                 ilocationenumerableList = await locationService.GetLocationList();
+                foreach (ILocationInfo loc in ilocationenumerableList)
+                {
+                    loc.FileName = ApplicationVariables.OnLineBasePath + loc.FileName;
 
+                }
             }
-           
+
 
             LocationTileInfos = ilocationenumerableList.ToObservableCollection();
         }

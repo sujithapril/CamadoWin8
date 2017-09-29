@@ -135,11 +135,9 @@
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="Style" />
       <RootProperty Name="Command" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Width" />
       <RootProperty Name="Name" />
       <RootProperty Name="Content" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Background" />
       <RootProperty Name="Foreground" />
@@ -162,7 +160,6 @@
       <RootProperty Name="Padding" />
       <RootProperty Name="TabNavigation" />
       <RootProperty Name="Content" />
-      <RootProperty Name="Background" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="ManipulationMode" />
@@ -278,6 +275,10 @@
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRow" />
       <RootMethod Name="SetRow" />
+      <RootMethod Name="GetColumnSpan" />
+      <RootMethod Name="SetColumnSpan" />
+      <RootMethod Name="GetRowSpan" />
+      <RootMethod Name="SetRowSpan" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ToolTipService">
       <RootMethod Name="GetPlacement" />
@@ -357,13 +358,13 @@
       <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl">
-      <RootProperty Name="ClearColor" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootProperty Name="ManipulationMode" />
       <RootEvent Name="Draw" />
+      <RootEvent Name="DoubleTapped" />
       <RootEvent Name="Tapped" />
     </RootType>
     <RootType FullName="CamadoWin8.App.Views.DetailGraphView" />

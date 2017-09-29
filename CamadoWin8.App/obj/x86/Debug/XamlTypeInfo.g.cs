@@ -137,11 +137,11 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
             _typeNameTable[9] = "CamadoWin8.App.Converter.ListConverter";
             _typeNameTable[10] = "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl";
             _typeNameTable[11] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[12] = "Windows.UI.Color";
-            _typeNameTable[13] = "System.ValueType";
-            _typeNameTable[14] = "Single";
-            _typeNameTable[15] = "Boolean";
-            _typeNameTable[16] = "Microsoft.Graphics.Canvas.CanvasDevice";
+            _typeNameTable[12] = "Single";
+            _typeNameTable[13] = "Boolean";
+            _typeNameTable[14] = "Microsoft.Graphics.Canvas.CanvasDevice";
+            _typeNameTable[15] = "Windows.UI.Color";
+            _typeNameTable[16] = "System.ValueType";
             _typeNameTable[17] = "Windows.Foundation.Size";
             _typeNameTable[18] = "CamadoWin8.App.Views.DetailGraphView";
             _typeNameTable[19] = "Windows.UI.Xaml.Controls.Page";
@@ -175,11 +175,11 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
             _typeTable[9] = typeof(global::CamadoWin8.App.Converter.ListConverter);
             _typeTable[10] = typeof(global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl);
             _typeTable[11] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[12] = typeof(global::Windows.UI.Color);
-            _typeTable[13] = typeof(global::System.ValueType);
-            _typeTable[14] = typeof(global::System.Single);
-            _typeTable[15] = typeof(global::System.Boolean);
-            _typeTable[16] = typeof(global::Microsoft.Graphics.Canvas.CanvasDevice);
+            _typeTable[12] = typeof(global::System.Single);
+            _typeTable[13] = typeof(global::System.Boolean);
+            _typeTable[14] = typeof(global::Microsoft.Graphics.Canvas.CanvasDevice);
+            _typeTable[15] = typeof(global::Windows.UI.Color);
+            _typeTable[16] = typeof(global::System.ValueType);
             _typeTable[17] = typeof(global::Windows.Foundation.Size);
             _typeTable[18] = typeof(global::CamadoWin8.App.Views.DetailGraphView);
             _typeTable[19] = typeof(global::Windows.UI.Xaml.Controls.Page);
@@ -237,7 +237,7 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
         private object Activate_8_DoNothingConverter() { return new global::CamadoWin8.App.Converter.DoNothingConverter(); }
         private object Activate_9_ListConverter() { return new global::CamadoWin8.App.Converter.ListConverter(); }
         private object Activate_10_CanvasControl() { return new global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl(); }
-        private object Activate_16_CanvasDevice() { return new global::Microsoft.Graphics.Canvas.CanvasDevice(); }
+        private object Activate_14_CanvasDevice() { return new global::Microsoft.Graphics.Canvas.CanvasDevice(); }
         private object Activate_18_DetailGraphView() { return new global::CamadoWin8.App.Views.DetailGraphView(); }
         private object Activate_21_LocationView() { return new global::CamadoWin8.App.Views.LocationView(); }
         private object Activate_22_LayOutView() { return new global::CamadoWin8.App.Views.LayOutView(); }
@@ -340,12 +340,12 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
             case 10:   //  Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl
                 userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_10_CanvasControl;
-                userType.AddMemberName("ClearColor");
                 userType.AddMemberName("Dpi");
                 userType.AddMemberName("UseSharedDevice");
                 userType.AddMemberName("ForceSoftwareRenderer");
                 userType.AddMemberName("DpiScale");
                 userType.AddMemberName("CustomDevice");
+                userType.AddMemberName("ClearColor");
                 userType.AddMemberName("ReadyToDraw");
                 userType.AddMemberName("Size");
                 userType.AddMemberName("Device");
@@ -356,28 +356,28 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
                 xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 12:   //  Windows.UI.Color
+            case 12:   //  Single
+                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 13:   //  Boolean
+                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 14:   //  Microsoft.Graphics.Canvas.CanvasDevice
+                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 15:   //  Windows.UI.Color
                 userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 13:   //  System.ValueType
+            case 16:   //  System.ValueType
                 userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                xamlType = userType;
-                break;
-
-            case 14:   //  Single
-                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 15:   //  Boolean
-                xamlType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlSystemBaseType(typeName, type);
-                break;
-
-            case 16:   //  Microsoft.Graphics.Canvas.CanvasDevice
-                userType = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
@@ -537,60 +537,60 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
             var that = (global::CamadoWin8.App.ViewModelLocator)instance;
             return that.GraphViewModel;
         }
-        private object get_6_CanvasControl_ClearColor(object instance)
-        {
-            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
-            return that.ClearColor;
-        }
-        private void set_6_CanvasControl_ClearColor(object instance, object Value)
-        {
-            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
-            that.ClearColor = (global::Windows.UI.Color)Value;
-        }
-        private object get_7_CanvasControl_Dpi(object instance)
+        private object get_6_CanvasControl_Dpi(object instance)
         {
             var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
             return that.Dpi;
         }
-        private object get_8_CanvasControl_UseSharedDevice(object instance)
+        private object get_7_CanvasControl_UseSharedDevice(object instance)
         {
             var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
             return that.UseSharedDevice;
         }
-        private void set_8_CanvasControl_UseSharedDevice(object instance, object Value)
+        private void set_7_CanvasControl_UseSharedDevice(object instance, object Value)
         {
             var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
             that.UseSharedDevice = (global::System.Boolean)Value;
         }
-        private object get_9_CanvasControl_ForceSoftwareRenderer(object instance)
+        private object get_8_CanvasControl_ForceSoftwareRenderer(object instance)
         {
             var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
             return that.ForceSoftwareRenderer;
         }
-        private void set_9_CanvasControl_ForceSoftwareRenderer(object instance, object Value)
+        private void set_8_CanvasControl_ForceSoftwareRenderer(object instance, object Value)
         {
             var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
             that.ForceSoftwareRenderer = (global::System.Boolean)Value;
         }
-        private object get_10_CanvasControl_DpiScale(object instance)
+        private object get_9_CanvasControl_DpiScale(object instance)
         {
             var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
             return that.DpiScale;
         }
-        private void set_10_CanvasControl_DpiScale(object instance, object Value)
+        private void set_9_CanvasControl_DpiScale(object instance, object Value)
         {
             var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
             that.DpiScale = (global::System.Single)Value;
         }
-        private object get_11_CanvasControl_CustomDevice(object instance)
+        private object get_10_CanvasControl_CustomDevice(object instance)
         {
             var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
             return that.CustomDevice;
         }
-        private void set_11_CanvasControl_CustomDevice(object instance, object Value)
+        private void set_10_CanvasControl_CustomDevice(object instance, object Value)
         {
             var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
             that.CustomDevice = (global::Microsoft.Graphics.Canvas.CanvasDevice)Value;
+        }
+        private object get_11_CanvasControl_ClearColor(object instance)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            return that.ClearColor;
+        }
+        private void set_11_CanvasControl_ClearColor(object instance, object Value)
+        {
+            var that = (global::Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl)instance;
+            that.ClearColor = (global::Windows.UI.Color)Value;
         }
         private object get_12_CanvasControl_ReadyToDraw(object instance)
         {
@@ -749,41 +749,41 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
                 xamlMember.Getter = get_5_ViewModelLocator_GraphViewModel;
                 xamlMember.SetIsReadOnly();
                 break;
-            case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.ClearColor":
-                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
-                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "ClearColor", "Windows.UI.Color");
-                xamlMember.Getter = get_6_CanvasControl_ClearColor;
-                xamlMember.Setter = set_6_CanvasControl_ClearColor;
-                break;
             case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.Dpi":
                 userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
                 xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "Dpi", "Single");
-                xamlMember.Getter = get_7_CanvasControl_Dpi;
+                xamlMember.Getter = get_6_CanvasControl_Dpi;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.UseSharedDevice":
                 userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
                 xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "UseSharedDevice", "Boolean");
-                xamlMember.Getter = get_8_CanvasControl_UseSharedDevice;
-                xamlMember.Setter = set_8_CanvasControl_UseSharedDevice;
+                xamlMember.Getter = get_7_CanvasControl_UseSharedDevice;
+                xamlMember.Setter = set_7_CanvasControl_UseSharedDevice;
                 break;
             case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.ForceSoftwareRenderer":
                 userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
                 xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "ForceSoftwareRenderer", "Boolean");
-                xamlMember.Getter = get_9_CanvasControl_ForceSoftwareRenderer;
-                xamlMember.Setter = set_9_CanvasControl_ForceSoftwareRenderer;
+                xamlMember.Getter = get_8_CanvasControl_ForceSoftwareRenderer;
+                xamlMember.Setter = set_8_CanvasControl_ForceSoftwareRenderer;
                 break;
             case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.DpiScale":
                 userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
                 xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "DpiScale", "Single");
-                xamlMember.Getter = get_10_CanvasControl_DpiScale;
-                xamlMember.Setter = set_10_CanvasControl_DpiScale;
+                xamlMember.Getter = get_9_CanvasControl_DpiScale;
+                xamlMember.Setter = set_9_CanvasControl_DpiScale;
                 break;
             case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.CustomDevice":
                 userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
                 xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "CustomDevice", "Microsoft.Graphics.Canvas.CanvasDevice");
-                xamlMember.Getter = get_11_CanvasControl_CustomDevice;
-                xamlMember.Setter = set_11_CanvasControl_CustomDevice;
+                xamlMember.Getter = get_10_CanvasControl_CustomDevice;
+                xamlMember.Setter = set_10_CanvasControl_CustomDevice;
+                break;
+            case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.ClearColor":
+                userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
+                xamlMember = new global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlMember(this, "ClearColor", "Windows.UI.Color");
+                xamlMember.Getter = get_11_CanvasControl_ClearColor;
+                xamlMember.Setter = set_11_CanvasControl_ClearColor;
                 break;
             case "Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl.ReadyToDraw":
                 userType = (global::CamadoWin8.App.CamadoWin8_App_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl");
@@ -1211,6 +1211,5 @@ namespace CamadoWin8.App.CamadoWin8_App_XamlTypeInfo
         }
     }
 }
-
 
 

@@ -106,6 +106,7 @@
     <Compile Include="InstanceFactory.cs" />
     <Compile Include="LoadGroupedBarGraph.cs" />
     <Compile Include="LoadLineGraph.cs" />
+    <Compile Include="Network.cs" />
     <Compile Include="ObservableCollectionExtension.cs" />
     <Compile Include="PageNames.cs" />
     <Compile Include="PagintedCollection.cs" />

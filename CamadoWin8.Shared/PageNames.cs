@@ -29,12 +29,14 @@ namespace CamadoWin8.Shared
     }
     public class ApplicationVariables
     {
-        public  static bool IsOffLine = false;
+        public static async Task<bool> IsOnLine() { return await Network.IsConnected(); }
 
         public static Frame RootFrame { get; set; }
 
         public static Frame DashboardFrame { get; set; }
 
         public static Frame DetailGraphFrame { get; set; }
+        public static string OnLineBasePath = @"http://iot.cabotprojects.com:3001/public/assets/images/";
+        public static string OffLineBasePath = @"/Assets/";
     }
 }

@@ -76,8 +76,8 @@ namespace CamadoWin8.ViewModel
                     stDate = (DateTime.UtcNow.AddHours(-8)).ToString("O");
                     endDate = DateTime.UtcNow.ToString("O");
                 }
-              
-                if (ApplicationVariables.IsOffLine == true)
+
+                if (!await ApplicationVariables.IsOnLine())
                 {
                     lineGraphdata = (RootObjectLine)await graphService.GetLineGraph2(stDate, endDate, deviceObj.DeviceMacId, "MAX");
                 }

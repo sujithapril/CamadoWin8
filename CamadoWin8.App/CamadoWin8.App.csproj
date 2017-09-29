@@ -253,6 +253,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\1504085295930_image.jpg" />
+    <Content Include="Assets\1504085308746_image.jpg" />
+    <Content Include="Assets\1504085335993_image.jpg" />
+    <Content Include="Assets\1504085369648_image.jpg" />
+    <Content Include="Assets\1504097475868_image.jpg" />
+    <Content Include="Assets\1504097591994_image.jpg" />
+    <Content Include="Assets\1504097614200_image.jpg" />
+    <Content Include="Assets\1504097633606_image.jpg" />
     <Content Include="Assets\a\devices.png" />
     <Content Include="Assets\a\devices2.png" />
     <Content Include="Assets\a\locations.png" />

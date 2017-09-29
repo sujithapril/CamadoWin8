@@ -132,27 +132,36 @@ namespace CamadoWin8.ViewModel
 
         public async void Initialize(object parameter)
         {
-            if (DeviceTileInfos.Count == 0)
+            //if (DeviceTileInfos.Count == 0)
+            //{
+            // SelectedTravelDetail = await travelDataService.GetTravelDetails(parameter.ToString());
+
+            // shareContractService.Initialize();
+
+            IEnumerable<IDeviceInfo> ideviceenumerableList = null;
+            if (!await ApplicationVariables.IsOnLine())
             {
-                // SelectedTravelDetail = await travelDataService.GetTravelDetails(parameter.ToString());
-
-                // shareContractService.Initialize();
-
-                IEnumerable<IDeviceInfo> ideviceenumerableList = null;
-                if (ApplicationVariables.IsOffLine == true)
+                ideviceenumerableList = await deviceService.GetDeviceList2();
+               foreach ( IDeviceInfo dev in  ideviceenumerableList)
                 {
-                    ideviceenumerableList = await deviceService.GetDeviceList2();
-                }
-                else
-                {
-                    ideviceenumerableList = await deviceService.GetDeviceList();
+                    dev.FileName = ApplicationVariables.OffLineBasePath + dev.FileName;
 
                 }
-
-             
-                //   DeviceTileInfos = ideviceenumerableList.ToList();
-                DeviceTileInfos = ideviceenumerableList.ToObservableCollection();
             }
+            else
+            {
+                ideviceenumerableList = await deviceService.GetDeviceList();
+                foreach (IDeviceInfo dev in ideviceenumerableList)
+                {
+                    dev.FileName = ApplicationVariables.OnLineBasePath + dev.FileName;
+
+                }
+            }
+
+
+            //   DeviceTileInfos = ideviceenumerableList.ToList();
+            DeviceTileInfos = ideviceenumerableList.ToObservableCollection();
+           // }
         }
     }
 }
