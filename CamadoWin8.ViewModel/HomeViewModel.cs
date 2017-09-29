@@ -137,7 +137,19 @@ namespace CamadoWin8.ViewModel
                 // SelectedTravelDetail = await travelDataService.GetTravelDetails(parameter.ToString());
 
                 // shareContractService.Initialize();
-                IEnumerable<IDeviceInfo> ideviceenumerableList = await deviceService.GetDeviceList2();
+
+                IEnumerable<IDeviceInfo> ideviceenumerableList = null;
+                if (ApplicationVariables.IsOffLine == true)
+                {
+                    ideviceenumerableList = await deviceService.GetDeviceList();
+                }
+                else
+                {
+                    ideviceenumerableList = await deviceService.GetDeviceList2();
+
+                }
+
+             
                 //   DeviceTileInfos = ideviceenumerableList.ToList();
                 DeviceTileInfos = ideviceenumerableList.ToObservableCollection();
             }
