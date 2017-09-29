@@ -28,6 +28,7 @@ using System.Globalization;
 using CamadoWin8.Contracts.Services;
 using CamadoWin8.Shared;
 using Windows.UI.Xaml.Shapes;
+using GalaSoft.MvvmLight.Messaging;
 
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
@@ -71,22 +72,30 @@ namespace CamadoWin8.App.Views
         public DetailGraphView()
         {
             this.InitializeComponent();
-
+            Messenger.Default.Register<LoadLineGraph>(
+             this, (action) => LoadLineGraph(action)
+             );
             graphModel = (DetailGraphViewModel)this.ViewModel;
-
-
         }
 
-
+        private async void LoadLineGraph(LoadLineGraph action)
+        {
+            this.canvas.Invalidate();
+            this.canvasright.Invalidate();
+            this.barcanvas.Invalidate();
+        }
 
         private void canvas_Draw(Microsoft.Graphics.Canvas.UI.Xaml.CanvasControl sender,
  Microsoft.Graphics.Canvas.UI.Xaml.CanvasDrawEventArgs args)
         {
-            GraphYAxisPlotter yAxisPlotter = new GraphYAxisPlotter();
-            yAxisPlotter.AxisLabel = "(Humidity, Sound, Temperature, Vibration)";
-            float[] maxDataValues = new float[4] { graphModel.getMaxHumidity(), graphModel.getMaxspl(), graphModel.getMaxTemprature(), graphModel.getMaxVib() };
-            yAxisPlotter.MaximumOffset = maxDataValues.Max();
-            YAxisMaxValue_Left = yAxisPlotter.renderLeftYAxis(sender, args);
+            if (graphModel.BarData.Count > 0)
+            {
+                GraphYAxisPlotter yAxisPlotter = new GraphYAxisPlotter();
+                //   yAxisPlotter.AxisLabel = "(Humidity, Sound, Temperature, Vibration)";
+                float[] maxDataValues = new float[4] { graphModel.getMaxHumidity(), graphModel.getMaxspl(), graphModel.getMaxTemprature(), graphModel.getMaxVib() };
+                yAxisPlotter.MaximumOffset = maxDataValues.Max();
+                YAxisMaxValue_Left = yAxisPlotter.renderLeftYAxis(sender, args);
+            }
 
         }
 
@@ -103,7 +112,9 @@ namespace CamadoWin8.App.Views
         }
         private void drawingcanvas_Draw(CanvasControl sender, CanvasDrawEventArgs args)
         {
-            var width = (float)sender.ActualWidth;
+            if (graphModel.BarData.Count > 0)
+            {
+                var width = (float)sender.ActualWidth;
             var height = (float)(canvas.ActualHeight) - heightOffset;
             var startPointX = -62;
             var Humidity_startPointY = height;
@@ -114,80 +125,81 @@ namespace CamadoWin8.App.Views
 
             float offset = height / numberOfIntervals;
 
-            using (var cpb = new CanvasPathBuilder(args.DrawingSession))
-            {
-                cpb.BeginFigure(new Vector2() { X = 0, Y = height });
-                cpb.AddLine(new Vector2() { X = width, Y = height });
-                cpb.EndFigure(CanvasFigureLoop.Open);
-                args.DrawingSession.DrawGeometry(CanvasGeometry.CreatePath(cpb), Colors.Black, 1);
-
-                for (int i = 0; i < graphModel.graphData.Length; i++)
+                using (var cpb = new CanvasPathBuilder(args.DrawingSession))
                 {
-                    string key = graphModel.graphData[i].key;
-                    float yReference_Left = height / YAxisMaxValue_Left;
-                    float yReference_Right = height / YAxisMaxValue_Right;
+                    cpb.BeginFigure(new Vector2() { X = 0, Y = height });
+                    cpb.AddLine(new Vector2() { X = width, Y = height });
+                    cpb.EndFigure(CanvasFigureLoop.Open);
+                    args.DrawingSession.DrawGeometry(CanvasGeometry.CreatePath(cpb), Colors.White, 1);
 
-                    float humidity = yReference_Left * graphModel.getHumidityForValue(key);
-                    float spl = yReference_Left * graphModel.getSplForValue(key);
-                    float temprature = yReference_Left * graphModel.getTemperatureForValue(key);
-                    float vib = yReference_Left * graphModel.getVibForValue(key);
-                    float frequency = yReference_Right * graphModel.getFrequncyForValue(key);
-                    DateTime DT = Convert.ToDateTime(key);
-                    String timeString = DT.ToString("hh: mm");
+                    for (int i = 0; i < graphModel.BarData.Count; i++)
+                    {
+                        DateTime key = graphModel.BarData[i].key;
+                        float yReference_Left = height / YAxisMaxValue_Left;
+                        float yReference_Right = height / YAxisMaxValue_Right;
 
-                    if (i == 0)
-                    {
-                        args.DrawingSession.DrawText(timeString, new Vector2() { X = startPointX + 80, Y = height + 20 }, Colors.Black, format);
-                        // args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = height }, new Vector2() { X = startPointX, Y = height + 15 }, Colors.Black);
-                    }
-                    else
-                    {
-                        if (i == graphModel.graphData.Length - 1)
+
+                        float humidity = yReference_Left * graphModel.BarData[i].humidity;
+                        float spl = yReference_Left * graphModel.BarData[i].spl;
+                        float temprature = yReference_Left * graphModel.BarData[i].temprature;
+                        float vib = yReference_Left * graphModel.BarData[i].vib;
+                        float frequency = yReference_Right * graphModel.BarData[i].frequency;
+                        String timeString = key.ToString("hh: mm");
+
+                        if (i == 0)
                         {
-                            args.DrawingSession.DrawText(timeString, new Vector2() { X = startPointX + 57, Y = height + 20 }, Colors.Black, format);
-
+                            args.DrawingSession.DrawText(timeString, new Vector2() { X = startPointX + 80, Y = height + 20 }, Colors.White, format);
+                            // args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = height }, new Vector2() { X = startPointX, Y = height + 15 }, Colors.Black);
                         }
                         else
                         {
-                            args.DrawingSession.DrawText(timeString, new Vector2() { X = startPointX + 60, Y = height + 20 }, Colors.Black, format);
+                            if (i == graphModel.BarData.Count - 1)
+                            {
+                                args.DrawingSession.DrawText(timeString, new Vector2() { X = startPointX + 57, Y = height + 20 }, Colors.White, format);
 
-                        }
-                        args.DrawingSession.DrawLine(new Vector2() { X = startPointX + 58, Y = height }, new Vector2() { X = startPointX + 58, Y = height + 15 }, Colors.Black);
+                            }
+                            else
+                            {
+                                args.DrawingSession.DrawText(timeString, new Vector2() { X = startPointX + 60, Y = height + 20 }, Colors.White, format);
 
-                        if (selectedBar.IsHumiditySelected)
-                        {
-                            args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Humidity_startPointY }, new Vector2() { X = startPointX + 58, Y = height - humidity }, new PageNames().HumidityColor);
-                            args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - humidity }, 4, new PageNames().HumidityColor);
+                            }
+                            args.DrawingSession.DrawLine(new Vector2() { X = startPointX + 58, Y = height }, new Vector2() { X = startPointX + 58, Y = height + 15 }, Colors.White);
+
+                            if (selectedBar.IsHumiditySelected)
+                            {
+                                args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Humidity_startPointY }, new Vector2() { X = startPointX + 58, Y = height - humidity }, new PageNames().HumidityColor);
+                                args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - humidity }, 4, new PageNames().HumidityColor);
+                            }
+                            if (selectedBar.IsFrequencySelected)
+                            {
+                                args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Frequency_startPointY }, new Vector2() { X = startPointX + 58, Y = height - frequency }, new PageNames().FrequencyColor);
+                                args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - frequency }, 4, new PageNames().FrequencyColor);
+                            }
+                            if (selectedBar.IsSoundSelected)
+                            {
+                                args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Sound_startPointY }, new Vector2() { X = startPointX + 58, Y = height - spl }, new PageNames().SoundColor);
+                                args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - spl }, 4, new PageNames().SoundColor);
+                            }
+                            if (selectedBar.IsTempratureSelected)
+                            {
+                                args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Temprature_startPointY }, new Vector2() { X = startPointX + 58, Y = height - temprature }, new PageNames().TempratureColor);
+                                args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - temprature }, 4, new PageNames().TempratureColor);
+                            }
+                            if (selectedBar.IsVibrationSelected)
+                            {
+                                args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Vibration_startPointY }, new Vector2() { X = startPointX + 58, Y = height - vib }, new PageNames().VibrationColor);
+                                args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - vib }, 4, new PageNames().VibrationColor);
+                            }
                         }
-                        if (selectedBar.IsFrequencySelected)
-                        {
-                            args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Frequency_startPointY }, new Vector2() { X = startPointX + 58, Y = height - frequency }, new PageNames().FrequencyColor);
-                            args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - frequency }, 4, new PageNames().FrequencyColor);
-                        }
-                        if (selectedBar.IsSoundSelected)
-                        {
-                            args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Sound_startPointY }, new Vector2() { X = startPointX + 58, Y = height - spl }, new PageNames().SoundColor);
-                            args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - spl }, 4, new PageNames().SoundColor);
-                        }
-                        if (selectedBar.IsTempratureSelected)
-                        {
-                            args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Temprature_startPointY }, new Vector2() { X = startPointX + 58, Y = height - temprature }, new PageNames().TempratureColor);
-                            args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - temprature }, 4, new PageNames().TempratureColor);
-                        }
-                        if (selectedBar.IsVibrationSelected)
-                        {
-                            args.DrawingSession.DrawLine(new Vector2() { X = startPointX, Y = Vibration_startPointY }, new Vector2() { X = startPointX + 58, Y = height - vib }, new PageNames().VibrationColor);
-                            args.DrawingSession.DrawCircle(new Vector2() { X = startPointX + 60, Y = height - vib }, 4, new PageNames().VibrationColor);
-                        }
+
+                        startPointX = startPointX + 62;
+                        Humidity_startPointY = height - humidity;
+                        Frequency_startPointY = height - frequency;
+                        Sound_startPointY = height - spl;
+                        Temprature_startPointY = height - temprature;
+                        Vibration_startPointY = height - vib;
+
                     }
-
-                    startPointX = startPointX + 62;
-                    Humidity_startPointY = height - humidity;
-                    Frequency_startPointY = height - frequency;
-                    Sound_startPointY = height - spl;
-                    Temprature_startPointY = height - temprature;
-                    Vibration_startPointY = height - vib;
-
                 }
             }
         }
@@ -195,12 +207,15 @@ namespace CamadoWin8.App.Views
         private void canvasright_Draw(CanvasControl sender, CanvasDrawEventArgs args)
         {
             // this.renderRightYAxis(sender, args);
-            GraphYAxisPlotter yAxisPlotter = new GraphYAxisPlotter();
-            yAxisPlotter.AxisLabel = "(Frequency)";
-            yAxisPlotter.MaximumOffset = graphModel.getMaxFrequency();
-            yAxisPlotter.IsLeftAxis = false;
-            yAxisPlotter.AxisColor = Colors.Red;
-            YAxisMaxValue_Right = yAxisPlotter.renderLeftYAxis(sender, args);
+            if (graphModel.BarData.Count > 0)
+            {
+                GraphYAxisPlotter yAxisPlotter = new GraphYAxisPlotter();
+                // yAxisPlotter.AxisLabel = "(Frequency)";
+                yAxisPlotter.MaximumOffset = graphModel.getMaxFrequency();
+                yAxisPlotter.IsLeftAxis = false;
+                yAxisPlotter.AxisColor = Colors.Red;
+                YAxisMaxValue_Right = yAxisPlotter.renderLeftYAxis(sender, args);
+            }
 
         }
 

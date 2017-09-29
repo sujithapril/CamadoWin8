@@ -34,9 +34,9 @@ namespace CamadoWin8.App.Common
             WordWrapping = CanvasWordWrapping.Wrap,
             HorizontalAlignment = CanvasHorizontalAlignment.Center,
         };
-        public Color AxisColor { get; set; } = Colors.Black;
-        public Color AxisPointsColor { get; set; } = Colors.Black;
-        public Color AxisLabelColor { get; set; } = Colors.Black;
+        public Color AxisColor { get; set; } = Colors.White;
+        public Color AxisPointsColor { get; set; } = Colors.White;
+        public Color AxisLabelColor { get; set; } = Colors.White;
 
         public float renderLeftYAxis(CanvasControl canvas, CanvasDrawEventArgs args)
         {
@@ -54,10 +54,10 @@ namespace CamadoWin8.App.Common
             using (var cpb = new CanvasPathBuilder(args.DrawingSession))
             {
                 // Verical Axis line
-              //  cpb.BeginFigure(startPoint);
-               
+                //  cpb.BeginFigure(startPoint);
+
                 //cpb.AddLine(endPoint);
-            
+
                 //cpb.EndFigure(CanvasFigureLoop.Open);
                 args.DrawingSession.DrawLine(startPoint, endPoint, AxisColor);
 
@@ -65,19 +65,19 @@ namespace CamadoWin8.App.Common
                 float yVal = height;
                 for (int i = 0; i <= NumberOfIntervals; i++)
                 {
-                  //  cpb.BeginFigure(new Vector2() { X = xPoint, Y = yVal });
+                    //  cpb.BeginFigure(new Vector2() { X = xPoint, Y = yVal });
                     if (IsLeftAxis)
                     {
                         args.DrawingSession.DrawLine(new Vector2() { X = xPoint, Y = yVal }, new Vector2() { X = width - WidthOffset, Y = yVal }, AxisPointsColor);
-                      //  cpb.AddLine(new Vector2() { X = width - WidthOffset, Y = yVal });
+                        //  cpb.AddLine(new Vector2() { X = width - WidthOffset, Y = yVal });
                     }
                     else
                     {
                         args.DrawingSession.DrawLine(new Vector2() { X = xPoint, Y = yVal }, new Vector2() { X = WidthOffset, Y = yVal }, AxisPointsColor);
 
-                       // cpb.AddLine(new Vector2() { X = WidthOffset, Y = yVal });
+                        // cpb.AddLine(new Vector2() { X = WidthOffset, Y = yVal });
                     }
-                 //   cpb.EndFigure(CanvasFigureLoop.Open);
+                    //   cpb.EndFigure(CanvasFigureLoop.Open);
 
                     float yPosition = yVal - AxisLabelYOffset;
                     if (yPosition < 0)
@@ -95,7 +95,18 @@ namespace CamadoWin8.App.Common
                 //Draw 
                 args.DrawingSession.DrawGeometry(CanvasGeometry.CreatePath(cpb), AxisPointsColor, 1);
                 float xVal = width - AxisLabelOffset;
-                if (!IsLeftAxis) { xVal = AxisLabelOffset; }
+                if (!IsLeftAxis) { xVal = AxisLabelOffset - 15; }
+                System.Diagnostics.Debug.WriteLine("XVAL => " + xVal);
+                if (xVal < 0)
+                {
+                    xVal = 0;
+                }
+                if (xVal >= width - 15)
+                {
+                    //xVal = 30;
+                }
+                System.Diagnostics.Debug.WriteLine("XVAL => " + xVal);
+
                 args.DrawingSession.Transform *= System.Numerics.Matrix3x2.CreateRotation(-(float)Math.PI / 2, new Vector2() { X = xVal, Y = height - HeightOffset });
                 args.DrawingSession.DrawText(AxisLabel, new Vector2() { X = xVal, Y = height - HeightOffset }, AxisLabelColor);
 

@@ -22,39 +22,47 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Style="{StaticResource LayoutRootStyle}" Name="LayoutRoot" Background="White">
+    <Grid Style="{StaticResource LayoutRootStyle}" Name="LayoutRoot">
         <!--<Grid.Background>
             <ImageBrush ImageSource="/Assets/bg.png" Stretch="UniformToFill"/>
         </Grid.Background>-->
-
+        <Grid.Background>
+            <ImageBrush ImageSource="ms-appx:///Assets/background.png"/>
+        </Grid.Background>
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="35"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0.15*"/>
-            <ColumnDefinition Width="0.7*"/>
-            <ColumnDefinition Width="0.15*"/>
+            <ColumnDefinition Width="0.07*"/>
+            <ColumnDefinition Width="0.30*"/>
+            <ColumnDefinition Width="0.13*"/>
+            <ColumnDefinition Width="0.50*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="backButton" Grid.Column="0" Grid.Row="0"  IsEnabled="True" Style="{StaticResource BackButtonStyle}"  Command="{Binding GoBack }" Height="38" Margin="36,0,0,10" Width="145"/>
-        <StackPanel Grid.Row="0" Grid.Column="1" Background="White" Orientation="Horizontal">
+        <Button x:Name="backButton"  Grid.ColumnSpan="2" Grid.Row="0"  IsEnabled="True" Style="{StaticResource BackButtonStyle}"  Command="{Binding GoBack }"/>
+        <StackPanel Margin="10,0,0,0" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
             <Rectangle Name="HumidityCheckBox" Fill="Blue" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
-            <TextBlock Text="Humidity" Foreground="Black" VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0"></TextBlock>
+            <TextBlock Text="Humidity" Foreground="White" VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0"></TextBlock>
             <Rectangle Name="SoundCheckBox" Fill="Green" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
-            <TextBlock Text="Sound"  Foreground="Black"   VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0"></TextBlock>
-            <Rectangle Name="TempratureCheckBox" Fill="Yellow" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
-            <TextBlock Text="Temprature"  Foreground="Black"  VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0"></TextBlock>
-            <Rectangle Name="VibrationCheckBox" Fill="Black" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
-            <TextBlock Text="Vibration" Foreground="Black" VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0"></TextBlock>
-            <Rectangle Name="FrequencyCheckBox" Fill="Red" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
-            <TextBlock Text="Frequency" Foreground="Black" VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0"></TextBlock>
-        </StackPanel>
-        <canvas:CanvasControl  Grid.Column="0" Grid.Row="1" ClearColor="White"   x:Name="canvas" Draw="canvas_Draw"   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="2,40,0,5"/>
-        <ScrollViewer Background="White"  Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible"  VerticalScrollBarVisibility="Hidden" Margin="0,40,0,5" ManipulationMode="TranslateRailsX" IsVerticalRailEnabled="False" IsVerticalScrollChainingEnabled="False" VerticalScrollMode="Disabled">
-            <canvas:CanvasControl  Tapped="barcanvas_Tapped"   Width="3360" ClearColor="White"  x:Name="barcanvas" Draw="drawingcanvas_Draw" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
-        </ScrollViewer>
-        <canvas:CanvasControl Grid.Column="2" Grid.Row="1" ClearColor="White"  x:Name="canvasright" Draw="canvasright_Draw"   VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,40,2,5" ManipulationMode="All"/>
+            <TextBlock Text="Sound"  Foreground="White"   VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0"></TextBlock>
 
+        </StackPanel>
+        <StackPanel Margin="10,5,0,0" Grid.Row="2" Grid.ColumnSpan="2"  Orientation="Horizontal" HorizontalAlignment="Center">
+            <Rectangle Name="TempratureCheckBox" Fill="Yellow" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
+            <TextBlock Text="Temprature"    VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0"></TextBlock>
+            <Rectangle Name="VibrationCheckBox" Fill="Black" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
+            <TextBlock Text="Vibration" Foreground="White" VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0"></TextBlock>
+            <Rectangle Name="FrequencyCheckBox" Fill="Red" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
+            <TextBlock Text="Frequency" Foreground="White" VerticalAlignment="Center" FontSize="18.667" Margin="5,0,0,0"></TextBlock>
+        </StackPanel>
+        <canvas:CanvasControl  Grid.Column="0" Grid.Row="3"  x:Name="canvas" Draw="canvas_Draw"   HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="2,40,0,5"/>
+        <ScrollViewer Grid.Column="1" Grid.Row="3" VerticalAlignment="Stretch" HorizontalScrollMode="Enabled" HorizontalScrollBarVisibility="Visible"  VerticalScrollBarVisibility="Hidden" Margin="0,40,0,5" ManipulationMode="TranslateRailsX" IsVerticalRailEnabled="False" IsVerticalScrollChainingEnabled="False" VerticalScrollMode="Disabled">
+            <canvas:CanvasControl DoubleTapped="barcanvas_DoubleTapped" Tapped="barcanvas_Tapped"   Width="3360" x:Name="barcanvas" Draw="drawingcanvas_Draw" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+        </ScrollViewer>
+        <canvas:CanvasControl Grid.Column="2" Grid.Row="3"  x:Name="canvasright" Draw="canvasright_Draw"   VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,40,2,5" ManipulationMode="All"/>
+        <Frame Grid.Column="3" Grid.Row="1" Grid.RowSpan="3" x:Name="ContentFrame" Margin="0,0,0,0"/>
         <!--<TextBlock x:Name="pageTitle" Text="Graph" Grid.Column="1" Grid.Row="0" Style="{StaticResource PageHeaderTextStyle}"/>-->
 
 

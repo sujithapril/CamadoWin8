@@ -12,6 +12,8 @@ namespace CamadoWin8.Contracts.Model
         public string DeviceMacId { get; set; }
         public string NickName { get; set; }
         public string Description { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
         public string BasePath = @"http://iot.cabotprojects.com:3001/public/assets/images/";
         private string fileName;
         public string FileName

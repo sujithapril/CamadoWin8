@@ -29,6 +29,8 @@ using SM = System.Math;
 using System.Globalization;
 using CamadoWin8.Contracts.Services;
 using CamadoWin8.Shared;
+using Windows.UI.Core;
+using Windows.UI.ViewManagement;
 
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
@@ -57,6 +59,7 @@ namespace CamadoWin8.App.Views
         {
             public Rect bar;
             public PageNames.BarType type;
+            public DateTime selectedDate;
         }
 
         public List<BarData> barList = new List<BarData>();
@@ -70,17 +73,19 @@ namespace CamadoWin8.App.Views
         public GraphView()
         {
             this.InitializeComponent();
+            ((CamadoWin8.ViewModel.GraphViewModel)ViewModel).navigationService.Frame = this.ContentFrame;
+
             Messenger.Default.Register<LoadGroupedBarGraph>(
-                this,(action) => LoadGraph(action)
+                this, (action) => LoadGraph(action)
                 );
-            
+
             graphModel = (GraphViewModel)this.ViewModel;
             this.HumidityCheckBox.Fill = new SolidColorBrush(new PageNames().HumidityColor);
             this.TempratureCheckBox.Fill = new SolidColorBrush(new PageNames().TempratureColor);
             this.SoundCheckBox.Fill = new SolidColorBrush(new PageNames().SoundColor);
             this.FrequencyCheckBox.Fill = new SolidColorBrush(new PageNames().FrequencyColor);
             this.VibrationCheckBox.Fill = new SolidColorBrush(new PageNames().VibrationColor);
-         
+
 
             //            yAxisData_Right = this.plotPoints(graphModel.getMaxFrequency());
 
@@ -137,7 +142,7 @@ namespace CamadoWin8.App.Views
                     cpb.BeginFigure(new Vector2() { X = 0, Y = height });
                     cpb.AddLine(new Vector2() { X = width, Y = height });
                     cpb.EndFigure(CanvasFigureLoop.Open);
-                    args.DrawingSession.DrawGeometry(CanvasGeometry.CreatePath(cpb), Colors.Black, 1);
+                    args.DrawingSession.DrawGeometry(CanvasGeometry.CreatePath(cpb), Colors.White, 1);
 
                     for (int i = 0; i < graphModel.BarData.Count; i++)
                     {
@@ -152,22 +157,22 @@ namespace CamadoWin8.App.Views
                         float frequency = yReference_Right * graphModel.BarData[i].Frequency;
                         String timeString = key.ToString("hh: mm");
 
-                        args.DrawingSession.DrawText(timeString, new Vector2() { X = startPoint + 60, Y = height + 20 }, Colors.Black, format);
-                        args.DrawingSession.DrawLine(new Vector2() { X = startPoint + 60, Y = height }, new Vector2() { X = startPoint + 60, Y = height + 15 }, Colors.Black);
+                        args.DrawingSession.DrawText(timeString, new Vector2() { X = startPoint + 60, Y = height + 20 }, Colors.White, format);
+                        args.DrawingSession.DrawLine(new Vector2() { X = startPoint + 60, Y = height }, new Vector2() { X = startPoint + 60, Y = height + 15 }, Colors.White);
                         args.DrawingSession.FillRectangle(startPoint, height - humidity, 25, humidity, new PageNames().HumidityColor);
-                        barList.Add(new BarData() { bar = new Rect(startPoint, height - humidity, 25, humidity), type = PageNames.BarType.Humidity });
+                        barList.Add(new BarData() {selectedDate = key, bar = new Rect(startPoint, height - humidity, 25, humidity), type = PageNames.BarType.Humidity });
                         startPoint = startPoint + 25;
                         args.DrawingSession.FillRectangle(startPoint, height - spl, 25, spl, new PageNames().SoundColor);
-                        barList.Add(new BarData() { bar = new Rect(startPoint, height - spl, 25, spl), type = PageNames.BarType.Spl });
+                        barList.Add(new BarData() {selectedDate = key, bar = new Rect(startPoint, height - spl, 25, spl), type = PageNames.BarType.Spl });
                         startPoint = startPoint + 25;
                         args.DrawingSession.FillRectangle(startPoint, height - temprature, 25, temprature, new PageNames().TempratureColor);
-                        barList.Add(new BarData() { bar = new Rect(startPoint, height - temprature, 25, temprature), type = PageNames.BarType.Temprature });
+                        barList.Add(new BarData() { selectedDate = key, bar = new Rect(startPoint, height - temprature, 25, temprature), type = PageNames.BarType.Temprature });
                         startPoint = startPoint + 25;
                         args.DrawingSession.FillRectangle(startPoint, height - vib, 25, vib, new PageNames().VibrationColor);
-                        barList.Add(new BarData() { bar = new Rect(startPoint, height - vib, 25, vib), type = PageNames.BarType.Vibration });
+                        barList.Add(new BarData() { selectedDate = key, bar = new Rect(startPoint, height - vib, 25, vib), type = PageNames.BarType.Vibration });
                         startPoint = startPoint + 25;
                         args.DrawingSession.FillRectangle(startPoint, height - frequency, 25, frequency, new PageNames().FrequencyColor);
-                        barList.Add(new BarData() { bar = new Rect(startPoint, height - frequency, 25, frequency), type = PageNames.BarType.Frequency });
+                        barList.Add(new BarData() {selectedDate = key, bar = new Rect(startPoint, height - frequency, 25, frequency), type = PageNames.BarType.Frequency });
                         startPoint = startPoint + 40;
                     }
                 }
@@ -195,6 +200,7 @@ namespace CamadoWin8.App.Views
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            ((CamadoWin8.ViewModel.GraphViewModel)ViewModel).navigationService.Frame = this.ContentFrame;
         }
 
         public IViewModel ViewModel
@@ -212,37 +218,26 @@ namespace CamadoWin8.App.Views
                 if (rectangle.Contains(point))
                 {
                     System.Diagnostics.Debug.WriteLine("TYpe => " + data.type);
-                    graphModel.LoadDetailView(data.type);
+                    graphModel.LoadDetailView(data.selectedDate, data.type);
                     return;
                 }
             }
 
         }
 
-        private void barcanvas_DragEnter(object sender, DragEventArgs e)
+        private async void barcanvas_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("DRAGENTER");
-        }
-       
-        private void ScrollViewer_DragEnter(object sender, DragEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("ScrollViewer_DragEnter");
+            Popup popup = new Popup();
+            popup.Height = Window.Current.Bounds.Height;
+            var Frame = new Frame();
+            Frame.Navigate(typeof(DetailGraphView), PageNames.BarType.Frequency);
+
+            // popup.Child = Frame;
+            //  DetailGraphView detailView = new DetailGraphView();
+
+            popup.IsOpen = true;
+            popup.IsLightDismissEnabled = true;
         }
 
-        private void ScrollViewer_DragOver(object sender, DragEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("ScrollViewer_DragOver");
-        }
-
-        private void ScrollViewer_PointerMoved(object sender, PointerRoutedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("ScrollViewer_PointerMoved");
-
-        }
-
-        private void ScrollViewer_PointerWheelChanged(object sender, PointerRoutedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("ScrollViewer_PointerWheelChanged");
-        }
     }
 }
