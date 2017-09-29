@@ -13,5 +13,8 @@ namespace CamadoWin8.Contracts.Model
         string NickName { get; set; }
         string Description { get; set; }
         string FileName { get; set; }
+        DateTime StartDate { get; set; }
+        DateTime EndDate { get; set; }
+
     }
 }

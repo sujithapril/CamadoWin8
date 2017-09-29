@@ -73,6 +73,7 @@ namespace CamadoWin8.App.Views
         public GraphView()
         {
             this.InitializeComponent();
+            ApplicationVariables.DetailGraphFrame = this.ContentFrame;
             ((CamadoWin8.ViewModel.GraphViewModel)ViewModel).navigationService.Frame = this.ContentFrame;
 
             Messenger.Default.Register<LoadGroupedBarGraph>(
@@ -200,6 +201,7 @@ namespace CamadoWin8.App.Views
         /// property is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            ApplicationVariables.DetailGraphFrame = this.ContentFrame;
             ((CamadoWin8.ViewModel.GraphViewModel)ViewModel).navigationService.Frame = this.ContentFrame;
         }
 
