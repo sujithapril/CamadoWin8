@@ -16,6 +16,7 @@ using Windows.UI.Xaml.Navigation;
 using CamadoWin8.Contracts.View;
 using CamadoWin8.Contracts.ViewModels;
 using CamadoWin8.Contracts.Services;
+using CamadoWin8.Shared;
 // The Basic Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234237
 
 namespace CamadoWin8.App.Views
@@ -31,7 +32,7 @@ namespace CamadoWin8.App.Views
         {
            
             this.InitializeComponent();
-
+            ApplicationVariables.DashboardFrame = this.ContentFrame;
             ((CamadoWin8.ViewModel.LayOutViewModel)ViewModel).navigationService.Frame = this.ContentFrame;
         }
       
@@ -44,8 +45,8 @@ namespace CamadoWin8.App.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             // this.navigationService.Frame = ContentFrame;
-         
-           ((CamadoWin8.ViewModel.LayOutViewModel)ViewModel).navigationService.Frame = this.ContentFrame;
+            ApplicationVariables.DashboardFrame = this.ContentFrame;
+            ((CamadoWin8.ViewModel.LayOutViewModel)ViewModel).navigationService.Frame = this.ContentFrame;
 
 
         }
