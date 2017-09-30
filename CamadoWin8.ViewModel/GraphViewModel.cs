@@ -47,6 +47,22 @@ namespace CamadoWin8.ViewModel
         public List<String> Columns = new List<string>();
         public List<barDataModel> BarData = new List<barDataModel>();
 
+        public String DeviceNickName()
+        {
+            if(deviceObj != null)
+            {
+                return deviceObj.NickName;
+            }
+            return "";
+        }
+        public String DeviceMacId()
+        {
+            if(deviceObj != null)
+            {
+                return deviceObj.DeviceMacId;
+            }
+            return "";
+        }
         public float getMaxFrequency()
         {
             return this.BarData.OfType<barDataModel>().Max(barDataModel => barDataModel.Frequency);
@@ -117,6 +133,7 @@ namespace CamadoWin8.ViewModel
 
             GoBack = new RelayCommand(() =>
             {
+                navigationService.Frame = ApplicationVariables.DashboardFrame;
                 navigationService.GoBack();
             });
             //GoHome = new RelayCommand(() =>

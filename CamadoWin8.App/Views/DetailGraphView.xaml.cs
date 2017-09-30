@@ -213,7 +213,7 @@ namespace CamadoWin8.App.Views
                 // yAxisPlotter.AxisLabel = "(Frequency)";
                 yAxisPlotter.MaximumOffset = graphModel.getMaxFrequency();
                 yAxisPlotter.IsLeftAxis = false;
-                yAxisPlotter.AxisColor = Colors.Red;
+                yAxisPlotter.AxisColor = new PageNames().FrequencyColor;
                 YAxisMaxValue_Right = yAxisPlotter.renderLeftYAxis(sender, args);
             }
 

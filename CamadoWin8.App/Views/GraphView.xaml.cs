@@ -86,14 +86,11 @@ namespace CamadoWin8.App.Views
             this.SoundCheckBox.Fill = new SolidColorBrush(new PageNames().SoundColor);
             this.FrequencyCheckBox.Fill = new SolidColorBrush(new PageNames().FrequencyColor);
             this.VibrationCheckBox.Fill = new SolidColorBrush(new PageNames().VibrationColor);
-
-
-            //            yAxisData_Right = this.plotPoints(graphModel.getMaxFrequency());
-
         }
         private async void LoadGraph(LoadGroupedBarGraph action)
         {
-            System.Diagnostics.Debug.WriteLine("CAlled load graph");
+           
+            DeviceName.Text = graphModel.DeviceNickName() + " - " + graphModel.DeviceMacId();
             this.canvas.Invalidate();
             this.canvasright.Invalidate();
             this.barcanvas.Invalidate();
@@ -189,7 +186,7 @@ namespace CamadoWin8.App.Views
                 yAxisPlotter.AxisLabel = "(Frequency)";
                 yAxisPlotter.MaximumOffset = graphModel.getMaxFrequency();
                 yAxisPlotter.IsLeftAxis = false;
-                yAxisPlotter.AxisColor = Colors.Red;
+                yAxisPlotter.AxisColor = new PageNames().FrequencyColor;
                 YAxisMaxValue_Right = yAxisPlotter.renderLeftYAxis(sender, args);
             }
 
@@ -229,17 +226,12 @@ namespace CamadoWin8.App.Views
 
         private async void barcanvas_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
-            Popup popup = new Popup();
-            popup.Height = Window.Current.Bounds.Height;
-            var Frame = new Frame();
-            Frame.Navigate(typeof(DetailGraphView), PageNames.BarType.Frequency);
-
-            // popup.Child = Frame;
-            //  DetailGraphView detailView = new DetailGraphView();
-
-            popup.IsOpen = true;
-            popup.IsLightDismissEnabled = true;
+            //popup.IsOpen = true;
         }
 
-    }
+        private void DeviceName_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+    } 
 }
