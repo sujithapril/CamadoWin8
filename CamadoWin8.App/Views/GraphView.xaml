@@ -22,7 +22,7 @@
         * Row 0 contains the back button and page title
         * Row 1 contains the rest of the page layout
     -->
-    <Grid Style="{StaticResource LayoutRootStyle}" Name="LayoutRoot">
+    <Grid  Style="{StaticResource LayoutRootStyle}" Name="LayoutRoot">
         <!--<Grid.Background>
             <ImageBrush ImageSource="/Assets/bg.png" Stretch="UniformToFill"/>
         </Grid.Background>-->
@@ -47,7 +47,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Command="{Binding GoBack}" IsEnabled="True" Style="{StaticResource BackButtonStyle}" VerticalAlignment="Center" Margin="36,0"/>
-            <TextBlock x:Name="DeviceName" VerticalAlignment="Center" Text="fggkj" FontSize="23"   Grid.Column="1" Margin="0,30,0,0" Height="50"/>
+            <TextBlock x:Name="DeviceName" VerticalAlignment="Center" FontSize="23"   Grid.Column="1" Margin="0,30,0,0" Height="50"/>
         </Grid>
         <StackPanel Margin="10,0,0,0" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Orientation="Horizontal">
             <Rectangle Name="HumidityCheckBox" Fill="Blue" Width="20" Height="20" VerticalAlignment="Center" Margin="5,0,0,0"></Rectangle>
@@ -71,11 +71,14 @@
         <canvas:CanvasControl Grid.Column="2" Grid.Row="3"  x:Name="canvasright" Draw="canvasright_Draw"   VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,40,2,5" ManipulationMode="All"/>
         <Frame Grid.Column="3" Grid.Row="1" Grid.RowSpan="3" x:Name="ContentFrame" Margin="0,0,0,0"/>
         <!--<TextBlock x:Name="pageTitle" Text="Graph" Grid.Column="1" Grid.Row="0" Style="{StaticResource PageHeaderTextStyle}"/>-->
-        <!--
-        <Popup x:Name="popup" Width="600" Height="600" IsLightDismissEnabled="True" HorizontalAlignment="Center" VerticalAlignment="Center" IsOpen="True" RequestedTheme="Default" Margin="10">
-                <local:ExpandedGraphView Width="600" Height="600"  VerticalAlignment="Center" HorizontalAlignment="Center" Background="{ThemeResource ComboBoxItemSelectedBackgroundThemeBrush}" />
-        </Popup> 
-        -->
+      <!--  <Popup x:Name="popup" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsLightDismissEnabled="True"  IsOpen="True" RequestedTheme="Default">
+                <local:ExpandedGraphView x:Name="ExpandedGraphView" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{ThemeResource ComboBoxItemSelectedBackgroundThemeBrush}" />
+            <Popup.ChildTransitions>
+                <TransitionCollection>
+                    <PaneThemeTransition Edge="Left"></PaneThemeTransition>
+                </TransitionCollection>
+            </Popup.ChildTransitions>
+        </Popup> -->
 
     </Grid>
 
