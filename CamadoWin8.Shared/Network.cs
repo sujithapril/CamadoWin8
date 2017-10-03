@@ -15,24 +15,24 @@ namespace CamadoWin8.Shared
         public static async Task<bool> IsConnected()
         {
 
-            bool isConnected = false;  //first api server availability          
+            bool isConnected = true;  //first api server availability          
 
-            try
-            {
+            //try
+            //{
 
-                var c = new HttpClient();
-                var resp = await c.GetAsync(new Uri("http://iot.cabotprojects.com"));
-                if (resp.StatusCode != System.Net.HttpStatusCode.OK)
-                {
-                    isConnected = false;
-                }
-                else
-                {
-                    isConnected = true;
-                }
-            }
+            //    var c = new HttpClient();
+            //    var resp = await c.GetAsync(new Uri("http://iot.cabotprojects.com"));
+            //    if (resp.StatusCode != System.Net.HttpStatusCode.OK)
+            //    {
+            //        isConnected = false;
+            //    }
+            //    else
+            //    {
+            //        isConnected = true;
+            //    }
+            //}
 
-            catch { isConnected = false; }
+            //catch { isConnected = false; }
 
 
             //if (isConnected)  //internet availability check

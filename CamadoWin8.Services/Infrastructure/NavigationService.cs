@@ -21,8 +21,11 @@ namespace CamadoWin8.Services.Infrastructure
             }
             set
             {
-                frame = value;
-                frame.Navigated += OnFrameNavigated;
+                if (frame != value)
+                {
+                    frame = value;
+                    frame.Navigated += OnFrameNavigated;
+                }
             }
         }
         private IStateService stateService;

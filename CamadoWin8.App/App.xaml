@@ -9,15 +9,15 @@
 
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary>
-                    <!--<SolidColorBrush x:Key="ListBoxItemSelectedPointerOverBackgroundThemeBrush" Color="#007700" />
-                    <SolidColorBrush x:Key="ListBoxItemSelectedPointerOverBorderThemeBrush" Color="#007700" />
-                    <SolidColorBrush x:Key="ListBoxItemSelectedBackgroundThemeBrush" Color="#007700" />
+                    <!--<SolidColorBrush x:Key="ListBoxItemSelectedPointerOverBackgroundThemeBrush" Color="#cc0000" />
+                    <SolidColorBrush x:Key="ListBoxItemSelectedPointerOverBorderThemeBrush" Color="#cc0000" />
+                    <SolidColorBrush x:Key="ListBoxItemSelectedBackgroundThemeBrush" Color="#cc0000" />
                     <SolidColorBrush x:Key="ListBoxItemLostFocusBackgroundThemeBrush" Color="Red" />
                     <SolidColorBrush x:Key="HighlightBrushKey}" Color="Red"/>
                     <SolidColorBrush x:Key="ControlBrushKey}" Color="Red"/>-->
-                    <SolidColorBrush x:Key="ListBoxItemSelectedPointerOverBackgroundThemeBrush" Color="#007700" />
-                    <SolidColorBrush x:Key="ListBoxItemSelectedPointerOverBorderThemeBrush" Color="#007700" />
-                    <SolidColorBrush x:Key="ListBoxItemSelectedBackgroundThemeBrush" Color="#007700" />
+                    <SolidColorBrush x:Key="ListBoxItemSelectedPointerOverBackgroundThemeBrush" Color="#cc0000" />
+                    <SolidColorBrush x:Key="ListBoxItemSelectedPointerOverBorderThemeBrush" Color="#cc0000" />
+                    <SolidColorBrush x:Key="ListBoxItemSelectedBackgroundThemeBrush" Color="#cc0000" />
                 </ResourceDictionary>
                 <!-- 
                     Styles that define common aspects of the platform look and feel

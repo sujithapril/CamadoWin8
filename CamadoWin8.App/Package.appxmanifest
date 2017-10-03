@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="Cabot.CamadoWin8App" Publisher="CN=F171D774-BAB2-4347-98DD-59A019635623" Version="1.1.0.0" />
+  <Identity Name="Cabot.CamadoWin8App" Publisher="CN=F171D774-BAB2-4347-98DD-59A019635623" Version="1.1.0.6" />
   <Properties>
     <DisplayName>CamadoWin8App</DisplayName>
     <PublisherDisplayName>Cabot</PublisherDisplayName>

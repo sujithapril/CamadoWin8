@@ -53,7 +53,7 @@ DataContext="{Binding LocationViewModel, Source={StaticResource MainViewModelLoc
                             <Image Source="{Binding FileName}" Stretch="UniformToFill"/>
                             <!--<Image Source="/Assets/noimage.png" Stretch="UniformToFill"/>-->
                         </Border>
-                        <StackPanel VerticalAlignment="Bottom" Background="#007700" >
+                        <StackPanel VerticalAlignment="Bottom" Background="#cc0000" >
                             <TextBlock Text="{Binding LocationName}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="20" Margin="15,0,15,0"/>
                             <TextBlock Text="{Binding LocationId}"   Foreground="Silver"  Height="20" Margin="15,0,15,0"/>
                         </StackPanel>

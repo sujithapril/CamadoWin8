@@ -47,7 +47,7 @@ DataContext="{Binding HomeViewModel, Source={StaticResource MainViewModelLocator
             <!--<GridView.ItemTemplate>
                 <DataTemplate>
 
-                    <Grid Width="190" Height="190" Background="#007700">
+                    <Grid Width="190" Height="190" Background="#cc0000">
                         <StackPanel Orientation="Vertical">
                         <Path Width="50" Height="50" Fill="#FFcdc5ae" Stretch="Uniform" Data="M105,42H85.5c-4.143,0-7.5-3.357-7.5-7.5s3.357-7.5,7.5-7.5H105V0H12v27h20.5c4.143,0,7.5,3.357,7.5,7.5 S36.643,42,32.5,42H12H0v98h118V42H105z" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="15"/>
                         --><!--<TextBlock Text="{Binding NickName}" TextWrapping="Wrap" FontSize="20" FontWeight="Light" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="15" Foreground="White"/>--><!--
@@ -72,7 +72,7 @@ DataContext="{Binding HomeViewModel, Source={StaticResource MainViewModelLocator
                             <Image Source="{Binding FileName}" Stretch="UniformToFill"/>
                             <!--<Image Source="/Assets/noimage.png" Stretch="UniformToFill"/>-->
                         </Border>
-                        <StackPanel VerticalAlignment="Bottom" Background="#007700" >
+                        <StackPanel VerticalAlignment="Bottom" Background="#cc0000" >
                             <TextBlock Text="{Binding NickName}" Foreground="{StaticResource ListViewItemOverlayForegroundThemeBrush}" Style="{StaticResource TitleTextStyle}" Height="20" Margin="15,0,15,0"/>
                             <TextBlock Text="{Binding DeviceMacId}"   Foreground="Silver"  Height="20" Margin="15,0,15,0"/>
                         </StackPanel>

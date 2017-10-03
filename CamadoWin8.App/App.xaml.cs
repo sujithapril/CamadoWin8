@@ -63,7 +63,7 @@ namespace CamadoWin8.App
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
-
+                ApplicationVariables.RootFrame = rootFrame;
                 navigationService.Frame = rootFrame;
 
                 if (args.PreviousExecutionState == ApplicationExecutionState.Terminated)
